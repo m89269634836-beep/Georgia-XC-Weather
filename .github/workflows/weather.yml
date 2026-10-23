@@ -3,6 +3,11 @@ on:
   workflow_dispatch:
   schedule:
     - cron: '17 2,8,14 * * *'
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/weather.yml'
+      - 'scripts/**'
 permissions:
   contents: write
 concurrency:
@@ -11,22 +16,44 @@ concurrency:
 jobs:
   fetch:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - name: Validate Python scripts
+        run: python -m py_compile scripts/fetch.py scripts/analyze.py
       - name: Fetch forecasts
         run: python scripts/fetch.py
       - name: Analyze vertical profiles and corridors
         run: python scripts/analyze.py
-      - name: Publish data
+      - name: Publish data (retry if repository changed)
+        shell: bash
         run: |
+          set -euo pipefail
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add data/latest.json data/status.json data/xc_analysis.json data/xc_report.md
-          if ! git diff --cached --quiet; then
-            git commit -m 'Update weather forecasts'
-            git push
-          fi
+          snapshot="$(mktemp -d)"
+          cp data/latest.json data/status.json data/xc_analysis.json data/xc_report.md "$snapshot/"
+          for attempt in 1 2 3 4 5; do
+            echo "Publish attempt $attempt"
+            git fetch origin main
+            git reset --hard origin/main
+            mkdir -p data
+            cp "$snapshot"/* data/
+            git add data/latest.json data/status.json data/xc_analysis.json data/xc_report.md
+            if git diff --cached --quiet; then
+              echo "Forecast data is already current"
+              exit 0
+            fi
+            git commit -m "Update XC weather forecasts"
+            if git push origin HEAD:main; then
+              echo "Published forecast data successfully"
+              exit 0
+            fi
+            echo "Branch changed during publish; retrying on latest main"
+            sleep 3
+          done
+          echo "::error::Failed to publish after 5 attempts"
+          exit 1
