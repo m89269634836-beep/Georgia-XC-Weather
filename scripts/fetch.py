@@ -1,4 +1,4 @@
-import json, time, urllib.parse, urllib.request
+import json, time, urllib.parse, urllib.request, math
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -10,7 +10,7 @@ POINTS = {
     "udzilaurta": (42.443674, 44.979723, 2200),
 }
 MODELS = {"ecmwf": "ecmwf_ifs025", "gfs": "ncep_gfs_global", "icon": "icon_global"}
-LEVELS = [925, 850, 700, 600, 500]
+LEVELS = [1000, 975, 950, 925, 900, 850, 800, 700, 600, 500]
 SURFACE = ["temperature_2m", "relative_humidity_2m", "cloud_cover",
            "cloud_cover_low", "cloud_cover_mid", "cloud_cover_high",
            "precipitation", "shortwave_radiation", "wind_speed_10m",
@@ -18,8 +18,29 @@ SURFACE = ["temperature_2m", "relative_humidity_2m", "cloud_cover",
 ALOFT = [f"{field}_{level}hPa" for level in LEVELS for field in
          ("temperature", "relative_humidity", "wind_speed",
           "wind_direction", "geopotential_height")]
+# Approximate straight-line XC sampling bearings, not validated flight routes.
+CORRIDORS = {
+    "lalisquri": [0, 90], "jidgeti": [90], "ananuri": [0],
+    "tsivi": [90, 270], "udzilaurta": [90],
+}
+def destination(lat, lon, bearing, km):
+    radius = 6371.0
+    phi, lam, az, delta = map(math.radians, (lat, lon, bearing, km / radius * 180 / math.pi))
+    phi2 = math.asin(math.sin(phi)*math.cos(delta) + math.cos(phi)*math.sin(delta)*math.cos(az))
+    lam2 = lam + math.atan2(math.sin(az)*math.sin(delta)*math.cos(phi),
+                           math.cos(delta)-math.sin(phi)*math.sin(phi2))
+    return round(math.degrees(phi2), 6), round(math.degrees(lam2), 6)
+
 OUT = Path("data")
 OUT.mkdir(exist_ok=True)
+# Sample 25 and 50 km along each possible XC direction.
+BASE_POINTS = dict(POINTS)
+for start, bearings in CORRIDORS.items():
+    lat, lon, _ = BASE_POINTS[start]
+    for bearing in bearings:
+        for distance in (25, 50):
+            x, y = destination(lat, lon, bearing, distance)
+            POINTS[f"{start}_b{bearing}_d{distance}"] = (x, y, None)
 now = datetime.now(timezone.utc)
 results = {"generated_at_utc": now.isoformat(), "points": {}, "errors": [], "models": MODELS}
 for point, (lat, lon, elev) in POINTS.items():
