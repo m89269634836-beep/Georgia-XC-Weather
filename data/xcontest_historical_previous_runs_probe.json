@@ -1,0 +1,76 @@
+{
+  "checked_utc": "2026-10-28T11:07:45.504529+00:00",
+  "source": "Open-Meteo Previous Runs API",
+  "notes": "Fixed lead 24/48 h. For exact initialisation/publication time use Single Runs.",
+  "results": [
+    {
+      "date": "2025-09-06",
+      "coords": [
+        42.099182,
+        45.418038
+      ],
+      "ok": true,
+      "grid_elevation_m": 804.0,
+      "fields_13_local": {
+        "temperature_2m_previous_day1": 24.8,
+        "relative_humidity_2m_previous_day1": 53,
+        "precipitation_previous_day1": 0.0,
+        "cloud_cover_previous_day1": 46,
+        "shortwave_radiation_previous_day1": 600.0,
+        "wind_speed_10m_previous_day1": 2.21,
+        "temperature_2m_previous_day2": 24.2,
+        "relative_humidity_2m_previous_day2": 57,
+        "precipitation_previous_day2": 0.0,
+        "cloud_cover_previous_day2": 62,
+        "shortwave_radiation_previous_day2": 553.0,
+        "wind_speed_10m_previous_day2": 2.02
+      }
+    },
+    {
+      "date": "2026-07-05",
+      "coords": [
+        42.099182,
+        45.418038
+      ],
+      "ok": true,
+      "grid_elevation_m": 804.0,
+      "fields_13_local": {
+        "temperature_2m_previous_day1": 26.3,
+        "relative_humidity_2m_previous_day1": 50,
+        "precipitation_previous_day1": 0.0,
+        "cloud_cover_previous_day1": 29,
+        "shortwave_radiation_previous_day1": 844.0,
+        "wind_speed_10m_previous_day1": 1.5,
+        "temperature_2m_previous_day2": 26.1,
+        "relative_humidity_2m_previous_day2": 55,
+        "precipitation_previous_day2": 0.0,
+        "cloud_cover_previous_day2": 21,
+        "shortwave_radiation_previous_day2": 866.0,
+        "wind_speed_10m_previous_day2": 1.22
+      }
+    },
+    {
+      "date": "2026-05-09",
+      "coords": [
+        42.178727,
+        44.880777
+      ],
+      "ok": true,
+      "grid_elevation_m": 1829.0,
+      "fields_13_local": {
+        "temperature_2m_previous_day1": 13.2,
+        "relative_humidity_2m_previous_day1": 59,
+        "precipitation_previous_day1": 0.1,
+        "cloud_cover_previous_day1": 82,
+        "shortwave_radiation_previous_day1": 815.0,
+        "wind_speed_10m_previous_day1": 2.15,
+        "temperature_2m_previous_day2": 12.3,
+        "relative_humidity_2m_previous_day2": 67,
+        "precipitation_previous_day2": 0.3,
+        "cloud_cover_previous_day2": 100,
+        "shortwave_radiation_previous_day2": 664.0,
+        "wind_speed_10m_previous_day2": 2.12
+      }
+    }
+  ]
+}
