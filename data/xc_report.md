@@ -1,6 +1,6 @@
 # XC weather diagnostics
 
-Forecast issued: 2026-10-28T11:07:37.966451+00:00 UTC
+Forecast issued: 2026-10-28T11:14:17.177411+00:00 UTC
 Time: 11:00–16:00 Georgia; wind direction is **FROM**; heights are **AMSL**.
 
 This report does not certify safe launch conditions. Thin inversions may not be resolved.
