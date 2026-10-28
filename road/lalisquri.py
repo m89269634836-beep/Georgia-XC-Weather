@@ -74,8 +74,9 @@ if not result["sources"]:
 
 lines=["# Lalisquri access-road wetness context","",
        "Weather values are gridded estimates, not observations of the road surface.",
-       "Takeoff: 42.178727, 44.880777; 1815 m AMSL; local time Asia/Tbilisi.",
+       f"Takeoff: {LAT}, {LON}; 780 m AMSL; local time Asia/Tbilisi.",
        "Soil moisture is volumetric (m³/m³) and model-specific, not a universal mud threshold.",
+       "Historical data and recent forecast analysis are both MODEL estimates, not rain gauge observations.",
        ""] 
 for name, source in result["sources"].items():
     lines += [f"## {name}","",f"Weather grid elevation: {source['model_elevation_m']} m AMSL","",
