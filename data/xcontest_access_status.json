@@ -1,0 +1,24 @@
+{
+  "checked_at_utc": "2026-10-28T08:17:59.606493+00:00",
+  "flight_example_id": 3727392,
+  "notices": [
+    "Unauthenticated, low-rate public URL check only.",
+    "HTTP success may still return an HTML login or anti-bot page.",
+    "No IGC, KML, authentication material or signed tokens are stored."
+  ],
+  "checks": [
+    {
+      "type": "flight_detail",
+      "url": "https://www.xcontest.org/2023/world/en/flights/detail:p_golovkin/24.03.2023/08:56",
+      "http_status": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "first_bytes_kind": "html"
+    },
+    {
+      "type": "route_kml",
+      "url": "https://www.xcontest.org/routekml.php?fl=3727392&rt=36103472",
+      "http_status": 404,
+      "error": "HTTP access denied or server error"
+    }
+  ]
+}
