@@ -28,6 +28,8 @@ jobs:
         run: python scripts/fetch.py
       - name: Analyze vertical profiles and corridors
         run: python scripts/analyze.py
+      - name: Prepare current-week daily XC reports
+        run: python scripts/weekly.py
       - name: Publish data (retry if repository changed)
         shell: bash
         run: |
@@ -35,14 +37,14 @@ jobs:
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           snapshot="$(mktemp -d)"
-          cp data/latest.json data/status.json data/xc_analysis.json data/xc_report.md "$snapshot/"
+          cp data/latest.json data/status.json data/xc_analysis.json data/xc_report.md data/xc_weekly_overview.md data/xc_day_*.json data/xc_corridor_*.json "$snapshot/"
           for attempt in 1 2 3 4 5; do
             echo "Publish attempt $attempt"
             git fetch origin main
             git reset --hard origin/main
             mkdir -p data
             cp "$snapshot"/* data/
-            git add data/latest.json data/status.json data/xc_analysis.json data/xc_report.md
+            git add data/latest.json data/status.json data/xc_analysis.json data/xc_report.md data/xc_weekly_overview.md data/xc_day_*.json data/xc_corridor_*.json
             if git diff --cached --quiet; then
               echo "Forecast data is already current"
               exit 0
