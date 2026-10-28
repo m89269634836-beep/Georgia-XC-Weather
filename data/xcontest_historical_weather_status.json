@@ -1,7 +1,7 @@
 {
-  "generated_utc": "2026-10-28T10:32:57.265292+00:00",
-  "requested_cases": 14,
-  "successful": 14,
+  "generated_utc": "2026-10-28T10:35:15.170943+00:00",
+  "requested_cases": 17,
+  "successful": 17,
   "errors": [],
   "warning": "Retrospective historical weather/reanalysis only; not D−1 issued forecasts or observed weather-station measurements."
 }
