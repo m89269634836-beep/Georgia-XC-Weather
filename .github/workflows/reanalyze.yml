@@ -1,0 +1,46 @@
+name: Reanalyze saved XC data
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/reanalyze.yml'
+permissions:
+  contents: write
+concurrency:
+  group: georgia-xc-reanalyze
+  cancel-in-progress: false
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    timeout-minutes: 4
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Analyze existing weather data
+        run: |
+          python -m py_compile scripts/analyze.py scripts/weekly.py
+          python scripts/analyze.py
+          python scripts/weekly.py
+      - name: Publish diagnostic reports
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          snapshot="$(mktemp -d)"
+          cp data/xc_analysis.json data/xc_report.md data/xc_weekly_overview.md data/xc_day_*.json data/xc_corridor_*.json "$snapshot/"
+          for attempt in 1 2 3 4 5; do
+            git fetch origin main
+            git reset --hard origin/main
+            mkdir -p data
+            cp "$snapshot"/* data/
+            git add data/xc_analysis.json data/xc_report.md data/xc_weekly_overview.md data/xc_day_*.json data/xc_corridor_*.json
+            if git diff --cached --quiet; then exit 0; fi
+            git commit -m 'Update XC daily diagnostics from saved forecast'
+            if git push origin HEAD:main; then exit 0; fi
+            sleep 3
+          done
+          exit 1
