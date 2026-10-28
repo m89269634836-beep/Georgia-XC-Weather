@@ -86,6 +86,7 @@ def get_one(date,site):
                 dz=zb[i]-za[i]
                 if dz>0:lapse.append((a[i]-b[i])/dz*1000)
         result["lapse_850_700_c_per_km"]=average(lapse)
+        result["pressure_level_data_available"]=bool(lapse)
     return result
 
 rows=[];errors=[]
