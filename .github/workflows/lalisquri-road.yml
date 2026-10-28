@@ -1,0 +1,44 @@
+name: Lalisquri rain and road wetness
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'road/lalisquri.py'
+      - '.github/workflows/lalisquri-road.yml'
+permissions:
+  contents: write
+concurrency:
+  group: lalisquri-road-wetness
+  cancel-in-progress: false
+jobs:
+  road:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Download historical Lalisquri rain and ground data
+        run: python road/lalisquri.py
+      - name: Publish Lalisquri diagnostics
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          snapshot="$(mktemp -d)"
+          cp data/lalisquri_road_conditions.json data/lalisquri_road_report.md "$snapshot/"
+          for attempt in 1 2 3 4 5; do
+            git fetch origin main
+            git reset --hard origin/main
+            mkdir -p data
+            cp "$snapshot"/* data/
+            git add data/lalisquri_road_conditions.json data/lalisquri_road_report.md
+            if git diff --cached --quiet; then exit 0; fi
+            git commit -m 'Update Lalisquri rain and soil wetness'
+            if git push origin HEAD:main; then exit 0; fi
+            sleep 3
+          done
+          exit 1
