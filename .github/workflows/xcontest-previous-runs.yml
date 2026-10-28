@@ -1,0 +1,42 @@
+name: Historical D-1 and D-2 forecast verification
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/xcontest/backtest_forecast_probe.py'
+      - '.github/workflows/xcontest-previous-runs.yml'
+permissions:
+  contents: write
+concurrency:
+  group: xcontest-previous-runs-probe
+  cancel-in-progress: false
+jobs:
+  archive:
+    runs-on: ubuntu-latest
+    timeout-minutes: 7
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verify real archived day-ahead forecast fields
+        run: python scripts/xcontest/backtest_forecast_probe.py
+      - name: Publish verification
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          cp data/xcontest_historical_previous_runs_probe.json /tmp/xcontest_historical_previous_runs_probe.json
+          for attempt in 1 2 3 4 5; do
+            git fetch origin main
+            git reset --hard origin/main
+            cp /tmp/xcontest_historical_previous_runs_probe.json data/xcontest_historical_previous_runs_probe.json
+            git add data/xcontest_historical_previous_runs_probe.json
+            if git diff --cached --quiet; then exit 0; fi
+            git commit -m 'Verify historical D-1 D-2 forecast coverage'
+            if git push origin HEAD:main; then exit 0; fi
+            sleep 3
+          done
+          exit 1
