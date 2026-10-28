@@ -1,8 +1,123 @@
 {
-  "checked_utc": "2026-10-28T11:07:45.504529+00:00",
+  "checked_utc": "2026-10-28T11:10:24.637965+00:00",
   "source": "Open-Meteo Previous Runs API",
   "notes": "Fixed lead 24/48 h. For exact initialisation/publication time use Single Runs.",
   "results": [
+    {
+      "date": "2025-03-15",
+      "coords": [
+        42.178727,
+        44.880777
+      ],
+      "ok": true,
+      "grid_elevation_m": 1829.0,
+      "fields_13_local": {
+        "temperature_2m_previous_day1": 15.1,
+        "relative_humidity_2m_previous_day1": 33,
+        "precipitation_previous_day1": 0.0,
+        "cloud_cover_previous_day1": 0,
+        "shortwave_radiation_previous_day1": 755.0,
+        "wind_speed_10m_previous_day1": 2.3,
+        "temperature_2m_previous_day2": 14.9,
+        "relative_humidity_2m_previous_day2": 34,
+        "precipitation_previous_day2": 0.0,
+        "cloud_cover_previous_day2": 0,
+        "shortwave_radiation_previous_day2": 748.0,
+        "wind_speed_10m_previous_day2": 2.12
+      }
+    },
+    {
+      "date": "2025-03-24",
+      "coords": [
+        42.099182,
+        45.418038
+      ],
+      "ok": true,
+      "grid_elevation_m": 804.0,
+      "fields_13_local": {
+        "temperature_2m_previous_day1": 9.1,
+        "relative_humidity_2m_previous_day1": 49,
+        "precipitation_previous_day1": 0.0,
+        "cloud_cover_previous_day1": 52,
+        "shortwave_radiation_previous_day1": 695.0,
+        "wind_speed_10m_previous_day1": 1.8,
+        "temperature_2m_previous_day2": 8.7,
+        "relative_humidity_2m_previous_day2": 50,
+        "precipitation_previous_day2": 0.0,
+        "cloud_cover_previous_day2": 3,
+        "shortwave_radiation_previous_day2": 653.0,
+        "wind_speed_10m_previous_day2": 1.82
+      }
+    },
+    {
+      "date": "2025-05-24",
+      "coords": [
+        42.099182,
+        45.418038
+      ],
+      "ok": true,
+      "grid_elevation_m": 804.0,
+      "fields_13_local": {
+        "temperature_2m_previous_day1": 20.9,
+        "relative_humidity_2m_previous_day1": 58,
+        "precipitation_previous_day1": 0.0,
+        "cloud_cover_previous_day1": 12,
+        "shortwave_radiation_previous_day1": 825.0,
+        "wind_speed_10m_previous_day1": 1.71,
+        "temperature_2m_previous_day2": 20.6,
+        "relative_humidity_2m_previous_day2": 52,
+        "precipitation_previous_day2": 0.0,
+        "cloud_cover_previous_day2": 73,
+        "shortwave_radiation_previous_day2": 659.0,
+        "wind_speed_10m_previous_day2": 1.25
+      }
+    },
+    {
+      "date": "2025-05-31",
+      "coords": [
+        42.099182,
+        45.418038
+      ],
+      "ok": true,
+      "grid_elevation_m": 804.0,
+      "fields_13_local": {
+        "temperature_2m_previous_day1": 26.0,
+        "relative_humidity_2m_previous_day1": 29,
+        "precipitation_previous_day1": 0.0,
+        "cloud_cover_previous_day1": 0,
+        "shortwave_radiation_previous_day1": 934.0,
+        "wind_speed_10m_previous_day1": 1.63,
+        "temperature_2m_previous_day2": 24.5,
+        "relative_humidity_2m_previous_day2": 39,
+        "precipitation_previous_day2": 0.1,
+        "cloud_cover_previous_day2": 100,
+        "shortwave_radiation_previous_day2": 832.0,
+        "wind_speed_10m_previous_day2": 0.95
+      }
+    },
+    {
+      "date": "2025-06-05",
+      "coords": [
+        42.099182,
+        45.418038
+      ],
+      "ok": true,
+      "grid_elevation_m": 804.0,
+      "fields_13_local": {
+        "temperature_2m_previous_day1": 24.0,
+        "relative_humidity_2m_previous_day1": 40,
+        "precipitation_previous_day1": 0.0,
+        "cloud_cover_previous_day1": 0,
+        "shortwave_radiation_previous_day1": 926.0,
+        "wind_speed_10m_previous_day1": 1.78,
+        "temperature_2m_previous_day2": 23.3,
+        "relative_humidity_2m_previous_day2": 46,
+        "precipitation_previous_day2": 0.0,
+        "cloud_cover_previous_day2": 51,
+        "shortwave_radiation_previous_day2": 819.0,
+        "wind_speed_10m_previous_day2": 1.7
+      }
+    },
     {
       "date": "2025-09-06",
       "coords": [
@@ -25,6 +140,185 @@
         "shortwave_radiation_previous_day2": 553.0,
         "wind_speed_10m_previous_day2": 2.02
       }
+    },
+    {
+      "date": "2025-10-12",
+      "coords": [
+        42.099182,
+        45.418038
+      ],
+      "ok": true,
+      "grid_elevation_m": 804.0,
+      "fields_13_local": {
+        "temperature_2m_previous_day1": 18.1,
+        "relative_humidity_2m_previous_day1": 47,
+        "precipitation_previous_day1": 0.0,
+        "cloud_cover_previous_day1": 2,
+        "shortwave_radiation_previous_day1": 638.0,
+        "wind_speed_10m_previous_day1": 1.46,
+        "temperature_2m_previous_day2": 18.0,
+        "relative_humidity_2m_previous_day2": 48,
+        "precipitation_previous_day2": 0.0,
+        "cloud_cover_previous_day2": 22,
+        "shortwave_radiation_previous_day2": 625.0,
+        "wind_speed_10m_previous_day2": 1.7
+      }
+    },
+    {
+      "date": "2025-11-02",
+      "coords": [
+        42.099182,
+        45.418038
+      ],
+      "ok": false,
+      "error": "<urlopen error _ssl.c:993: The handshake operation timed out>"
+    },
+    {
+      "date": "2025-12-06",
+      "coords": [
+        42.443674,
+        44.979723
+      ],
+      "ok": true,
+      "grid_elevation_m": 2210.0,
+      "fields_13_local": {
+        "temperature_2m_previous_day1": 1.0,
+        "relative_humidity_2m_previous_day1": 52,
+        "precipitation_previous_day1": 0.0,
+        "cloud_cover_previous_day1": 0,
+        "shortwave_radiation_previous_day1": 433.0,
+        "wind_speed_10m_previous_day1": 1.91,
+        "temperature_2m_previous_day2": 1.3,
+        "relative_humidity_2m_previous_day2": 49,
+        "precipitation_previous_day2": 0.0,
+        "cloud_cover_previous_day2": 0,
+        "shortwave_radiation_previous_day2": 432.0,
+        "wind_speed_10m_previous_day2": 2.0
+      }
+    },
+    {
+      "date": "2026-02-21",
+      "coords": [
+        42.178727,
+        44.880777
+      ],
+      "ok": true,
+      "grid_elevation_m": 1829.0,
+      "fields_13_local": {
+        "temperature_2m_previous_day1": 5.9,
+        "relative_humidity_2m_previous_day1": 41,
+        "precipitation_previous_day1": 0.0,
+        "cloud_cover_previous_day1": 62,
+        "shortwave_radiation_previous_day1": 631.0,
+        "wind_speed_10m_previous_day1": 0.41,
+        "temperature_2m_previous_day2": 5.8,
+        "relative_humidity_2m_previous_day2": 45,
+        "precipitation_previous_day2": 0.0,
+        "cloud_cover_previous_day2": 96,
+        "shortwave_radiation_previous_day2": 628.0,
+        "wind_speed_10m_previous_day2": 0.5
+      }
+    },
+    {
+      "date": "2026-04-03",
+      "coords": [
+        42.099182,
+        45.418038
+      ],
+      "ok": true,
+      "grid_elevation_m": 804.0,
+      "fields_13_local": {
+        "temperature_2m_previous_day1": 17.6,
+        "relative_humidity_2m_previous_day1": 40,
+        "precipitation_previous_day1": 0.0,
+        "cloud_cover_previous_day1": 51,
+        "shortwave_radiation_previous_day1": 567.0,
+        "wind_speed_10m_previous_day1": 1.57,
+        "temperature_2m_previous_day2": 17.7,
+        "relative_humidity_2m_previous_day2": 43,
+        "precipitation_previous_day2": 0.0,
+        "cloud_cover_previous_day2": 46,
+        "shortwave_radiation_previous_day2": 743.0,
+        "wind_speed_10m_previous_day2": 1.48
+      }
+    },
+    {
+      "date": "2026-05-09",
+      "coords": [
+        42.178727,
+        44.880777
+      ],
+      "ok": true,
+      "grid_elevation_m": 1829.0,
+      "fields_13_local": {
+        "temperature_2m_previous_day1": 13.2,
+        "relative_humidity_2m_previous_day1": 59,
+        "precipitation_previous_day1": 0.1,
+        "cloud_cover_previous_day1": 82,
+        "shortwave_radiation_previous_day1": 815.0,
+        "wind_speed_10m_previous_day1": 2.15,
+        "temperature_2m_previous_day2": 12.3,
+        "relative_humidity_2m_previous_day2": 67,
+        "precipitation_previous_day2": 0.3,
+        "cloud_cover_previous_day2": 100,
+        "shortwave_radiation_previous_day2": 664.0,
+        "wind_speed_10m_previous_day2": 2.12
+      }
+    },
+    {
+      "date": "2026-06-04",
+      "coords": [
+        42.099182,
+        45.418038
+      ],
+      "ok": true,
+      "grid_elevation_m": 804.0,
+      "fields_13_local": {
+        "temperature_2m_previous_day1": 21.9,
+        "relative_humidity_2m_previous_day1": 43,
+        "precipitation_previous_day1": 0.0,
+        "cloud_cover_previous_day1": 0,
+        "shortwave_radiation_previous_day1": 911.0,
+        "wind_speed_10m_previous_day1": 2.12,
+        "temperature_2m_previous_day2": 22.0,
+        "relative_humidity_2m_previous_day2": 42,
+        "precipitation_previous_day2": 0.0,
+        "cloud_cover_previous_day2": 20,
+        "shortwave_radiation_previous_day2": 858.0,
+        "wind_speed_10m_previous_day2": 1.51
+      }
+    },
+    {
+      "date": "2026-06-20",
+      "coords": [
+        41.77946,
+        45.451075
+      ],
+      "ok": true,
+      "grid_elevation_m": 1575.0,
+      "fields_13_local": {
+        "temperature_2m_previous_day1": 24.6,
+        "relative_humidity_2m_previous_day1": 56,
+        "precipitation_previous_day1": 0.0,
+        "cloud_cover_previous_day1": 57,
+        "shortwave_radiation_previous_day1": 854.0,
+        "wind_speed_10m_previous_day1": 3.22,
+        "temperature_2m_previous_day2": 23.4,
+        "relative_humidity_2m_previous_day2": 57,
+        "precipitation_previous_day2": 0.0,
+        "cloud_cover_previous_day2": 90,
+        "shortwave_radiation_previous_day2": 709.0,
+        "wind_speed_10m_previous_day2": 3.54
+      }
+    },
+    {
+      "date": "2026-06-28",
+      "coords": [
+        42.099182,
+        45.418038
+      ],
+      "ok": false,
+      "error": "<urlopen error _ssl.c:993: The handshake operation timed out>"
     },
     {
       "date": "2026-07-05",
@@ -50,26 +344,26 @@
       }
     },
     {
-      "date": "2026-05-09",
+      "date": "2026-10-10",
       "coords": [
-        42.178727,
-        44.880777
+        42.487786,
+        44.501733
       ],
       "ok": true,
-      "grid_elevation_m": 1829.0,
+      "grid_elevation_m": 2673.0,
       "fields_13_local": {
-        "temperature_2m_previous_day1": 13.2,
+        "temperature_2m_previous_day1": 7.0,
         "relative_humidity_2m_previous_day1": 59,
-        "precipitation_previous_day1": 0.1,
-        "cloud_cover_previous_day1": 82,
-        "shortwave_radiation_previous_day1": 815.0,
-        "wind_speed_10m_previous_day1": 2.15,
-        "temperature_2m_previous_day2": 12.3,
-        "relative_humidity_2m_previous_day2": 67,
-        "precipitation_previous_day2": 0.3,
-        "cloud_cover_previous_day2": 100,
-        "shortwave_radiation_previous_day2": 664.0,
-        "wind_speed_10m_previous_day2": 2.12
+        "precipitation_previous_day1": 0.0,
+        "cloud_cover_previous_day1": 39,
+        "shortwave_radiation_previous_day1": 622.0,
+        "wind_speed_10m_previous_day1": 1.06,
+        "temperature_2m_previous_day2": 6.8,
+        "relative_humidity_2m_previous_day2": 56,
+        "precipitation_previous_day2": 0.0,
+        "cloud_cover_previous_day2": 72,
+        "shortwave_radiation_previous_day2": 582.0,
+        "wind_speed_10m_previous_day2": 1.12
       }
     }
   ]
