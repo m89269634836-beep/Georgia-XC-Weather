@@ -22,7 +22,8 @@ CASES=[
  ("2025-11-02","Лалискури"),("2025-12-06","Удзилаурта"),
  ("2026-02-21","Джиджети"),("2026-05-09","Джиджети"),
  ("2026-06-04","Лалискури"),("2026-06-20","Циви"),
- ("2026-07-05","Лалискури"),("2026-10-10","Гудаури")
+ ("2026-07-05","Лалискури"),("2026-10-10","Гудаури"),
+ ("2025-05-31","Лалискури"),("2026-04-03","Лалискури"),("2026-06-28","Лалискури")
 ]
 ARCHIVE="https://archive-api.open-meteo.com/v1/archive"
 HR="temperature_2m,relative_humidity_2m,precipitation,cloud_cover,shortwave_radiation,wind_speed_10m,wind_direction_10m,temperature_850hPa,temperature_700hPa,geopotential_height_850hPa,geopotential_height_700hPa,relative_humidity_700hPa"
