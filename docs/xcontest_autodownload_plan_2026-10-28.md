@@ -33,3 +33,11 @@ Prototype has been tested locally with `python -m py_compile` and structurally v
 - Browser profile/cookies and downloaded third-party IGC remain on user machine; never commit to public repo.
 - Keep no passwords, private keys or signed URLs in public logs.
 - Track original IGC provenance and G-record (not cryptographically checked by the prototype).
+
+## Local Windows downloader v0.2 — tested on 2026-10-28
+
+A self-contained Windows ZIP `XContest_IGC_AutoDownloader_v0.2_Windows.zip` was produced in the conversation, with six clickable CMD launchers (install, login, auto-test, inspect, manual, small batch).
+
+Changes relative to prototype: manual mode now actually waits for a page download event; visible browser-control diagnostic reports safe labels; the downloader can try expanding a Download/Export menu; upper-case `.IGC` extensions are normalized and hashed for de-duplication.
+
+Validated locally using four separate IGCs and the account's 18-file XContest `ALL IGC` export: syntax, IGC dates/fix counts, 18 ZIP members, hash duplicate detection, and URL validation all pass. Live UI selectors still require a one-file test **in the owner's own signed-in Windows browser**. The authenticated browser profile and flight logs are not uploaded here. No permissions bypass or account credentials are used.
