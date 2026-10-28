@@ -1,0 +1,45 @@
+name: Historical weather comparisons for XC days
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/xcontest/archive_weather_cases.py'
+      - '.github/workflows/xcontest-archive-weather.yml'
+permissions:
+  contents: write
+concurrency:
+  group: xcontest-archive-weather
+  cancel-in-progress: false
+jobs:
+  reanalysis:
+    runs-on: ubuntu-latest
+    timeout-minutes: 9
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Download retrospective weather grids
+        run: |
+          python -m py_compile scripts/xcontest/archive_weather_cases.py
+          python scripts/xcontest/archive_weather_cases.py
+      - name: Publish aggregated public weather indicators only
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          snapshot="$(mktemp -d)"
+          cp data/xcontest_historical_weather_cases.csv data/xcontest_historical_weather_status.json "$snapshot/"
+          for attempt in 1 2 3 4 5; do
+            git fetch origin main
+            git reset --hard origin/main
+            cp "$snapshot"/* data/
+            git add data/xcontest_historical_weather_cases.csv data/xcontest_historical_weather_status.json
+            if git diff --cached --quiet; then exit 0; fi
+            git commit -m 'Update retrospective weather for selected XC days'
+            if git push origin HEAD:main; then exit 0; fi
+            sleep 3
+          done
+          exit 1
