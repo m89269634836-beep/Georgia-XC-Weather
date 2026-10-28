@@ -9,7 +9,10 @@ from pathlib import Path
 
 ROOT = Path("data")
 src = json.loads((ROOT / "latest.json").read_text(encoding="utf-8"))
-DAYS = ["2026-10-24", "2026-10-25"]
+# Automatically cover available local forecast days, rather than a fixed weekend.
+_first = next(iter(next(iter(src["points"].values()))["forecasts"].values()))
+DAYS = sorted({t[:10] for t in _first["hourly"]["time"]})
+
 HOURS = range(11, 17)
 LEVELS = [1000, 975, 950, 925, 900, 850, 800, 700, 600, 500]
 NAMES = {"lalisquri":"Лалискури","jidgeti":"Джиджети",
