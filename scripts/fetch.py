@@ -49,7 +49,7 @@ for point, (lat, lon, elev) in POINTS.items():
     for name, model in MODELS.items():
         params = {"latitude": lat, "longitude": lon, "models": model,
                   "hourly": ",".join(SURFACE + ALOFT), "timezone": "Asia/Tbilisi",
-                  "forecast_days": 5, "wind_speed_unit": "ms"}
+                  "forecast_days": 8, "wind_speed_unit": "ms"}
         url = "https://api.open-meteo.com/v1/forecast?" + urllib.parse.urlencode(params)
         for attempt in range(3):
             try:
