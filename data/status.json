@@ -1,51 +1,5 @@
 {
-  "generated_at_utc": "2026-11-02T15:12:07.251156+00:00",
-  "successful": 48,
-  "errors": [
-    {
-      "point": "lalisquri",
-      "model": "icon",
-      "error": "The read operation timed out"
-    },
-    {
-      "point": "lalisquri_b0_d50",
-      "model": "gfs",
-      "error": "HTTP Error 429: Too Many Requests"
-    },
-    {
-      "point": "lalisquri_b90_d25",
-      "model": "ecmwf",
-      "error": "<urlopen error _ssl.c:993: The handshake operation timed out>"
-    },
-    {
-      "point": "lalisquri_b90_d25",
-      "model": "icon",
-      "error": "<urlopen error _ssl.c:993: The handshake operation timed out>"
-    },
-    {
-      "point": "tsivi_b90_d25",
-      "model": "gfs",
-      "error": "<urlopen error _ssl.c:993: The handshake operation timed out>"
-    },
-    {
-      "point": "tsivi_b90_d50",
-      "model": "icon",
-      "error": "HTTP Error 429: Too Many Requests"
-    },
-    {
-      "point": "udzilaurta_b90_d25",
-      "model": "ecmwf",
-      "error": "<urlopen error _ssl.c:993: The handshake operation timed out>"
-    },
-    {
-      "point": "udzilaurta_b90_d25",
-      "model": "icon",
-      "error": "HTTP Error 429: Too Many Requests"
-    },
-    {
-      "point": "udzilaurta_b90_d50",
-      "model": "icon",
-      "error": "<urlopen error _ssl.c:993: The handshake operation timed out>"
-    }
-  ]
+  "generated_at_utc": "2026-11-03T03:07:12.521494+00:00",
+  "successful": 57,
+  "errors": []
 }
