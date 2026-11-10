@@ -1,0 +1,553 @@
+{
+  "generated_utc": "2026-11-10T11:29:26.536107+00:00",
+  "source": "OpenStreetMap core v0.6 bbox API (not Overpass)",
+  "caveat": "An OSM road line may be impassable, blocked, legally private, snow-covered or too steep. Not a driving ETA.",
+  "sites": {
+    "medvezhiy": {
+      "label": "Медвежий",
+      "lat": 42.527694,
+      "lon": 45.054976,
+      "nearest_highway": {
+        "highway": "footway",
+        "surface": null,
+        "tracktype": null,
+        "access": null,
+        "distance_m": 15,
+        "osm_way_id": 759231608
+      },
+      "road_ways": 13,
+      "nearby_highways": [
+        {
+          "highway": "footway",
+          "surface": null,
+          "tracktype": null,
+          "access": null,
+          "distance_m": 15,
+          "osm_way_id": 759231608
+        },
+        {
+          "highway": "footway",
+          "surface": null,
+          "tracktype": null,
+          "access": null,
+          "distance_m": 233,
+          "osm_way_id": 1420280441
+        },
+        {
+          "highway": "tertiary",
+          "surface": "gravel",
+          "tracktype": null,
+          "access": null,
+          "distance_m": 263,
+          "osm_way_id": 153973447
+        },
+        {
+          "highway": "path",
+          "surface": null,
+          "tracktype": null,
+          "access": null,
+          "distance_m": 281,
+          "osm_way_id": 1544866673
+        },
+        {
+          "highway": "tertiary",
+          "surface": "gravel",
+          "tracktype": null,
+          "access": null,
+          "distance_m": 345,
+          "osm_way_id": 1544866666
+        }
+      ],
+      "api_success": true
+    },
+    "sagarejo": {
+      "label": "Сагареджо",
+      "lat": 41.6836805556,
+      "lon": 45.2819722222,
+      "nearest_highway": {
+        "highway": "track",
+        "surface": null,
+        "tracktype": null,
+        "access": null,
+        "distance_m": 15,
+        "osm_way_id": 1288383937
+      },
+      "road_ways": 8,
+      "nearby_highways": [
+        {
+          "highway": "track",
+          "surface": null,
+          "tracktype": null,
+          "access": null,
+          "distance_m": 15,
+          "osm_way_id": 1288383937
+        },
+        {
+          "highway": "track",
+          "surface": null,
+          "tracktype": null,
+          "access": null,
+          "distance_m": 511,
+          "osm_way_id": 1289350918
+        },
+        {
+          "highway": "track",
+          "surface": null,
+          "tracktype": null,
+          "access": null,
+          "distance_m": 728,
+          "osm_way_id": 1289350915
+        },
+        {
+          "highway": "track",
+          "surface": null,
+          "tracktype": "grade5",
+          "access": null,
+          "distance_m": 780,
+          "osm_way_id": 1289350924
+        },
+        {
+          "highway": "track",
+          "surface": null,
+          "tracktype": null,
+          "access": null,
+          "distance_m": 843,
+          "osm_way_id": 1289350919
+        }
+      ],
+      "api_success": true
+    },
+    "kaspi": {
+      "label": "Каспи",
+      "lat": 41.8901555556,
+      "lon": 44.5437888889,
+      "nearest_highway": {
+        "highway": "track",
+        "surface": "ground",
+        "tracktype": null,
+        "access": null,
+        "distance_m": 446,
+        "osm_way_id": 101750378
+      },
+      "road_ways": 12,
+      "nearby_highways": [
+        {
+          "highway": "track",
+          "surface": "ground",
+          "tracktype": null,
+          "access": null,
+          "distance_m": 446,
+          "osm_way_id": 101750378
+        },
+        {
+          "highway": "track",
+          "surface": null,
+          "tracktype": "grade2",
+          "access": null,
+          "distance_m": 682,
+          "osm_way_id": 286972342
+        },
+        {
+          "highway": "tertiary",
+          "surface": "paved",
+          "tracktype": null,
+          "access": null,
+          "distance_m": 842,
+          "osm_way_id": 101750316
+        },
+        {
+          "highway": "residential",
+          "surface": "paved",
+          "tracktype": null,
+          "access": null,
+          "distance_m": 842,
+          "osm_way_id": 161573693
+        },
+        {
+          "highway": "tertiary",
+          "surface": "paved",
+          "tracktype": null,
+          "access": null,
+          "distance_m": 842,
+          "osm_way_id": 165305577
+        }
+      ],
+      "api_success": true
+    },
+    "kaspi_2": {
+      "label": "Каспи 2",
+      "lat": 41.8603666667,
+      "lon": 44.4774611111,
+      "nearest_highway": {
+        "highway": "track",
+        "surface": "ground",
+        "tracktype": null,
+        "access": null,
+        "distance_m": 619,
+        "osm_way_id": 101696981
+      },
+      "road_ways": 2,
+      "nearby_highways": [
+        {
+          "highway": "track",
+          "surface": "ground",
+          "tracktype": null,
+          "access": null,
+          "distance_m": 619,
+          "osm_way_id": 101696981
+        },
+        {
+          "highway": "unclassified",
+          "surface": "ground",
+          "tracktype": null,
+          "access": null,
+          "distance_m": 698,
+          "osm_way_id": 101696982
+        }
+      ],
+      "api_success": true
+    },
+    "mtskheta_west_NW_19_49": {
+      "label": "К западу от Мцхеты NW",
+      "lat": 41.874566,
+      "lon": 44.657796,
+      "nearest_highway": {
+        "highway": "unclassified",
+        "surface": "unpaved",
+        "tracktype": null,
+        "access": null,
+        "distance_m": 8,
+        "osm_way_id": 105733057
+      },
+      "road_ways": 41,
+      "nearby_highways": [
+        {
+          "highway": "unclassified",
+          "surface": "unpaved",
+          "tracktype": null,
+          "access": null,
+          "distance_m": 8,
+          "osm_way_id": 105733057
+        },
+        {
+          "highway": "track",
+          "surface": null,
+          "tracktype": null,
+          "access": null,
+          "distance_m": 40,
+          "osm_way_id": 273369966
+        },
+        {
+          "highway": "track",
+          "surface": null,
+          "tracktype": null,
+          "access": null,
+          "distance_m": 78,
+          "osm_way_id": 79419227
+        },
+        {
+          "highway": "track",
+          "surface": "gravel",
+          "tracktype": "grade2",
+          "access": null,
+          "distance_m": 285,
+          "osm_way_id": 158309403
+        },
+        {
+          "highway": "track",
+          "surface": "gravel",
+          "tracktype": "grade2",
+          "access": null,
+          "distance_m": 395,
+          "osm_way_id": 846955270
+        }
+      ],
+      "api_success": true
+    },
+    "martkopi_SW_44_24": {
+      "label": "Марткопи SW",
+      "lat": 41.789341,
+      "lon": 45.044892,
+      "nearest_highway": {
+        "highway": "unclassified",
+        "surface": "gravel",
+        "tracktype": "grade2",
+        "access": null,
+        "distance_m": 300,
+        "osm_way_id": 59705225
+      },
+      "road_ways": 14,
+      "nearby_highways": [
+        {
+          "highway": "unclassified",
+          "surface": "gravel",
+          "tracktype": "grade2",
+          "access": null,
+          "distance_m": 300,
+          "osm_way_id": 59705225
+        },
+        {
+          "highway": "track",
+          "surface": null,
+          "tracktype": null,
+          "access": null,
+          "distance_m": 432,
+          "osm_way_id": 59705220
+        },
+        {
+          "highway": "track",
+          "surface": null,
+          "tracktype": null,
+          "access": null,
+          "distance_m": 559,
+          "osm_way_id": 59705224
+        },
+        {
+          "highway": "track",
+          "surface": null,
+          "tracktype": null,
+          "access": null,
+          "distance_m": 581,
+          "osm_way_id": 60726236
+        },
+        {
+          "highway": "track",
+          "surface": null,
+          "tracktype": null,
+          "access": null,
+          "distance_m": 588,
+          "osm_way_id": 60726281
+        }
+      ],
+      "api_success": true
+    },
+    "martkopi_SW_37_56": {
+      "label": "Марткопи SW",
+      "lat": 41.794996,
+      "lon": 45.07956,
+      "nearest_highway": {
+        "highway": "track",
+        "surface": null,
+        "tracktype": null,
+        "access": null,
+        "distance_m": 34,
+        "osm_way_id": 338141748
+      },
+      "road_ways": 12,
+      "nearby_highways": [
+        {
+          "highway": "track",
+          "surface": null,
+          "tracktype": null,
+          "access": null,
+          "distance_m": 34,
+          "osm_way_id": 338141748
+        },
+        {
+          "highway": "track",
+          "surface": null,
+          "tracktype": null,
+          "access": null,
+          "distance_m": 396,
+          "osm_way_id": 163008658
+        },
+        {
+          "highway": "track",
+          "surface": null,
+          "tracktype": null,
+          "access": null,
+          "distance_m": 427,
+          "osm_way_id": 338141749
+        },
+        {
+          "highway": "tertiary",
+          "surface": "asphalt",
+          "tracktype": null,
+          "access": null,
+          "distance_m": 553,
+          "osm_way_id": 105701343
+        },
+        {
+          "highway": "track",
+          "surface": "dirt",
+          "tracktype": "grade3",
+          "access": null,
+          "distance_m": 574,
+          "osm_way_id": 163007596
+        }
+      ],
+      "api_success": true
+    },
+    "martkopi_NW_87_62": {
+      "label": "Марткопи NW",
+      "lat": 41.75446,
+      "lon": 45.086005,
+      "nearest_highway": {
+        "highway": "track",
+        "surface": null,
+        "tracktype": null,
+        "access": null,
+        "distance_m": 112,
+        "osm_way_id": 1237647594
+      },
+      "road_ways": 40,
+      "nearby_highways": [
+        {
+          "highway": "track",
+          "surface": null,
+          "tracktype": null,
+          "access": null,
+          "distance_m": 112,
+          "osm_way_id": 1237647594
+        },
+        {
+          "highway": "unclassified",
+          "surface": "unpaved",
+          "tracktype": null,
+          "access": null,
+          "distance_m": 302,
+          "osm_way_id": 171646134
+        },
+        {
+          "highway": "track",
+          "surface": null,
+          "tracktype": null,
+          "access": null,
+          "distance_m": 474,
+          "osm_way_id": 337540287
+        },
+        {
+          "highway": "track",
+          "surface": null,
+          "tracktype": null,
+          "access": null,
+          "distance_m": 504,
+          "osm_way_id": 1366964515
+        },
+        {
+          "highway": "unclassified",
+          "surface": "unpaved",
+          "tracktype": null,
+          "access": null,
+          "distance_m": 519,
+          "osm_way_id": 993098077
+        }
+      ],
+      "api_success": true
+    },
+    "kojori_NE_59_79": {
+      "label": "Коджори NE",
+      "lat": 41.662223,
+      "lon": 44.738416,
+      "nearest_highway": {
+        "highway": "track",
+        "surface": null,
+        "tracktype": "grade3",
+        "access": null,
+        "distance_m": 164,
+        "osm_way_id": 65999783
+      },
+      "road_ways": 190,
+      "nearby_highways": [
+        {
+          "highway": "track",
+          "surface": null,
+          "tracktype": "grade3",
+          "access": null,
+          "distance_m": 164,
+          "osm_way_id": 65999783
+        },
+        {
+          "highway": "track",
+          "surface": null,
+          "tracktype": "grade3",
+          "access": null,
+          "distance_m": 194,
+          "osm_way_id": 171199883
+        },
+        {
+          "highway": "track",
+          "surface": null,
+          "tracktype": null,
+          "access": null,
+          "distance_m": 252,
+          "osm_way_id": 1273069662
+        },
+        {
+          "highway": "track",
+          "surface": null,
+          "tracktype": "grade3",
+          "access": null,
+          "distance_m": 314,
+          "osm_way_id": 66000535
+        },
+        {
+          "highway": "service",
+          "surface": null,
+          "tracktype": null,
+          "access": null,
+          "distance_m": 320,
+          "osm_way_id": 1532009438
+        }
+      ],
+      "api_success": true
+    },
+    "kojori_SE_82_99": {
+      "label": "Коджори SE",
+      "lat": 41.643626,
+      "lon": 44.760106,
+      "nearest_highway": {
+        "highway": "residential",
+        "surface": "unpaved",
+        "tracktype": null,
+        "access": null,
+        "distance_m": 190,
+        "osm_way_id": 588909303
+      },
+      "road_ways": 127,
+      "nearby_highways": [
+        {
+          "highway": "residential",
+          "surface": "unpaved",
+          "tracktype": null,
+          "access": null,
+          "distance_m": 190,
+          "osm_way_id": 588909303
+        },
+        {
+          "highway": "residential",
+          "surface": "unpaved",
+          "tracktype": "grade3",
+          "access": null,
+          "distance_m": 200,
+          "osm_way_id": 28474662
+        },
+        {
+          "highway": "residential",
+          "surface": "unpaved",
+          "tracktype": "grade3",
+          "access": null,
+          "distance_m": 204,
+          "osm_way_id": 28474659
+        },
+        {
+          "highway": "residential",
+          "surface": "gravel",
+          "tracktype": null,
+          "access": null,
+          "distance_m": 308,
+          "osm_way_id": 588909295
+        },
+        {
+          "highway": "residential",
+          "surface": "unpaved",
+          "tracktype": null,
+          "access": null,
+          "distance_m": 308,
+          "osm_way_id": 588909302
+        }
+      ],
+      "api_success": true
+    }
+  }
+}
