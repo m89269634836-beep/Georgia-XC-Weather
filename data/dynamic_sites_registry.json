@@ -152,6 +152,66 @@
       "usable_wind_sector_deg": null,
       "landing_coordinate": null,
       "field_wind_notes": null
+    },
+    {
+      "id": "medvezhiy",
+      "name": "Медвежий",
+      "latitude": 42.527694,
+      "longitude": 45.054976,
+      "coordinate_type": "user-supplied location; launch characteristics not yet verified",
+      "reported_facing": "unknown",
+      "exact_launch_confirmed": false,
+      "ridge_axis_deg": null,
+      "valley_axis_deg": null,
+      "usable_wind_sector_deg": null,
+      "landing_coordinate": null,
+      "field_wind_notes": null,
+      "airspace_or_safety_note": "Reconnaissance only. Confirm takeoff face, open canopy, access, landing and airspace before flying."
+    },
+    {
+      "id": "sagarejo",
+      "name": "Сагареджо",
+      "latitude": 41.6836805556,
+      "longitude": 45.2819722222,
+      "coordinate_type": "user-supplied location; launch characteristics not yet verified",
+      "reported_facing": "unknown",
+      "exact_launch_confirmed": false,
+      "ridge_axis_deg": null,
+      "valley_axis_deg": null,
+      "usable_wind_sector_deg": null,
+      "landing_coordinate": null,
+      "field_wind_notes": null,
+      "airspace_or_safety_note": "Reconnaissance only. Confirm takeoff face, open canopy, access, landing and airspace before flying."
+    },
+    {
+      "id": "kaspi",
+      "name": "Каспи",
+      "latitude": 41.8901555556,
+      "longitude": 44.5437888889,
+      "coordinate_type": "user-supplied location; launch characteristics not yet verified",
+      "reported_facing": "unknown",
+      "exact_launch_confirmed": false,
+      "ridge_axis_deg": null,
+      "valley_axis_deg": null,
+      "usable_wind_sector_deg": null,
+      "landing_coordinate": null,
+      "field_wind_notes": null,
+      "airspace_or_safety_note": "Reconnaissance only. Confirm takeoff face, open canopy, access, landing and airspace before flying."
+    },
+    {
+      "id": "kaspi_2",
+      "name": "Каспи 2",
+      "latitude": 41.8603666667,
+      "longitude": 44.4774611111,
+      "coordinate_type": "user-supplied location; launch characteristics not yet verified",
+      "reported_facing": "unknown",
+      "exact_launch_confirmed": false,
+      "ridge_axis_deg": null,
+      "valley_axis_deg": null,
+      "usable_wind_sector_deg": null,
+      "landing_coordinate": null,
+      "field_wind_notes": null,
+      "airspace_or_safety_note": "Reconnaissance only. Confirm takeoff face, open canopy, access, landing and airspace before flying."
     }
   ]
 }
