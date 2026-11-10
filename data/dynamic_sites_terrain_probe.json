@@ -1,5 +1,5 @@
 {
-  "checked_utc": "2026-11-10T09:03:22.480978+00:00",
+  "checked_utc": "2026-11-10T11:14:14.339409+00:00",
   "dem_dataset": "SRTM90m via OpenTopoData; area centres must NOT be treated as launch points",
   "sites": [
     {
@@ -393,6 +393,167 @@
         "N",
         "NE",
         "E",
+        "SW",
+        "NW"
+      ],
+      "warning": "DEM difference indicates downhill direction only; not verified ridge face, takeoff, soaring suitability or freedom from lee/rotor."
+    },
+    {
+      "key": "medvezhiy",
+      "label": "Медвежий",
+      "lat": 42.527694,
+      "lon": 45.054976,
+      "provenance": "user-supplied location; launch characteristics not yet verified",
+      "known_face": "unknown",
+      "dem_elevation_m": 2807.0,
+      "height_drop_from_centre_m": {
+        "0.4km": {
+          "N": 11,
+          "NE": 168,
+          "E": 189,
+          "SE": 160,
+          "S": 121,
+          "SW": 249,
+          "W": 210,
+          "NW": 10
+        },
+        "1.5km": {
+          "N": 155,
+          "NE": 499,
+          "E": 187,
+          "SE": 334,
+          "S": -30,
+          "SW": 419,
+          "W": 551,
+          "NW": 63
+        }
+      },
+      "possible_open_downhill_sectors_400m": [
+        "NE",
+        "E",
+        "SE",
+        "S",
+        "SW",
+        "W"
+      ],
+      "warning": "DEM difference indicates downhill direction only; not verified ridge face, takeoff, soaring suitability or freedom from lee/rotor."
+    },
+    {
+      "key": "sagarejo",
+      "label": "Сагареджо",
+      "lat": 41.6836805556,
+      "lon": 45.2819722222,
+      "provenance": "user-supplied location; launch characteristics not yet verified",
+      "known_face": "unknown",
+      "dem_elevation_m": 941.0,
+      "height_drop_from_centre_m": {
+        "0.4km": {
+          "N": 67,
+          "NE": 105,
+          "E": 137,
+          "SE": 101,
+          "S": 26,
+          "SW": 40,
+          "W": 18,
+          "NW": 0
+        },
+        "1.5km": {
+          "N": 271,
+          "NE": 290,
+          "E": 261,
+          "SE": 172,
+          "S": 66,
+          "SW": 132,
+          "W": 117,
+          "NW": 103
+        }
+      },
+      "possible_open_downhill_sectors_400m": [
+        "N",
+        "NE",
+        "E",
+        "SE",
+        "S",
+        "SW"
+      ],
+      "warning": "DEM difference indicates downhill direction only; not verified ridge face, takeoff, soaring suitability or freedom from lee/rotor."
+    },
+    {
+      "key": "kaspi",
+      "label": "Каспи",
+      "lat": 41.8901555556,
+      "lon": 44.5437888889,
+      "provenance": "user-supplied location; launch characteristics not yet verified",
+      "known_face": "unknown",
+      "dem_elevation_m": 825.0,
+      "height_drop_from_centre_m": {
+        "0.4km": {
+          "N": 70,
+          "NE": 109,
+          "E": 80,
+          "SE": 102,
+          "S": 74,
+          "SW": 61,
+          "W": 49,
+          "NW": -5
+        },
+        "1.5km": {
+          "N": 263,
+          "NE": 304,
+          "E": 271,
+          "SE": 206,
+          "S": 276,
+          "SW": 248,
+          "W": 239,
+          "NW": 55
+        }
+      },
+      "possible_open_downhill_sectors_400m": [
+        "N",
+        "NE",
+        "E",
+        "SE",
+        "S",
+        "SW",
+        "W"
+      ],
+      "warning": "DEM difference indicates downhill direction only; not verified ridge face, takeoff, soaring suitability or freedom from lee/rotor."
+    },
+    {
+      "key": "kaspi_2",
+      "label": "Каспи 2",
+      "lat": 41.8603666667,
+      "lon": 44.4774611111,
+      "provenance": "user-supplied location; launch characteristics not yet verified",
+      "known_face": "unknown",
+      "dem_elevation_m": 741.0,
+      "height_drop_from_centre_m": {
+        "0.4km": {
+          "N": 83,
+          "NE": 65,
+          "E": -6,
+          "SE": 29,
+          "S": 38,
+          "SW": 30,
+          "W": -3,
+          "NW": 63
+        },
+        "1.5km": {
+          "N": 160,
+          "NE": 127,
+          "E": 13,
+          "SE": 54,
+          "S": 12,
+          "SW": 26,
+          "W": 63,
+          "NW": 129
+        }
+      },
+      "possible_open_downhill_sectors_400m": [
+        "N",
+        "NE",
+        "SE",
+        "S",
         "SW",
         "NW"
       ],
