@@ -5,18 +5,10 @@ centre is NOT a verified launch coordinate. No pilot track or private data.
 """
 import json, math, time, urllib.request, urllib.parse, datetime
 from pathlib import Path
-SITES=[
- ("lalisquri","Лалискури",42.099182,45.418038,"verified user launch","N"),
- ("jidgeti","Джиджети",42.178727,44.880777,"verified user launch","N"),
- ("ananuri","Ананури",42.184199,44.739236,"verified user launch","N"),
- ("tsivi","Циви",41.779460,45.451075,"verified user launch","N"),
- ("udzilaurta","Удзилаурта",42.443674,44.979723,"verified user launch","N-NE"),
- ("gudauri","Гудаури район",42.487786,44.501733,"existing site reference, multiple launch faces","multiple"),
- ("tbilisi_sea_area","Тбилисское море",41.756111,44.920417,"AIP UGA3 area centre; NOT launch coordinate","E-SE-S (Syride)"),
- ("sighnaghi_area","Сигнахи",41.6233,45.9372,"AIP UGA2 area centre; NOT launch coordinate","SE aspect hypothesis"),
- ("kazaniani_area","Казаниани",41.68056,45.30167,"AIP UGA1 approximate polygon centre; NOT launch coordinate","unknown"),
- ("rustavi","Рустави",41.55440,44.93460,"published takeoff coordinate; CTR restriction","unknown"),
-]
+ROOT=Path(__file__).resolve().parents[2]
+REGISTRY=json.loads((ROOT/"data/dynamic_sites_registry.json").read_text(encoding="utf-8"))
+SITES=[(s["id"],s["name"],float(s["latitude"]),float(s["longitude"]),
+        s["coordinate_type"],s.get("reported_facing","unknown")) for s in REGISTRY["sites"]]
 DIRS=["N","NE","E","SE","S","SW","W","NW"]
 DEGS=[0,45,90,135,180,225,270,315]
 def destination(lat,lon,deg,km):
