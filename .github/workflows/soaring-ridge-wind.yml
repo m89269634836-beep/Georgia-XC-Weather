@@ -8,6 +8,7 @@ on:
     paths:
       - 'scripts/soaring/dynamic_ridge_forecast.py'
       - '.github/workflows/soaring-ridge-wind.yml'
+      - 'data/dynamic_sites_registry.json'
 permissions:
   contents: write
 concurrency:
