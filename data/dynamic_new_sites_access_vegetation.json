@@ -1,0 +1,347 @@
+{
+  "timestamp_utc": "2026-11-10T11:16:57.667754+00:00",
+  "data_sources": [
+    "ESA WorldCover 2021 v200 10m",
+    "OpenStreetMap Overpass mapped roads"
+  ],
+  "warnings": [
+    "2021 land cover classification does not replace a current satellite image or on-site inspection",
+    "OpenStreetMap road mapping does not establish road surface condition, driveability, access rights, or snow clearance",
+    "No inspected launch site or approved landing inferred from these metrics"
+  ],
+  "sites": {
+    "medvezhiy": {
+      "name": "Медвежий",
+      "lat": 42.527694,
+      "lon": 45.054976,
+      "landcover": {
+        "tile": "N42E045",
+        "radii_m": {
+          "60": {
+            "pixels": 180,
+            "tree_pct": 0.0,
+            "open_grass_bare_pct": 100.0,
+            "shrub_pct": 0.0,
+            "cropland_pct": 0.0,
+            "built_pct": 0.0,
+            "class_counts": {
+              "10": 0,
+              "20": 0,
+              "30": 180,
+              "40": 0,
+              "50": 0,
+              "60": 0
+            }
+          },
+          "250": {
+            "pixels": 3115,
+            "tree_pct": 0.4,
+            "open_grass_bare_pct": 98.0,
+            "shrub_pct": 0.0,
+            "cropland_pct": 0.0,
+            "built_pct": 0.0,
+            "class_counts": {
+              "10": 14,
+              "20": 0,
+              "30": 3045,
+              "40": 0,
+              "50": 0,
+              "60": 9
+            }
+          },
+          "700": {
+            "pixels": 24410,
+            "tree_pct": 1.2,
+            "open_grass_bare_pct": 97.9,
+            "shrub_pct": 0.0,
+            "cropland_pct": 0.0,
+            "built_pct": 0.0,
+            "class_counts": {
+              "10": 301,
+              "20": 0,
+              "30": 23079,
+              "40": 0,
+              "50": 1,
+              "60": 824
+            }
+          }
+        },
+        "center_class": 30
+      },
+      "mapped_roads": {
+        "error": "https://overpass.kumi.systems/api/interpreter: The read operation timed out; https://overpass-api.de/api/interpreter: The read operation timed out; https://overpass.nchc.org.tw/api/interpreter: <urlopen error [Errno -2] Name or service not known>"
+      }
+    },
+    "sagarejo": {
+      "name": "Сагареджо",
+      "lat": 41.6836805556,
+      "lon": 45.2819722222,
+      "landcover": {
+        "tile": "N39E045",
+        "radii_m": {
+          "60": {
+            "pixels": 177,
+            "tree_pct": 12.4,
+            "open_grass_bare_pct": 41.8,
+            "shrub_pct": 0.0,
+            "cropland_pct": 45.8,
+            "built_pct": 0.0,
+            "class_counts": {
+              "10": 22,
+              "20": 0,
+              "30": 74,
+              "40": 81,
+              "50": 0,
+              "60": 0
+            }
+          },
+          "250": {
+            "pixels": 3075,
+            "tree_pct": 36.6,
+            "open_grass_bare_pct": 22.8,
+            "shrub_pct": 2.4,
+            "cropland_pct": 38.2,
+            "built_pct": 0.0,
+            "class_counts": {
+              "10": 1125,
+              "20": 74,
+              "30": 700,
+              "40": 1176,
+              "50": 0,
+              "60": 0
+            }
+          },
+          "700": {
+            "pixels": 24086,
+            "tree_pct": 20.8,
+            "open_grass_bare_pct": 39.0,
+            "shrub_pct": 4.2,
+            "cropland_pct": 36.0,
+            "built_pct": 0.0,
+            "class_counts": {
+              "10": 5016,
+              "20": 1012,
+              "30": 9387,
+              "40": 8671,
+              "50": 0,
+              "60": 0
+            }
+          }
+        },
+        "center_class": 30
+      },
+      "mapped_roads": {
+        "endpoint": "https://overpass-api.de/api/interpreter",
+        "ways_count": 18,
+        "nearest_mapped_ways": [
+          {
+            "id": 1288383937,
+            "highway": "track",
+            "surface": null,
+            "tracktype": null,
+            "access": null,
+            "distance_to_mapped_node_m": 28
+          },
+          {
+            "id": 1289350918,
+            "highway": "track",
+            "surface": null,
+            "tracktype": null,
+            "access": null,
+            "distance_to_mapped_node_m": 516
+          },
+          {
+            "id": 1289350915,
+            "highway": "track",
+            "surface": null,
+            "tracktype": null,
+            "access": null,
+            "distance_to_mapped_node_m": 740
+          },
+          {
+            "id": 1289350924,
+            "highway": "track",
+            "surface": null,
+            "tracktype": "grade5",
+            "access": null,
+            "distance_to_mapped_node_m": 782
+          },
+          {
+            "id": 1289350919,
+            "highway": "track",
+            "surface": null,
+            "tracktype": null,
+            "access": null,
+            "distance_to_mapped_node_m": 844
+          },
+          {
+            "id": 1288387827,
+            "highway": "track",
+            "surface": null,
+            "tracktype": null,
+            "access": null,
+            "distance_to_mapped_node_m": 975
+          },
+          {
+            "id": 1289350921,
+            "highway": "track",
+            "surface": null,
+            "tracktype": null,
+            "access": null,
+            "distance_to_mapped_node_m": 1062
+          },
+          {
+            "id": 1289350920,
+            "highway": "track",
+            "surface": null,
+            "tracktype": null,
+            "access": null,
+            "distance_to_mapped_node_m": 1079
+          }
+        ],
+        "warning": "distance measured to mapped road vertices; may overestimate true road distance"
+      }
+    },
+    "kaspi": {
+      "name": "Каспи",
+      "lat": 41.8901555556,
+      "lon": 44.5437888889,
+      "landcover": {
+        "tile": "N39E042",
+        "radii_m": {
+          "60": {
+            "pixels": 177,
+            "tree_pct": 0.0,
+            "open_grass_bare_pct": 100.0,
+            "shrub_pct": 0.0,
+            "cropland_pct": 0.0,
+            "built_pct": 0.0,
+            "class_counts": {
+              "10": 0,
+              "20": 0,
+              "30": 177,
+              "40": 0,
+              "50": 0,
+              "60": 0
+            }
+          },
+          "250": {
+            "pixels": 3081,
+            "tree_pct": 0.5,
+            "open_grass_bare_pct": 99.5,
+            "shrub_pct": 0.0,
+            "cropland_pct": 0.0,
+            "built_pct": 0.0,
+            "class_counts": {
+              "10": 16,
+              "20": 0,
+              "30": 3065,
+              "40": 0,
+              "50": 0,
+              "60": 0
+            }
+          },
+          "700": {
+            "pixels": 24171,
+            "tree_pct": 2.7,
+            "open_grass_bare_pct": 97.3,
+            "shrub_pct": 0.0,
+            "cropland_pct": 0.0,
+            "built_pct": 0.0,
+            "class_counts": {
+              "10": 656,
+              "20": 0,
+              "30": 23515,
+              "40": 0,
+              "50": 0,
+              "60": 0
+            }
+          }
+        },
+        "center_class": 30
+      },
+      "mapped_roads": {
+        "error": "https://overpass.kumi.systems/api/interpreter: The read operation timed out; https://overpass-api.de/api/interpreter: HTTP Error 502: Bad Gateway; https://overpass.nchc.org.tw/api/interpreter: <urlopen error [Errno -2] Name or service not known>"
+      }
+    },
+    "kaspi_2": {
+      "name": "Каспи 2",
+      "lat": 41.8603666667,
+      "lon": 44.4774611111,
+      "landcover": {
+        "tile": "N39E042",
+        "radii_m": {
+          "60": {
+            "pixels": 175,
+            "tree_pct": 0.0,
+            "open_grass_bare_pct": 100.0,
+            "shrub_pct": 0.0,
+            "cropland_pct": 0.0,
+            "built_pct": 0.0,
+            "class_counts": {
+              "10": 0,
+              "20": 0,
+              "30": 175,
+              "40": 0,
+              "50": 0,
+              "60": 0
+            }
+          },
+          "250": {
+            "pixels": 3084,
+            "tree_pct": 2.0,
+            "open_grass_bare_pct": 98.0,
+            "shrub_pct": 0.0,
+            "cropland_pct": 0.0,
+            "built_pct": 0.0,
+            "class_counts": {
+              "10": 62,
+              "20": 0,
+              "30": 3022,
+              "40": 0,
+              "50": 0,
+              "60": 0
+            }
+          },
+          "700": {
+            "pixels": 24150,
+            "tree_pct": 0.3,
+            "open_grass_bare_pct": 88.6,
+            "shrub_pct": 0.0,
+            "cropland_pct": 11.2,
+            "built_pct": 0.0,
+            "class_counts": {
+              "10": 62,
+              "20": 0,
+              "30": 21395,
+              "40": 2693,
+              "50": 0,
+              "60": 0
+            }
+          }
+        },
+        "center_class": 30
+      },
+      "mapped_roads": {
+        "error": "https://overpass.kumi.systems/api/interpreter: The read operation timed out; https://overpass-api.de/api/interpreter: HTTP Error 502: Bad Gateway; https://overpass.nchc.org.tw/api/interpreter: <urlopen error [Errno -2] Name or service not known>"
+      }
+    }
+  },
+  "errors": [
+    {
+      "site": "medvezhiy",
+      "part": "mapped_roads",
+      "error": "https://overpass.kumi.systems/api/interpreter: The read operation timed out; https://overpass-api.de/api/interpreter: The read operation timed out; https://overpass.nchc.org.tw/api/interpreter: <urlopen error [Errno -2] Name or service not known>"
+    },
+    {
+      "site": "kaspi",
+      "part": "mapped_roads",
+      "error": "https://overpass.kumi.systems/api/interpreter: The read operation timed out; https://overpass-api.de/api/interpreter: HTTP Error 502: Bad Gateway; https://overpass.nchc.org.tw/api/interpreter: <urlopen error [Errno -2] Name or service not known>"
+    },
+    {
+      "site": "kaspi_2",
+      "part": "mapped_roads",
+      "error": "https://overpass.kumi.systems/api/interpreter: The read operation timed out; https://overpass-api.de/api/interpreter: HTTP Error 502: Bad Gateway; https://overpass.nchc.org.tw/api/interpreter: <urlopen error [Errno -2] Name or service not known>"
+    }
+  ]
+}
