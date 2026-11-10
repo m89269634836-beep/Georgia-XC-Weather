@@ -9,6 +9,12 @@ ROOT=Path(__file__).resolve().parents[2]
 REGISTRY=json.loads((ROOT/"data/dynamic_sites_registry.json").read_text(encoding="utf-8"))
 SITES=[(s["id"],s["name"],float(s["latitude"]),float(s["longitude"]),
         s["coordinate_type"],s.get("reported_facing","unknown")) for s in REGISTRY["sites"]]
+SCOUT_FILE=ROOT/"data/dynamic_tbilisi_dem_scout.json"
+if SCOUT_FILE.exists():
+    for point in json.loads(SCOUT_FILE.read_text(encoding="utf-8")).get("candidates",[]):
+        SITES.append(("scout_"+point["id"],point["region"]+" "+point["possible_face"],
+             float(point["lat"]),float(point["lon"]),
+             "Hypothetical DEM candidate; NOT a launch",point["possible_face"]))
 MODELS={"icon_eu":"dwd_icon_eu","ecmwf_ifs":"ecmwf_ifs","gfs":"ncep_gfs_global"}
 BASE="https://api.open-meteo.com/v1/forecast"
 HOUR=["wind_speed_10m","wind_direction_10m","wind_gusts_10m","wind_speed_80m","wind_direction_80m","temperature_2m","precipitation","cloud_cover"]
