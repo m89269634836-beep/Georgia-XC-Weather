@@ -1,0 +1,403 @@
+{
+  "checked_utc": "2026-11-10T08:56:24.768902+00:00",
+  "dem_dataset": "SRTM90m via OpenTopoData; area centres must NOT be treated as launch points",
+  "sites": [
+    {
+      "key": "lalisquri",
+      "label": "Лалискури",
+      "lat": 42.099182,
+      "lon": 45.418038,
+      "provenance": "verified user launch",
+      "known_face": "N",
+      "dem_elevation_m": 779.0,
+      "height_drop_from_centre_m": {
+        "0.4km": {
+          "N": 145,
+          "NE": 117,
+          "E": 117,
+          "SE": 103,
+          "S": 201,
+          "SW": 163,
+          "W": 18,
+          "NW": 79
+        },
+        "1.5km": {
+          "N": 158,
+          "NE": 286,
+          "E": 299,
+          "SE": 224,
+          "S": 331,
+          "SW": 161,
+          "W": 55,
+          "NW": -118
+        }
+      },
+      "possible_open_downhill_sectors_400m": [
+        "N",
+        "NE",
+        "E",
+        "SE",
+        "S",
+        "SW",
+        "NW"
+      ],
+      "warning": "DEM difference indicates downhill direction only; not verified ridge face, takeoff, soaring suitability or freedom from lee/rotor."
+    },
+    {
+      "key": "jidgeti",
+      "label": "Джиджети",
+      "lat": 42.178727,
+      "lon": 44.880777,
+      "provenance": "verified user launch",
+      "known_face": "N",
+      "dem_elevation_m": 1807.0,
+      "height_drop_from_centre_m": {
+        "0.4km": {
+          "N": 55,
+          "NE": 30,
+          "E": 68,
+          "SE": 107,
+          "S": 168,
+          "SW": 90,
+          "W": 94,
+          "NW": -3
+        },
+        "1.5km": {
+          "N": 267,
+          "NE": 30,
+          "E": 51,
+          "SE": 402,
+          "S": 389,
+          "SW": 313,
+          "W": 466,
+          "NW": 166
+        }
+      },
+      "possible_open_downhill_sectors_400m": [
+        "N",
+        "NE",
+        "E",
+        "SE",
+        "S",
+        "SW",
+        "W"
+      ],
+      "warning": "DEM difference indicates downhill direction only; not verified ridge face, takeoff, soaring suitability or freedom from lee/rotor."
+    },
+    {
+      "key": "ananuri",
+      "label": "Ананури",
+      "lat": 42.184199,
+      "lon": 44.739236,
+      "provenance": "verified user launch",
+      "known_face": "N",
+      "dem_elevation_m": 1696.0,
+      "height_drop_from_centre_m": {
+        "0.4km": {
+          "N": 109,
+          "NE": 107,
+          "E": 47,
+          "SE": 148,
+          "S": 218,
+          "SW": 189,
+          "W": 198,
+          "NW": 71
+        },
+        "1.5km": {
+          "N": 303,
+          "NE": 533,
+          "E": 653,
+          "SE": 377,
+          "S": 578,
+          "SW": 555,
+          "W": 517,
+          "NW": 56
+        }
+      },
+      "possible_open_downhill_sectors_400m": [
+        "N",
+        "NE",
+        "E",
+        "SE",
+        "S",
+        "SW",
+        "W",
+        "NW"
+      ],
+      "warning": "DEM difference indicates downhill direction only; not verified ridge face, takeoff, soaring suitability or freedom from lee/rotor."
+    },
+    {
+      "key": "tsivi",
+      "label": "Циви",
+      "lat": 41.77946,
+      "lon": 45.451075,
+      "provenance": "verified user launch",
+      "known_face": "N",
+      "dem_elevation_m": 1576.0,
+      "height_drop_from_centre_m": {
+        "0.4km": {
+          "N": 42,
+          "NE": 91,
+          "E": 177,
+          "SE": 173,
+          "S": 162,
+          "SW": 50,
+          "W": 28,
+          "NW": -39
+        },
+        "1.5km": {
+          "N": 140,
+          "NE": 280,
+          "E": 424,
+          "SE": 386,
+          "S": 328,
+          "SW": 420,
+          "W": 84,
+          "NW": 55
+        }
+      },
+      "possible_open_downhill_sectors_400m": [
+        "N",
+        "NE",
+        "E",
+        "SE",
+        "S",
+        "SW",
+        "W"
+      ],
+      "warning": "DEM difference indicates downhill direction only; not verified ridge face, takeoff, soaring suitability or freedom from lee/rotor."
+    },
+    {
+      "key": "udzilaurta",
+      "label": "Удзилаурта",
+      "lat": 42.443674,
+      "lon": 44.979723,
+      "provenance": "verified user launch",
+      "known_face": "N-NE",
+      "dem_elevation_m": 2204.0,
+      "height_drop_from_centre_m": {
+        "0.4km": {
+          "N": 126,
+          "NE": 129,
+          "E": 12,
+          "SE": 5,
+          "S": 150,
+          "SW": 215,
+          "W": 50,
+          "NW": 68
+        },
+        "1.5km": {
+          "N": 446,
+          "NE": 102,
+          "E": -31,
+          "SE": 325,
+          "S": 540,
+          "SW": 454,
+          "W": 554,
+          "NW": 750
+        }
+      },
+      "possible_open_downhill_sectors_400m": [
+        "N",
+        "NE",
+        "S",
+        "SW",
+        "W",
+        "NW"
+      ],
+      "warning": "DEM difference indicates downhill direction only; not verified ridge face, takeoff, soaring suitability or freedom from lee/rotor."
+    },
+    {
+      "key": "gudauri",
+      "label": "Гудаури район",
+      "lat": 42.487786,
+      "lon": 44.501733,
+      "provenance": "existing site reference, multiple launch faces",
+      "known_face": "multiple",
+      "dem_elevation_m": 2663.0,
+      "height_drop_from_centre_m": {
+        "0.4km": {
+          "N": -69,
+          "NE": -19,
+          "E": 64,
+          "SE": 113,
+          "S": 162,
+          "SW": 143,
+          "W": 40,
+          "NW": -31
+        },
+        "1.5km": {
+          "N": -284,
+          "NE": -139,
+          "E": 139,
+          "SE": 481,
+          "S": 424,
+          "SW": 356,
+          "W": 111,
+          "NW": -47
+        }
+      },
+      "possible_open_downhill_sectors_400m": [
+        "E",
+        "SE",
+        "S",
+        "SW",
+        "W"
+      ],
+      "warning": "DEM difference indicates downhill direction only; not verified ridge face, takeoff, soaring suitability or freedom from lee/rotor."
+    },
+    {
+      "key": "tbilisi_sea_area",
+      "label": "Тбилисское море",
+      "lat": 41.756111,
+      "lon": 44.920417,
+      "provenance": "AIP UGA3 area centre; NOT launch coordinate",
+      "known_face": "E-SE-S (Syride)",
+      "dem_elevation_m": 982.0,
+      "height_drop_from_centre_m": {
+        "0.4km": {
+          "N": -5,
+          "NE": 22,
+          "E": 78,
+          "SE": 88,
+          "S": 85,
+          "SW": 88,
+          "W": 34,
+          "NW": -64
+        },
+        "1.5km": {
+          "N": -101,
+          "NE": -88,
+          "E": -55,
+          "SE": 139,
+          "S": 168,
+          "SW": 197,
+          "W": 96,
+          "NW": 62
+        }
+      },
+      "possible_open_downhill_sectors_400m": [
+        "NE",
+        "E",
+        "SE",
+        "S",
+        "SW",
+        "W"
+      ],
+      "warning": "DEM difference indicates downhill direction only; not verified ridge face, takeoff, soaring suitability or freedom from lee/rotor."
+    },
+    {
+      "key": "sighnaghi_area",
+      "label": "Сигнахи",
+      "lat": 41.6233,
+      "lon": 45.9372,
+      "provenance": "AIP UGA2 area centre; NOT launch coordinate",
+      "known_face": "SE aspect hypothesis",
+      "dem_elevation_m": 497.0,
+      "height_drop_from_centre_m": {
+        "0.4km": {
+          "N": 52,
+          "NE": 71,
+          "E": 55,
+          "SE": 17,
+          "S": -46,
+          "SW": -53,
+          "W": -77,
+          "NW": -13
+        },
+        "1.5km": {
+          "N": 140,
+          "NE": 194,
+          "E": 157,
+          "SE": 69,
+          "S": -107,
+          "SW": -236,
+          "W": -260,
+          "NW": -23
+        }
+      },
+      "possible_open_downhill_sectors_400m": [
+        "N",
+        "NE",
+        "E"
+      ],
+      "warning": "DEM difference indicates downhill direction only; not verified ridge face, takeoff, soaring suitability or freedom from lee/rotor."
+    },
+    {
+      "key": "kazaniani_area",
+      "label": "Казаниани",
+      "lat": 41.68056,
+      "lon": 45.30167,
+      "provenance": "AIP UGA1 approximate polygon centre; NOT launch coordinate",
+      "known_face": "unknown",
+      "dem_elevation_m": 691.0,
+      "height_drop_from_centre_m": {
+        "0.4km": {
+          "N": 26,
+          "NE": 34,
+          "E": 19,
+          "SE": 14,
+          "S": 9,
+          "SW": -5,
+          "W": -20,
+          "NW": -16
+        },
+        "1.5km": {
+          "N": 70,
+          "NE": 87,
+          "E": 80,
+          "SE": 17,
+          "S": -42,
+          "SW": -107,
+          "W": -218,
+          "NW": -31
+        }
+      },
+      "possible_open_downhill_sectors_400m": [
+        "N",
+        "NE"
+      ],
+      "warning": "DEM difference indicates downhill direction only; not verified ridge face, takeoff, soaring suitability or freedom from lee/rotor."
+    },
+    {
+      "key": "rustavi",
+      "label": "Рустави",
+      "lat": 41.5544,
+      "lon": 44.9346,
+      "provenance": "published takeoff coordinate; CTR restriction",
+      "known_face": "unknown",
+      "dem_elevation_m": 738.0,
+      "height_drop_from_centre_m": {
+        "0.4km": {
+          "N": 124,
+          "NE": 114,
+          "E": 52,
+          "SE": -16,
+          "S": 20,
+          "SW": 40,
+          "W": 15,
+          "NW": 86
+        },
+        "1.5km": {
+          "N": 279,
+          "NE": 309,
+          "E": 182,
+          "SE": 96,
+          "S": 137,
+          "SW": 112,
+          "W": 4,
+          "NW": 229
+        }
+      },
+      "possible_open_downhill_sectors_400m": [
+        "N",
+        "NE",
+        "E",
+        "SW",
+        "NW"
+      ],
+      "warning": "DEM difference indicates downhill direction only; not verified ridge face, takeoff, soaring suitability or freedom from lee/rotor."
+    }
+  ],
+  "errors": []
+}

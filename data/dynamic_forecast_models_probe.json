@@ -1,0 +1,127 @@
+{
+  "checked_utc": "2026-11-10T08:56:28.731426+00:00",
+  "probe_point": "Lalisquri 42.099182N 45.418038E",
+  "models": [
+    {
+      "model": "dwd_icon_eu",
+      "http_ok": true,
+      "nonnull_hours": 48,
+      "grid_elevation_m": 804.0,
+      "first_hours": [
+        [
+          "2026-11-10T00:00",
+          0.14
+        ],
+        [
+          "2026-11-10T01:00",
+          0.5
+        ],
+        [
+          "2026-11-10T02:00",
+          0.5
+        ],
+        [
+          "2026-11-10T03:00",
+          0.71
+        ]
+      ]
+    },
+    {
+      "model": "icon_eu",
+      "http_ok": true,
+      "nonnull_hours": 48,
+      "grid_elevation_m": 804.0,
+      "first_hours": [
+        [
+          "2026-11-10T00:00",
+          0.14
+        ],
+        [
+          "2026-11-10T01:00",
+          0.5
+        ],
+        [
+          "2026-11-10T02:00",
+          0.5
+        ],
+        [
+          "2026-11-10T03:00",
+          0.71
+        ]
+      ]
+    },
+    {
+      "model": "ecmwf_ifs",
+      "http_ok": true,
+      "nonnull_hours": 48,
+      "grid_elevation_m": 804.0,
+      "first_hours": [
+        [
+          "2026-11-10T00:00",
+          0.56
+        ],
+        [
+          "2026-11-10T01:00",
+          0.57
+        ],
+        [
+          "2026-11-10T02:00",
+          0.35
+        ],
+        [
+          "2026-11-10T03:00",
+          0.6
+        ]
+      ]
+    },
+    {
+      "model": "ecmwf_ifs025",
+      "http_ok": true,
+      "nonnull_hours": 48,
+      "grid_elevation_m": 804.0,
+      "first_hours": [
+        [
+          "2026-11-10T00:00",
+          0.72
+        ],
+        [
+          "2026-11-10T01:00",
+          0.57
+        ],
+        [
+          "2026-11-10T02:00",
+          0.57
+        ],
+        [
+          "2026-11-10T03:00",
+          0.64
+        ]
+      ]
+    },
+    {
+      "model": "icon_global",
+      "http_ok": true,
+      "nonnull_hours": 48,
+      "grid_elevation_m": 804.0,
+      "first_hours": [
+        [
+          "2026-11-10T00:00",
+          0.67
+        ],
+        [
+          "2026-11-10T01:00",
+          0.51
+        ],
+        [
+          "2026-11-10T02:00",
+          0.61
+        ],
+        [
+          "2026-11-10T03:00",
+          0.8
+        ]
+      ]
+    }
+  ],
+  "meaning": "API return and nonnull hours establish availability, not ability to predict wind along a 1-2 km gorge."
+}
