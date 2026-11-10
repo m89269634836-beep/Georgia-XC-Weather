@@ -1,0 +1,81 @@
+name: WindNinja spatial ridge-flow prototype
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/soaring/windninja_windows_prototype.py'
+      - '.github/workflows/windninja-spatial-prototype.yml'
+permissions:
+  contents: write
+concurrency:
+  group: windninja-spatial-prototype
+  cancel-in-progress: false
+jobs:
+  windninja:
+    runs-on: windows-latest
+    timeout-minutes: 22
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install Python GIS tooling
+        shell: pwsh
+        run: python -m pip install --disable-pip-version-check rasterio numpy pyproj matplotlib
+      - name: Download and locate official WindNinja 4.0 Windows CLI
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $zip = Join-Path $env:RUNNER_TEMP 'windninja-4.0.0.zip'
+          $folder = Join-Path $env:RUNNER_TEMP 'windninja'
+          New-Item -ItemType Directory -Force -Path $folder | Out-Null
+          curl.exe -fLsS --retry 3 --max-time 180 "https://github.com/firelab/windninja/releases/download/4.0.0/firelab-WindNinja-4.0.0-win64.zip" -o $zip
+          if ($LASTEXITCODE -ne 0) { throw "WindNinja binary download failed" }
+          Expand-Archive -Path $zip -DestinationPath $folder -Force
+          $exe = Get-ChildItem -Path $folder -Filter 'WindNinja_cli.exe' -Recurse | Select-Object -First 1
+          if (-not $exe) { Get-ChildItem $folder; throw 'WindNinja_cli.exe not found' }
+          Write-Host "WindNinja CLI is $($exe.FullName)"
+          "WINDNINJA_EXE=$($exe.FullName)" | Out-File -Append -FilePath $env:GITHUB_ENV -Encoding utf8
+          $find = Get-ChildItem -Path $folder -Filter 'date_time_zonespec.csv' -Recurse | Select-Object -First 1
+          if ($find) {
+            $datadir = $find.DirectoryName
+            Write-Host "WindNinja data is $datadir"
+            "WINDNINJA_DATA=$datadir" | Out-File -Append -FilePath $env:GITHUB_ENV -Encoding utf8
+          }
+      - name: Run real WindNinja scenarios with real 30m terrain
+        id: spatial
+        shell: pwsh
+        continue-on-error: true
+        run: python -u scripts/soaring/windninja_windows_prototype.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: windninja-spatial-prototype-outputs
+          path: data/windninja_spatial_prototype
+          if-no-files-found: warn
+          retention-days: 10
+      - name: Publish actual calculation status and any produced maps
+        if: always()
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p data/windninja_spatial_prototype
+          if [[ ! -f data/windninja_spatial_prototype/status.json ]]; then
+            printf '{"executed":false,"errors":["WindNinja bootstrap failed before simulation status existed"]}\n' > data/windninja_spatial_prototype/status.json
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          snapshot="$(mktemp -d)"
+          cp -r data/windninja_spatial_prototype "$snapshot/"
+          for attempt in 1 2 3 4 5; do
+            git fetch origin main
+            git reset --hard origin/main
+            cp -r "$snapshot/windninja_spatial_prototype" data/
+            git add data/windninja_spatial_prototype
+            if git diff --cached --quiet; then exit 0; fi
+            git commit -m 'Record WindNinja prototype execution status and actual spatial results'
+            if git push origin HEAD:main; then exit 0; fi
+            sleep 3
+          done
+          exit 1
