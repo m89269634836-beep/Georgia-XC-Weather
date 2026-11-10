@@ -1,0 +1,46 @@
+name: Georgia dynamic soaring ridge wind forecast
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '38 2,8 * * *'
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/soaring/dynamic_ridge_forecast.py'
+      - '.github/workflows/soaring-ridge-wind.yml'
+permissions:
+  contents: write
+concurrency:
+  group: soaring-ridge-wind
+  cancel-in-progress: false
+jobs:
+  wind:
+    runs-on: ubuntu-latest
+    timeout-minutes: 9
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Pull lower-level wind and ridge gusts
+        run: |
+          python -m py_compile scripts/soaring/dynamic_ridge_forecast.py
+          python -u scripts/soaring/dynamic_ridge_forecast.py
+      - name: Publish point model output (not a flight clearance)
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          cp data/dynamic_ridge_forecast.json /tmp/dynamic_ridge_forecast.json
+          for attempt in 1 2 3 4 5; do
+            git fetch origin main
+            git reset --hard origin/main
+            cp /tmp/dynamic_ridge_forecast.json data/dynamic_ridge_forecast.json
+            git add data/dynamic_ridge_forecast.json
+            if git diff --cached --quiet; then exit 0; fi
+            git commit -m 'Update model ridge wind forecast for dynamic soaring sites'
+            if git push origin HEAD:main; then exit 0; fi
+            sleep 3
+          done
+          exit 1
