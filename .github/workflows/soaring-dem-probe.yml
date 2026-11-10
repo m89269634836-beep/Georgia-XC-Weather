@@ -6,6 +6,7 @@ on:
     paths:
       - 'scripts/soaring/dynamic_sites_probe.py'
       - '.github/workflows/soaring-dem-probe.yml'
+      - 'data/dynamic_sites_registry.json'
 permissions:
   contents: write
 concurrency:
