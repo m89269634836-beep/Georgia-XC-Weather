@@ -22,7 +22,7 @@ REG=json.loads((ROOT/"data/dynamic_sites_registry.json").read_text(encoding="utf
 SITES=[s for s in REG["sites"] if s["id"] in ["sagarejo","kaspi"]]
 STATUS={"generated_utc":datetime.datetime.now(datetime.timezone.utc).isoformat(),
 "windninja_version":"4.0.0 (Windows binary)",
-"dem_source":"Copernicus GLO-30 Public (30m DSM from radar)",
+"dem_source":"Copernicus GLO-30 Public fallback GLO-90 (DSM radar heights)",
 "coordinate_system":"EPSG:32638 UTM Zone 38N, meters",
 "domain_width_m":8000,"grid_spacing_m":125,"mesh_resolution_m":200,
 "initialization":"domainAverageInitialization, neutral atmosphere, uniform grass roughness",
@@ -31,22 +31,30 @@ STATUS={"generated_utc":datetime.datetime.now(datetime.timezone.utc).isoformat()
 def checkpoint():
  (OUT/"status.json").write_text(json.dumps(STATUS,ensure_ascii=False,indent=2),encoding="utf-8")
 checkpoint()
-def copdem_url(lat,lon):
+def copdem_urls(lat,lon):
   n=math.floor(lat); e=math.floor(lon)
-  til=f"Copernicus_DSM_COG_10_{'N' if n>=0 else 'S'}{abs(n):02d}_00_{'E' if e>=0 else 'W'}{abs(e):03d}_00_DEM"
-  return f"https://copernicus-dem-30m.s3.amazonaws.com/{til}/{til}.tif"
+  for arcsec,bucket in [('10','copernicus-dem-30m'),('30','copernicus-dem-90m')]:
+    til=f"Copernicus_DSM_COG_{arcsec}_{'N' if n>=0 else 'S'}{abs(n):02d}_00_{'E' if e>=0 else 'W'}{abs(e):03d}_00_DEM"
+    yield f"https://{bucket}.s3.amazonaws.com/{til}/{til}.tif"
 def make_dem(s):
   lat,lon=float(s["latitude"]),float(s["longitude"])
   to_utm=Transformer.from_crs("EPSG:4326","EPSG:32638",always_xy=True)
   x,y=to_utm.transform(lon,lat); n=64; cell=125
   transform=from_origin(x-4000,y+4000,cell,cell)
   height=np.full((n,n),-9999.0,dtype=np.float32)
-  url=copdem_url(lat,lon)
-  with rasterio.Env(GDAL_DISABLE_READDIR_ON_OPEN="EMPTY_DIR",GDAL_HTTP_MAX_RETRY="3",GDAL_HTTP_RETRY_DELAY="2"):
-    with rasterio.open(url) as src:
-      reproject(source=rasterio.band(src,1),destination=height,src_transform=src.transform,
-        src_crs=src.crs,dst_transform=transform,dst_crs="EPSG:32638",
-        dst_nodata=-9999.0,resampling=Resampling.bilinear,num_threads=1)
+  worked=False
+  failures=[]
+  for url in copdem_urls(lat,lon):
+    try:
+      with rasterio.Env(GDAL_DISABLE_READDIR_ON_OPEN="EMPTY_DIR",GDAL_HTTP_MAX_RETRY="2",GDAL_HTTP_RETRY_DELAY="2"):
+        with rasterio.open(url) as src:
+          reproject(source=rasterio.band(src,1),destination=height,src_transform=src.transform,
+            src_crs=src.crs,dst_transform=transform,dst_crs="EPSG:32638",
+            dst_nodata=-9999.0,resampling=Resampling.bilinear,num_threads=1)
+      worked=True
+      break
+    except Exception as exc:failures.append(str(exc)[:120])
+  if not worked:raise RuntimeError("Both Copernicus 30m and 90m DEM tiles unavailable: "+"; ".join(failures))
   if np.mean(height<=-9990)>0.002:raise RuntimeError(f"DEM has {np.mean(height<=-9990)*100:.1f}% missing cells; refusing fill")
   dem=OUT/f"{s['id']}_UTM38_125m.tif"
   with rasterio.open(dem,"w",driver="GTiff",height=n,width=n,count=1,
