@@ -1,0 +1,39 @@
+name: Check open ridge access tracks via OSM core API
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/soaring/scout_osm_access.py'
+      - '.github/workflows/soaring-access-osm.yml'
+permissions:
+  contents: write
+jobs:
+  access:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate OSM mapped road geometries
+        run: python -u scripts/soaring/scout_osm_access.py
+      - name: Commit results
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          cp data/dynamic_scout_osm_roads.json /tmp/dynamic_scout_osm_roads.json
+          for attempt in 1 2 3 4 5; do
+            git fetch origin main
+            git reset --hard origin/main
+            cp /tmp/dynamic_scout_osm_roads.json data/dynamic_scout_osm_roads.json
+            git add data/dynamic_scout_osm_roads.json
+            if git diff --cached --quiet; then exit 0; fi
+            git commit -m 'Record verified OSM road geometry and uncertainty for soaring recce spots'
+            if git push origin HEAD:main; then exit 0; fi
+            sleep 3
+          done
+          exit 1
