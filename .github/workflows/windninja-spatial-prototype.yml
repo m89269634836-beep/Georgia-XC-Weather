@@ -33,11 +33,18 @@ jobs:
           curl.exe -fLsS --retry 3 --max-time 180 "https://github.com/firelab/windninja/releases/download/4.0.0/firelab-WindNinja-4.0.0-win64.zip" -o $zip
           if ($LASTEXITCODE -ne 0) { throw "WindNinja binary download failed" }
           Expand-Archive -Path $zip -DestinationPath $folder -Force
-          $exe = Get-ChildItem -Path $folder -Filter 'WindNinja_cli.exe' -Recurse | Select-Object -First 1
+          $setup = Get-ChildItem -Path $folder -Filter 'WindNinja-4.0.0-win64.exe' -Recurse | Select-Object -First 1
+          if (-not $setup) { throw 'NSIS WindNinja installer not found in official ZIP' }
+          $install = Join-Path $env:RUNNER_TEMP 'WindNinjaInstall'
+          Write-Host "Running official NSIS installer silently in $install"
+          $process = Start-Process -FilePath $setup.FullName -ArgumentList @('/S', "/D=$install") -PassThru -Wait -NoNewWindow
+          Write-Host "Installer exit code: $($process.ExitCode)"
+          if ($process.ExitCode -ne 0) { throw 'WindNinja NSIS installer returned nonzero exit code' }
+          $exe = Get-ChildItem -Path $install -Filter 'WindNinja_cli.exe' -Recurse | Select-Object -First 1
           if (-not $exe) { Get-ChildItem $folder; throw 'WindNinja_cli.exe not found' }
           Write-Host "WindNinja CLI is $($exe.FullName)"
           "WINDNINJA_EXE=$($exe.FullName)" | Out-File -Append -FilePath $env:GITHUB_ENV -Encoding utf8
-          $find = Get-ChildItem -Path $folder -Filter 'date_time_zonespec.csv' -Recurse | Select-Object -First 1
+          $find = Get-ChildItem -Path $install -Filter 'date_time_zonespec.csv' -Recurse | Select-Object -First 1
           if ($find) {
             $datadir = $find.DirectoryName
             Write-Host "WindNinja data is $datadir"
