@@ -1,5 +1,5 @@
 {
-  "checked_utc": "2026-11-10T08:56:24.768902+00:00",
+  "checked_utc": "2026-11-10T09:03:03.494800+00:00",
   "dem_dataset": "SRTM90m via OpenTopoData; area centres must NOT be treated as launch points",
   "sites": [
     {
@@ -7,7 +7,7 @@
       "label": "Лалискури",
       "lat": 42.099182,
       "lon": 45.418038,
-      "provenance": "verified user launch",
+      "provenance": "user-verified launch",
       "known_face": "N",
       "dem_elevation_m": 779.0,
       "height_drop_from_centre_m": {
@@ -48,7 +48,7 @@
       "label": "Джиджети",
       "lat": 42.178727,
       "lon": 44.880777,
-      "provenance": "verified user launch",
+      "provenance": "user-verified launch",
       "known_face": "N",
       "dem_elevation_m": 1807.0,
       "height_drop_from_centre_m": {
@@ -89,7 +89,7 @@
       "label": "Ананури",
       "lat": 42.184199,
       "lon": 44.739236,
-      "provenance": "verified user launch",
+      "provenance": "user-verified launch",
       "known_face": "N",
       "dem_elevation_m": 1696.0,
       "height_drop_from_centre_m": {
@@ -131,7 +131,7 @@
       "label": "Циви",
       "lat": 41.77946,
       "lon": 45.451075,
-      "provenance": "verified user launch",
+      "provenance": "user-verified launch",
       "known_face": "N",
       "dem_elevation_m": 1576.0,
       "height_drop_from_centre_m": {
@@ -172,7 +172,7 @@
       "label": "Удзилаурта",
       "lat": 42.443674,
       "lon": 44.979723,
-      "provenance": "verified user launch",
+      "provenance": "user-verified launch",
       "known_face": "N-NE",
       "dem_elevation_m": 2204.0,
       "height_drop_from_centre_m": {
@@ -212,8 +212,8 @@
       "label": "Гудаури район",
       "lat": 42.487786,
       "lon": 44.501733,
-      "provenance": "existing site reference, multiple launch faces",
-      "known_face": "multiple",
+      "provenance": "reference point: multiple launch faces",
+      "known_face": "multiple; see Kudebi",
       "dem_elevation_m": 2663.0,
       "height_drop_from_centre_m": {
         "0.4km": {
@@ -251,8 +251,8 @@
       "label": "Тбилисское море",
       "lat": 41.756111,
       "lon": 44.920417,
-      "provenance": "AIP UGA3 area centre; NOT launch coordinate",
-      "known_face": "E-SE-S (Syride)",
+      "provenance": "AIP UGA3 approximate AREA CENTRE — NOT a launch",
+      "known_face": "E-SE-S (Syride description)",
       "dem_elevation_m": 982.0,
       "height_drop_from_centre_m": {
         "0.4km": {
@@ -291,8 +291,8 @@
       "label": "Сигнахи",
       "lat": 41.6233,
       "lon": 45.9372,
-      "provenance": "AIP UGA2 area centre; NOT launch coordinate",
-      "known_face": "SE aspect hypothesis",
+      "provenance": "AIP UGA2 approximate AREA CENTRE — NOT a launch",
+      "known_face": "unknown; official travel guide describes town on SE-facing slope",
       "dem_elevation_m": 497.0,
       "height_drop_from_centre_m": {
         "0.4km": {
@@ -328,7 +328,7 @@
       "label": "Казаниани",
       "lat": 41.68056,
       "lon": 45.30167,
-      "provenance": "AIP UGA1 approximate polygon centre; NOT launch coordinate",
+      "provenance": "AIP UGA1 approximate AREA CENTRE — NOT a launch",
       "known_face": "unknown",
       "dem_elevation_m": 691.0,
       "height_drop_from_centre_m": {
@@ -364,8 +364,8 @@
       "label": "Рустави",
       "lat": 41.5544,
       "lon": 44.9346,
-      "provenance": "published takeoff coordinate; CTR restriction",
-      "known_face": "unknown",
+      "provenance": "public catalog launch",
+      "known_face": "unknown; imported all-directions entry not trustworthy",
       "dem_elevation_m": 738.0,
       "height_drop_from_centre_m": {
         "0.4km": {
