@@ -19,7 +19,8 @@ ROOT=Path(__file__).resolve().parents[2]
 OUT=ROOT/"data"/"windninja_spatial_prototype"
 OUT.mkdir(parents=True,exist_ok=True)
 REG=json.loads((ROOT/"data/dynamic_sites_registry.json").read_text(encoding="utf-8"))
-SITES=[s for s in REG["sites"] if s["id"] in ["sagarejo","kaspi"]]
+SITES=[s for s in REG["sites"] if s["id"] in ["medvezhiy","sagarejo","kaspi","kaspi_2"]]
+WIND_SCENARIOS={"medvezhiy":[210,270],"sagarejo":[45,90,270],"kaspi":[90,110,270],"kaspi_2":[90,110,270]}
 STATUS={"generated_utc":datetime.datetime.now(datetime.timezone.utc).isoformat(),
 "windninja_version":"4.0.0 (Windows binary)",
 "dem_source":"Copernicus GLO-30 Public fallback GLO-90 (DSM radar heights)",
@@ -27,7 +28,7 @@ STATUS={"generated_utc":datetime.datetime.now(datetime.timezone.utc).isoformat()
 "domain_width_m":8000,"grid_spacing_m":125,"mesh_resolution_m":200,
 "initialization":"domainAverageInitialization, neutral atmosphere, uniform grass roughness",
 "simulations":[],"errors":[],
-"warning":"These are two hypothetical upstream wind scenarios, NOT a weather forecast or safe launch determination. Mass solver alone does not reliably predict rotor."}
+"warning":"These are multiple hypothetical upstream wind scenarios, NOT a weather forecast or safe launch determination. Mass solver alone does not reliably predict rotor."}
 def checkpoint():
  (OUT/"status.json").write_text(json.dumps(STATUS,ensure_ascii=False,indent=2),encoding="utf-8")
 checkpoint()
@@ -94,7 +95,7 @@ def run():
     try:dem,z,transform,url=make_dem(s);print("DEM_OK",s["id"],float(z.min()),float(z.max()),url,flush=True)
     except Exception as exc:
        STATUS["errors"].append({"site":s["id"],"step":"DEM","error":str(exc)});checkpoint();continue
-    for direction in [270,0]:
+    for direction in WIND_SCENARIOS[s['id']]:
       speed=6
       label=f"{s['id']}_from_{direction}_6ms"
       directory=OUT/label;directory.mkdir(exist_ok=True)
@@ -133,6 +134,15 @@ def run():
         entry["wind20m_p90_ms"]=round(float(np.quantile(valid,.9)),2)
         entry["wind20m_max_ms"]=round(float(np.max(valid)),2)
         entry["wind20m_speedup_p90_vs_input"]=round(entry["wind20m_p90_ms"]/speed,2)
+        try:
+          xy=Transformer.from_crs("EPSG:4326","EPSG:32638",always_xy=True)
+          x,y=xy.transform(float(s["longitude"]),float(s["latitude"]))
+          with rasterio.open(p) as ds:
+            rr,cc=ds.index(x,y)
+            patch=ds.read(1,masked=True)[max(0,rr-2):rr+3,max(0,cc-2):cc+3].compressed()
+            entry["local_5x5_mean_ms"]=round(float(np.mean(patch)),2) if len(patch) else None
+            entry["local_5x5_max_ms"]=round(float(np.max(patch)),2) if len(patch) else None
+        except Exception as e: entry["local_sampling_warning"]=str(e)[:180]
         png=OUT/f"{label}.png"
         plot_result(s,f"{direction}° {speed} m/s",z,speeds[0],transform,png)
         entry["preview_png"]=str(png.relative_to(ROOT))
