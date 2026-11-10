@@ -1,6 +1,6 @@
 # Weekly XC model overview
 
-Forecast issued: 2026-11-10T08:56:04.873488+00:00 UTC
+Forecast issued: 2026-11-10T09:03:51.737804+00:00 UTC
 Local time Georgia (Asia/Tbilisi). All daytime statistics: 11:00–16:00.
 Wind FROM directions. Fixed-altitude winds are linearly interpolated model pressure-level vectors.
 Note: model ground/10m wind may poorly resolve launch slope; pressure levels below terrain are ignored.
