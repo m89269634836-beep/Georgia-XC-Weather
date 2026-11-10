@@ -1,5 +1,5 @@
 {
-  "retrieved_utc": "2026-11-10T08:59:16.716346+00:00",
+  "retrieved_utc": "2026-11-10T09:03:02.726487+00:00",
   "date_window_local": [
     "2026-11-11",
     "2026-11-12",
@@ -20,7 +20,7 @@
       "label": "Лалискури",
       "lat": 42.099182,
       "lon": 45.418038,
-      "coordinate_type": "user launch",
+      "coordinate_type": "user-verified launch",
       "reported_facing": "N",
       "models": {
         "icon_eu": {
@@ -353,7 +353,7 @@
       "label": "Джиджети",
       "lat": 42.178727,
       "lon": 44.880777,
-      "coordinate_type": "user launch",
+      "coordinate_type": "user-verified launch",
       "reported_facing": "N",
       "models": {
         "icon_eu": {
@@ -686,7 +686,7 @@
       "label": "Ананури",
       "lat": 42.184199,
       "lon": 44.739236,
-      "coordinate_type": "user launch",
+      "coordinate_type": "user-verified launch",
       "reported_facing": "N",
       "models": {
         "icon_eu": {
@@ -1019,7 +1019,7 @@
       "label": "Циви",
       "lat": 41.77946,
       "lon": 45.451075,
-      "coordinate_type": "user launch",
+      "coordinate_type": "user-verified launch",
       "reported_facing": "N",
       "models": {
         "icon_eu": {
@@ -1352,7 +1352,7 @@
       "label": "Удзилаурта",
       "lat": 42.443674,
       "lon": 44.979723,
-      "coordinate_type": "user launch",
+      "coordinate_type": "user-verified launch",
       "reported_facing": "N-NE",
       "models": {
         "icon_eu": {
@@ -1685,8 +1685,8 @@
       "label": "Гудаури район",
       "lat": 42.487786,
       "lon": 44.501733,
-      "coordinate_type": "reference only; multiple launches",
-      "reported_facing": "different",
+      "coordinate_type": "reference point: multiple launch faces",
+      "reported_facing": "multiple; see Kudebi",
       "models": {
         "icon_eu": {
           "model_code": "dwd_icon_eu",
@@ -2018,8 +2018,8 @@
       "label": "Тбилисское море",
       "lat": 41.756111,
       "lon": 44.920417,
-      "coordinate_type": "AIP UGA3 AREA CENTER ONLY",
-      "reported_facing": "E-SE-S according to Syride",
+      "coordinate_type": "AIP UGA3 approximate AREA CENTRE — NOT a launch",
+      "reported_facing": "E-SE-S (Syride description)",
       "models": {
         "icon_eu": {
           "model_code": "dwd_icon_eu",
@@ -2351,8 +2351,8 @@
       "label": "Сигнахи",
       "lat": 41.6233,
       "lon": 45.9372,
-      "coordinate_type": "AIP UGA2 AREA CENTER ONLY",
-      "reported_facing": "unknown exact start",
+      "coordinate_type": "AIP UGA2 approximate AREA CENTRE — NOT a launch",
+      "reported_facing": "unknown; official travel guide describes town on SE-facing slope",
       "models": {
         "icon_eu": {
           "model_code": "dwd_icon_eu",
@@ -2684,8 +2684,8 @@
       "label": "Казаниани",
       "lat": 41.68056,
       "lon": 45.30167,
-      "coordinate_type": "AIP UGA1 AREA CENTER ONLY",
-      "reported_facing": "unknown exact start",
+      "coordinate_type": "AIP UGA1 approximate AREA CENTRE — NOT a launch",
+      "reported_facing": "unknown",
       "models": {
         "icon_eu": {
           "model_code": "dwd_icon_eu",
@@ -3017,8 +3017,8 @@
       "label": "Рустави",
       "lat": 41.5544,
       "lon": 44.9346,
-      "coordinate_type": "published point; CTR restriction",
-      "reported_facing": "unknown",
+      "coordinate_type": "public catalog launch",
+      "reported_facing": "unknown; imported all-directions entry not trustworthy",
       "models": {
         "icon_eu": {
           "model_code": "dwd_icon_eu",
