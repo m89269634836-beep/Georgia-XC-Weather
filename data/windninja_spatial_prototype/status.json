@@ -1,1 +1,24 @@
-{"executed":false,"errors":["WindNinja bootstrap failed before simulation status existed"]}
+{
+  "generated_utc": "2026-11-10T11:22:20.578241+00:00",
+  "windninja_version": "4.0.0 (Windows binary)",
+  "dem_source": "Copernicus GLO-30 Public (30m DSM from radar)",
+  "coordinate_system": "EPSG:32638 UTM Zone 38N, meters",
+  "domain_width_m": 8000,
+  "grid_spacing_m": 125,
+  "mesh_resolution_m": 200,
+  "initialization": "domainAverageInitialization, neutral atmosphere, uniform grass roughness",
+  "simulations": [],
+  "errors": [
+    {
+      "site": "sagarejo",
+      "step": "DEM",
+      "error": "HTTP response code: 404"
+    },
+    {
+      "site": "kaspi",
+      "step": "DEM",
+      "error": "HTTP response code: 404"
+    }
+  ],
+  "warning": "These are two hypothetical upstream wind scenarios, NOT a weather forecast or safe launch determination. Mass solver alone does not reliably predict rotor."
+}
