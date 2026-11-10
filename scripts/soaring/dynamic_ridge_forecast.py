@@ -5,18 +5,10 @@ resolve individual cliffs or local valley wind acceleration. No auth.
 """
 import urllib.request,urllib.parse,json,datetime,time,math
 from pathlib import Path
-SITES=[
- ("lalisquri","Лалискури",42.099182,45.418038,"user launch","N"),
- ("jidgeti","Джиджети",42.178727,44.880777,"user launch","N"),
- ("ananuri","Ананури",42.184199,44.739236,"user launch","N"),
- ("tsivi","Циви",41.779460,45.451075,"user launch","N"),
- ("udzilaurta","Удзилаурта",42.443674,44.979723,"user launch","N-NE"),
- ("gudauri","Гудаури район",42.487786,44.501733,"reference only; multiple launches","different"),
- ("tbilisi_sea_area","Тбилисское море",41.756111,44.920417,"AIP UGA3 AREA CENTER ONLY","E-SE-S according to Syride"),
- ("sighnaghi_area","Сигнахи",41.6233,45.9372,"AIP UGA2 AREA CENTER ONLY","unknown exact start"),
- ("kazaniani_area","Казаниани",41.68056,45.30167,"AIP UGA1 AREA CENTER ONLY","unknown exact start"),
- ("rustavi","Рустави",41.55440,44.93460,"published point; CTR restriction","unknown"),
-]
+ROOT=Path(__file__).resolve().parents[2]
+REGISTRY=json.loads((ROOT/"data/dynamic_sites_registry.json").read_text(encoding="utf-8"))
+SITES=[(s["id"],s["name"],float(s["latitude"]),float(s["longitude"]),
+        s["coordinate_type"],s.get("reported_facing","unknown")) for s in REGISTRY["sites"]]
 MODELS={"icon_eu":"dwd_icon_eu","ecmwf_ifs":"ecmwf_ifs","gfs":"ncep_gfs_global"}
 BASE="https://api.open-meteo.com/v1/forecast"
 HOUR=["wind_speed_10m","wind_direction_10m","wind_gusts_10m","wind_speed_80m","wind_direction_80m","temperature_2m","precipitation","cloud_cover"]
