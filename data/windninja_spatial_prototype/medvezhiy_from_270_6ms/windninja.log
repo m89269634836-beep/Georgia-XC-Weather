@@ -1,0 +1,20 @@
+Run 0: Reading elevation file...
+Run 0: Run number 0 started with 2 threads.
+Run 0: Generating mesh...
+Run 0: Initializing flow...
+Run 0: Building equations...
+Run 0: Solving...
+Run 0: Solver: 13% complete
+Run 0: Solver: 44% complete
+Run 0: Solver: 66% complete
+Run 0: Solver: 87% complete
+Run 0: Solver: 96% complete
+Run 0: Solver: 100% complete
+Run 0: Writing output files...
+Run 0: Meshing time was 0.001314 seconds.
+Run 0: Initialization time was 0.005027 seconds.
+Run 0: Equation building time was 0.032036 seconds.
+Run 0: Solver time was 0.117641 seconds.
+Run 0: Output writing time was 0.004494 seconds.
+Run 0: Total simulation time was 0.178230 seconds.
+Run 0: Run number 0 done!

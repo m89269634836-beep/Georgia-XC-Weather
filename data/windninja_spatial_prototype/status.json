@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-11-10T11:24:17.634834+00:00",
+  "generated_utc": "2026-11-10T11:27:10.669949+00:00",
   "windninja_version": "4.0.0 (Windows binary)",
   "dem_source": "Copernicus GLO-30 Public fallback GLO-90 (DSM radar heights)",
   "coordinate_system": "EPSG:32638 UTM Zone 38N, meters",
@@ -9,13 +9,101 @@
   "initialization": "domainAverageInitialization, neutral atmosphere, uniform grass roughness",
   "simulations": [
     {
+      "site": "medvezhiy",
+      "scenario_from_deg": 210,
+      "input_wind_ms": 6,
+      "config": "data\\windninja_spatial_prototype\\medvezhiy_from_210_6ms\\scenario.cfg",
+      "dem": "data\\windninja_spatial_prototype\\medvezhiy_UTM38_125m.tif",
+      "executed": true,
+      "duration_sec": 1.1,
+      "process_return_code": 0,
+      "ascii_files": [
+        "D:\\a\\Georgia-XC-Weather\\Georgia-XC-Weather\\data\\windninja_spatial_prototype\\medvezhiy_from_210_6ms\\medvezhiy_UTM38_125m_210_6_200m_ang.asc",
+        "D:\\a\\Georgia-XC-Weather\\Georgia-XC-Weather\\data\\windninja_spatial_prototype\\medvezhiy_from_210_6ms\\medvezhiy_UTM38_125m_210_6_200m_vel.asc"
+      ],
+      "output_speed_ascii": "data\\windninja_spatial_prototype\\medvezhiy_from_210_6ms\\medvezhiy_UTM38_125m_210_6_200m_vel.asc",
+      "wind20m_mean_ms": 4.75,
+      "wind20m_p90_ms": 6.22,
+      "wind20m_max_ms": 8.56,
+      "wind20m_speedup_p90_vs_input": 1.04,
+      "local_5x5_mean_ms": 5.73,
+      "local_5x5_max_ms": 7.76,
+      "preview_png": "data\\windninja_spatial_prototype\\medvezhiy_from_210_6ms.png"
+    },
+    {
+      "site": "medvezhiy",
+      "scenario_from_deg": 270,
+      "input_wind_ms": 6,
+      "config": "data\\windninja_spatial_prototype\\medvezhiy_from_270_6ms\\scenario.cfg",
+      "dem": "data\\windninja_spatial_prototype\\medvezhiy_UTM38_125m.tif",
+      "executed": true,
+      "duration_sec": 1.3,
+      "process_return_code": 0,
+      "ascii_files": [
+        "D:\\a\\Georgia-XC-Weather\\Georgia-XC-Weather\\data\\windninja_spatial_prototype\\medvezhiy_from_270_6ms\\medvezhiy_UTM38_125m_270_6_200m_ang.asc",
+        "D:\\a\\Georgia-XC-Weather\\Georgia-XC-Weather\\data\\windninja_spatial_prototype\\medvezhiy_from_270_6ms\\medvezhiy_UTM38_125m_270_6_200m_vel.asc"
+      ],
+      "output_speed_ascii": "data\\windninja_spatial_prototype\\medvezhiy_from_270_6ms\\medvezhiy_UTM38_125m_270_6_200m_vel.asc",
+      "wind20m_mean_ms": 4.71,
+      "wind20m_p90_ms": 6.36,
+      "wind20m_max_ms": 8.86,
+      "wind20m_speedup_p90_vs_input": 1.06,
+      "local_5x5_mean_ms": 6.13,
+      "local_5x5_max_ms": 8.55,
+      "preview_png": "data\\windninja_spatial_prototype\\medvezhiy_from_270_6ms.png"
+    },
+    {
+      "site": "sagarejo",
+      "scenario_from_deg": 45,
+      "input_wind_ms": 6,
+      "config": "data\\windninja_spatial_prototype\\sagarejo_from_45_6ms\\scenario.cfg",
+      "dem": "data\\windninja_spatial_prototype\\sagarejo_UTM38_125m.tif",
+      "executed": true,
+      "duration_sec": 1.2,
+      "process_return_code": 0,
+      "ascii_files": [
+        "D:\\a\\Georgia-XC-Weather\\Georgia-XC-Weather\\data\\windninja_spatial_prototype\\sagarejo_from_45_6ms\\sagarejo_UTM38_125m_45_6_200m_ang.asc",
+        "D:\\a\\Georgia-XC-Weather\\Georgia-XC-Weather\\data\\windninja_spatial_prototype\\sagarejo_from_45_6ms\\sagarejo_UTM38_125m_45_6_200m_vel.asc"
+      ],
+      "output_speed_ascii": "data\\windninja_spatial_prototype\\sagarejo_from_45_6ms\\sagarejo_UTM38_125m_45_6_200m_vel.asc",
+      "wind20m_mean_ms": 5.02,
+      "wind20m_p90_ms": 5.48,
+      "wind20m_max_ms": 6.28,
+      "wind20m_speedup_p90_vs_input": 0.91,
+      "local_5x5_mean_ms": 5.44,
+      "local_5x5_max_ms": 6.28,
+      "preview_png": "data\\windninja_spatial_prototype\\sagarejo_from_45_6ms.png"
+    },
+    {
+      "site": "sagarejo",
+      "scenario_from_deg": 90,
+      "input_wind_ms": 6,
+      "config": "data\\windninja_spatial_prototype\\sagarejo_from_90_6ms\\scenario.cfg",
+      "dem": "data\\windninja_spatial_prototype\\sagarejo_UTM38_125m.tif",
+      "executed": true,
+      "duration_sec": 1.1,
+      "process_return_code": 0,
+      "ascii_files": [
+        "D:\\a\\Georgia-XC-Weather\\Georgia-XC-Weather\\data\\windninja_spatial_prototype\\sagarejo_from_90_6ms\\sagarejo_UTM38_125m_90_6_200m_ang.asc",
+        "D:\\a\\Georgia-XC-Weather\\Georgia-XC-Weather\\data\\windninja_spatial_prototype\\sagarejo_from_90_6ms\\sagarejo_UTM38_125m_90_6_200m_vel.asc"
+      ],
+      "output_speed_ascii": "data\\windninja_spatial_prototype\\sagarejo_from_90_6ms\\sagarejo_UTM38_125m_90_6_200m_vel.asc",
+      "wind20m_mean_ms": 5.02,
+      "wind20m_p90_ms": 5.32,
+      "wind20m_max_ms": 6.32,
+      "wind20m_speedup_p90_vs_input": 0.89,
+      "local_5x5_mean_ms": 5.32,
+      "local_5x5_max_ms": 6.22,
+      "preview_png": "data\\windninja_spatial_prototype\\sagarejo_from_90_6ms.png"
+    },
+    {
       "site": "sagarejo",
       "scenario_from_deg": 270,
       "input_wind_ms": 6,
       "config": "data\\windninja_spatial_prototype\\sagarejo_from_270_6ms\\scenario.cfg",
       "dem": "data\\windninja_spatial_prototype\\sagarejo_UTM38_125m.tif",
       "executed": true,
-      "duration_sec": 1.5,
+      "duration_sec": 0.9,
       "process_return_code": 0,
       "ascii_files": [
         "D:\\a\\Georgia-XC-Weather\\Georgia-XC-Weather\\data\\windninja_spatial_prototype\\sagarejo_from_270_6ms\\sagarejo_UTM38_125m_270_6_200m_ang.asc",
@@ -26,27 +114,53 @@
       "wind20m_p90_ms": 5.32,
       "wind20m_max_ms": 6.32,
       "wind20m_speedup_p90_vs_input": 0.89,
+      "local_5x5_mean_ms": 5.32,
+      "local_5x5_max_ms": 6.22,
       "preview_png": "data\\windninja_spatial_prototype\\sagarejo_from_270_6ms.png"
     },
     {
-      "site": "sagarejo",
-      "scenario_from_deg": 0,
+      "site": "kaspi",
+      "scenario_from_deg": 90,
       "input_wind_ms": 6,
-      "config": "data\\windninja_spatial_prototype\\sagarejo_from_0_6ms\\scenario.cfg",
-      "dem": "data\\windninja_spatial_prototype\\sagarejo_UTM38_125m.tif",
+      "config": "data\\windninja_spatial_prototype\\kaspi_from_90_6ms\\scenario.cfg",
+      "dem": "data\\windninja_spatial_prototype\\kaspi_UTM38_125m.tif",
+      "executed": true,
+      "duration_sec": 1.1,
+      "process_return_code": 0,
+      "ascii_files": [
+        "D:\\a\\Georgia-XC-Weather\\Georgia-XC-Weather\\data\\windninja_spatial_prototype\\kaspi_from_90_6ms\\kaspi_UTM38_125m_90_6_200m_ang.asc",
+        "D:\\a\\Georgia-XC-Weather\\Georgia-XC-Weather\\data\\windninja_spatial_prototype\\kaspi_from_90_6ms\\kaspi_UTM38_125m_90_6_200m_vel.asc"
+      ],
+      "output_speed_ascii": "data\\windninja_spatial_prototype\\kaspi_from_90_6ms\\kaspi_UTM38_125m_90_6_200m_vel.asc",
+      "wind20m_mean_ms": 5.04,
+      "wind20m_p90_ms": 5.42,
+      "wind20m_max_ms": 6.14,
+      "wind20m_speedup_p90_vs_input": 0.9,
+      "local_5x5_mean_ms": 5.57,
+      "local_5x5_max_ms": 6.14,
+      "preview_png": "data\\windninja_spatial_prototype\\kaspi_from_90_6ms.png"
+    },
+    {
+      "site": "kaspi",
+      "scenario_from_deg": 110,
+      "input_wind_ms": 6,
+      "config": "data\\windninja_spatial_prototype\\kaspi_from_110_6ms\\scenario.cfg",
+      "dem": "data\\windninja_spatial_prototype\\kaspi_UTM38_125m.tif",
       "executed": true,
       "duration_sec": 1.2,
       "process_return_code": 0,
       "ascii_files": [
-        "D:\\a\\Georgia-XC-Weather\\Georgia-XC-Weather\\data\\windninja_spatial_prototype\\sagarejo_from_0_6ms\\sagarejo_UTM38_125m_0_6_200m_ang.asc",
-        "D:\\a\\Georgia-XC-Weather\\Georgia-XC-Weather\\data\\windninja_spatial_prototype\\sagarejo_from_0_6ms\\sagarejo_UTM38_125m_0_6_200m_vel.asc"
+        "D:\\a\\Georgia-XC-Weather\\Georgia-XC-Weather\\data\\windninja_spatial_prototype\\kaspi_from_110_6ms\\kaspi_UTM38_125m_110_6_200m_ang.asc",
+        "D:\\a\\Georgia-XC-Weather\\Georgia-XC-Weather\\data\\windninja_spatial_prototype\\kaspi_from_110_6ms\\kaspi_UTM38_125m_110_6_200m_vel.asc"
       ],
-      "output_speed_ascii": "data\\windninja_spatial_prototype\\sagarejo_from_0_6ms\\sagarejo_UTM38_125m_0_6_200m_vel.asc",
-      "wind20m_mean_ms": 5.04,
-      "wind20m_p90_ms": 5.47,
-      "wind20m_max_ms": 6.21,
-      "wind20m_speedup_p90_vs_input": 0.91,
-      "preview_png": "data\\windninja_spatial_prototype\\sagarejo_from_0_6ms.png"
+      "output_speed_ascii": "data\\windninja_spatial_prototype\\kaspi_from_110_6ms\\kaspi_UTM38_125m_110_6_200m_vel.asc",
+      "wind20m_mean_ms": 5.05,
+      "wind20m_p90_ms": 5.31,
+      "wind20m_max_ms": 6.13,
+      "wind20m_speedup_p90_vs_input": 0.88,
+      "local_5x5_mean_ms": 5.42,
+      "local_5x5_max_ms": 5.94,
+      "preview_png": "data\\windninja_spatial_prototype\\kaspi_from_110_6ms.png"
     },
     {
       "site": "kaspi",
@@ -55,7 +169,7 @@
       "config": "data\\windninja_spatial_prototype\\kaspi_from_270_6ms\\scenario.cfg",
       "dem": "data\\windninja_spatial_prototype\\kaspi_UTM38_125m.tif",
       "executed": true,
-      "duration_sec": 0.3,
+      "duration_sec": 1.1,
       "process_return_code": 0,
       "ascii_files": [
         "D:\\a\\Georgia-XC-Weather\\Georgia-XC-Weather\\data\\windninja_spatial_prototype\\kaspi_from_270_6ms\\kaspi_UTM38_125m_270_6_200m_ang.asc",
@@ -66,29 +180,77 @@
       "wind20m_p90_ms": 5.42,
       "wind20m_max_ms": 6.14,
       "wind20m_speedup_p90_vs_input": 0.9,
+      "local_5x5_mean_ms": 5.57,
+      "local_5x5_max_ms": 6.14,
       "preview_png": "data\\windninja_spatial_prototype\\kaspi_from_270_6ms.png"
     },
     {
-      "site": "kaspi",
-      "scenario_from_deg": 0,
+      "site": "kaspi_2",
+      "scenario_from_deg": 90,
       "input_wind_ms": 6,
-      "config": "data\\windninja_spatial_prototype\\kaspi_from_0_6ms\\scenario.cfg",
-      "dem": "data\\windninja_spatial_prototype\\kaspi_UTM38_125m.tif",
+      "config": "data\\windninja_spatial_prototype\\kaspi_2_from_90_6ms\\scenario.cfg",
+      "dem": "data\\windninja_spatial_prototype\\kaspi_2_UTM38_125m.tif",
       "executed": true,
-      "duration_sec": 1.1,
+      "duration_sec": 1.0,
       "process_return_code": 0,
       "ascii_files": [
-        "D:\\a\\Georgia-XC-Weather\\Georgia-XC-Weather\\data\\windninja_spatial_prototype\\kaspi_from_0_6ms\\kaspi_UTM38_125m_0_6_200m_ang.asc",
-        "D:\\a\\Georgia-XC-Weather\\Georgia-XC-Weather\\data\\windninja_spatial_prototype\\kaspi_from_0_6ms\\kaspi_UTM38_125m_0_6_200m_vel.asc"
+        "D:\\a\\Georgia-XC-Weather\\Georgia-XC-Weather\\data\\windninja_spatial_prototype\\kaspi_2_from_90_6ms\\kaspi_2_UTM38_125m_90_6_200m_ang.asc",
+        "D:\\a\\Georgia-XC-Weather\\Georgia-XC-Weather\\data\\windninja_spatial_prototype\\kaspi_2_from_90_6ms\\kaspi_2_UTM38_125m_90_6_200m_vel.asc"
       ],
-      "output_speed_ascii": "data\\windninja_spatial_prototype\\kaspi_from_0_6ms\\kaspi_UTM38_125m_0_6_200m_vel.asc",
-      "wind20m_mean_ms": 5.03,
-      "wind20m_p90_ms": 5.34,
-      "wind20m_max_ms": 6.56,
+      "output_speed_ascii": "data\\windninja_spatial_prototype\\kaspi_2_from_90_6ms\\kaspi_2_UTM38_125m_90_6_200m_vel.asc",
+      "wind20m_mean_ms": 5.04,
+      "wind20m_p90_ms": 5.32,
+      "wind20m_max_ms": 6.04,
       "wind20m_speedup_p90_vs_input": 0.89,
-      "preview_png": "data\\windninja_spatial_prototype\\kaspi_from_0_6ms.png"
+      "local_5x5_mean_ms": 5.08,
+      "local_5x5_max_ms": 5.21,
+      "preview_png": "data\\windninja_spatial_prototype\\kaspi_2_from_90_6ms.png"
+    },
+    {
+      "site": "kaspi_2",
+      "scenario_from_deg": 110,
+      "input_wind_ms": 6,
+      "config": "data\\windninja_spatial_prototype\\kaspi_2_from_110_6ms\\scenario.cfg",
+      "dem": "data\\windninja_spatial_prototype\\kaspi_2_UTM38_125m.tif",
+      "executed": true,
+      "duration_sec": 1.0,
+      "process_return_code": 0,
+      "ascii_files": [
+        "D:\\a\\Georgia-XC-Weather\\Georgia-XC-Weather\\data\\windninja_spatial_prototype\\kaspi_2_from_110_6ms\\kaspi_2_UTM38_125m_110_6_200m_ang.asc",
+        "D:\\a\\Georgia-XC-Weather\\Georgia-XC-Weather\\data\\windninja_spatial_prototype\\kaspi_2_from_110_6ms\\kaspi_2_UTM38_125m_110_6_200m_vel.asc"
+      ],
+      "output_speed_ascii": "data\\windninja_spatial_prototype\\kaspi_2_from_110_6ms\\kaspi_2_UTM38_125m_110_6_200m_vel.asc",
+      "wind20m_mean_ms": 5.04,
+      "wind20m_p90_ms": 5.31,
+      "wind20m_max_ms": 5.92,
+      "wind20m_speedup_p90_vs_input": 0.88,
+      "local_5x5_mean_ms": 5.15,
+      "local_5x5_max_ms": 5.41,
+      "preview_png": "data\\windninja_spatial_prototype\\kaspi_2_from_110_6ms.png"
+    },
+    {
+      "site": "kaspi_2",
+      "scenario_from_deg": 270,
+      "input_wind_ms": 6,
+      "config": "data\\windninja_spatial_prototype\\kaspi_2_from_270_6ms\\scenario.cfg",
+      "dem": "data\\windninja_spatial_prototype\\kaspi_2_UTM38_125m.tif",
+      "executed": true,
+      "duration_sec": 0.9,
+      "process_return_code": 0,
+      "ascii_files": [
+        "D:\\a\\Georgia-XC-Weather\\Georgia-XC-Weather\\data\\windninja_spatial_prototype\\kaspi_2_from_270_6ms\\kaspi_2_UTM38_125m_270_6_200m_ang.asc",
+        "D:\\a\\Georgia-XC-Weather\\Georgia-XC-Weather\\data\\windninja_spatial_prototype\\kaspi_2_from_270_6ms\\kaspi_2_UTM38_125m_270_6_200m_vel.asc"
+      ],
+      "output_speed_ascii": "data\\windninja_spatial_prototype\\kaspi_2_from_270_6ms\\kaspi_2_UTM38_125m_270_6_200m_vel.asc",
+      "wind20m_mean_ms": 5.04,
+      "wind20m_p90_ms": 5.32,
+      "wind20m_max_ms": 6.04,
+      "wind20m_speedup_p90_vs_input": 0.89,
+      "local_5x5_mean_ms": 5.08,
+      "local_5x5_max_ms": 5.21,
+      "preview_png": "data\\windninja_spatial_prototype\\kaspi_2_from_270_6ms.png"
     }
   ],
   "errors": [],
-  "warning": "These are two hypothetical upstream wind scenarios, NOT a weather forecast or safe launch determination. Mass solver alone does not reliably predict rotor."
+  "warning": "These are multiple hypothetical upstream wind scenarios, NOT a weather forecast or safe launch determination. Mass solver alone does not reliably predict rotor."
 }
