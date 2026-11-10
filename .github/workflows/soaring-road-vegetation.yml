@@ -1,0 +1,45 @@
+name: Four ridge sites tree cover and road mapping
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/soaring/new_sites_landcover_access.py'
+      - 'data/dynamic_sites_registry.json'
+      - '.github/workflows/soaring-road-vegetation.yml'
+permissions:
+  contents: write
+concurrency:
+  group: soaring-road-vegetation
+  cancel-in-progress: false
+jobs:
+  survey:
+    runs-on: ubuntu-latest
+    timeout-minutes: 13
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install GIS tooling
+        run: pip install 'rasterio>=1.3,<2' 'numpy>=1.26,<3' 'pyproj>=3,<4'
+      - name: Investigate ESA WorldCover and OSM roads
+        run: python -u scripts/soaring/new_sites_landcover_access.py
+      - name: Publish data and errors
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          cp data/dynamic_new_sites_access_vegetation.json /tmp/dynamic_new_sites_access_vegetation.json
+          for attempt in 1 2 3 4 5; do
+            git fetch origin main
+            git reset --hard origin/main
+            cp /tmp/dynamic_new_sites_access_vegetation.json data/dynamic_new_sites_access_vegetation.json
+            git add data/dynamic_new_sites_access_vegetation.json
+            if git diff --cached --quiet; then exit 0; fi
+            git commit -m 'Record landcover and mapped roads near four soaring survey sites'
+            if git push origin HEAD:main; then exit 0; fi
+            sleep 3
+          done
+          exit 1
