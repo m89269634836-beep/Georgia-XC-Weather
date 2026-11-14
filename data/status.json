@@ -1,5 +1,16 @@
 {
-  "generated_at_utc": "2026-11-13T20:55:11.243600+00:00",
-  "successful": 57,
-  "errors": []
+  "generated_at_utc": "2026-11-14T09:03:39.110771+00:00",
+  "successful": 55,
+  "errors": [
+    {
+      "point": "lalisquri",
+      "model": "ecmwf",
+      "error": "<urlopen error _ssl.c:994: The handshake operation timed out>"
+    },
+    {
+      "point": "lalisquri",
+      "model": "gfs",
+      "error": "<urlopen error _ssl.c:994: The handshake operation timed out>"
+    }
+  ]
 }
