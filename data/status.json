@@ -1,11 +1,5 @@
 {
-  "generated_at_utc": "2026-11-20T10:08:20.257056+00:00",
-  "successful": 56,
-  "errors": [
-    {
-      "point": "lalisquri",
-      "model": "ecmwf",
-      "error": "<urlopen error _ssl.c:994: The handshake operation timed out>"
-    }
-  ]
+  "generated_at_utc": "2026-11-20T21:51:53.765120+00:00",
+  "successful": 57,
+  "errors": []
 }
