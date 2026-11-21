@@ -1,0 +1,128 @@
+{
+  "version": "v3-5day-analog-experiment",
+  "generated_at_utc": "2026-11-21T13:27:30.373674+00:00",
+  "input_site_days": 117,
+  "train_2024_2025": 71,
+  "test_2026": 46,
+  "n_complete_history": 117,
+  "features_today_used": [
+    "d1_temp_c",
+    "d1_rh_pct",
+    "d1_sun_wm2",
+    "d1_cloud_pct",
+    "d1_rain_11_16_mm",
+    "d1_wind10_ms",
+    "d1_wind80_ms",
+    "d1_wind10_u",
+    "d1_wind10_v",
+    "d1_wind80_u",
+    "d1_wind80_v"
+  ],
+  "features_history_used": [
+    "lag1_temperature_2m_mean",
+    "lag1_precipitation_sum",
+    "lag1_windu",
+    "lag1_windv",
+    "lag1_shortwave_radiation_sum",
+    "lag1_pressure_msl_mean",
+    "lag1_cloud_cover_mean",
+    "lag2_temperature_2m_mean",
+    "lag2_precipitation_sum",
+    "lag2_windu",
+    "lag2_windv",
+    "lag2_shortwave_radiation_sum",
+    "lag2_pressure_msl_mean",
+    "lag2_cloud_cover_mean",
+    "lag3_temperature_2m_mean",
+    "lag3_precipitation_sum",
+    "lag3_windu",
+    "lag3_windv",
+    "lag3_shortwave_radiation_sum",
+    "lag3_pressure_msl_mean",
+    "lag3_cloud_cover_mean",
+    "lag4_temperature_2m_mean",
+    "lag4_precipitation_sum",
+    "lag4_windu",
+    "lag4_windv",
+    "lag4_shortwave_radiation_sum",
+    "lag4_pressure_msl_mean",
+    "lag4_cloud_cover_mean",
+    "lag5_temperature_2m_mean",
+    "lag5_precipitation_sum",
+    "lag5_windu",
+    "lag5_windv",
+    "lag5_shortwave_radiation_sum",
+    "lag5_pressure_msl_mean",
+    "lag5_cloud_cover_mean",
+    "trend3_pressure_msl_mean",
+    "trend3_temperature_2m_mean",
+    "trend3_cloud_cover_mean",
+    "trend3_wind_speed_10m_mean"
+  ],
+  "goals": "Retrospectively test 5-day weather patterns for actual XContest route distance conditional on multiple published flights from site-day",
+  "weather_day0": "24h-as-issued ECMWF previous runs 0.25deg",
+  "weather_prior_days": "ERA5 reanalysis, hindsight; NOT operationally available on D−1 (5 day delay)",
+  "outcomes": {
+    "q75_route_km": {
+      "metrics": {
+        "site_season": {
+          "mae_km": 26.17,
+          "median_absolute_error_km": 19.65,
+          "mae_log_km": 0.5916
+        },
+        "today_analog": {
+          "mae_km": 27.3,
+          "median_absolute_error_km": 21.78,
+          "mae_log_km": 0.6079
+        },
+        "five_day_analog": {
+          "mae_km": 28.86,
+          "median_absolute_error_km": 23.23,
+          "mae_log_km": 0.6429
+        }
+      },
+      "gain_vs_dayonly_km": -1.56,
+      "gain_bootstrap_ci95_km": [
+        -3.78,
+        0.62
+      ],
+      "five_day_improves_uncertainty_bound": false,
+      "note": "Model and distance metric were fixed a priori, no hyperparameter search on 2026."
+    },
+    "median_route_km": {
+      "metrics": {
+        "site_season": {
+          "mae_km": 21.31,
+          "median_absolute_error_km": 16.08,
+          "mae_log_km": 0.6243
+        },
+        "today_analog": {
+          "mae_km": 21.92,
+          "median_absolute_error_km": 17.45,
+          "mae_log_km": 0.6399
+        },
+        "five_day_analog": {
+          "mae_km": 22.88,
+          "median_absolute_error_km": 20.27,
+          "mae_log_km": 0.6674
+        }
+      },
+      "gain_vs_dayonly_km": -0.96,
+      "gain_bootstrap_ci95_km": [
+        -3.13,
+        1.21
+      ],
+      "five_day_improves_uncertainty_bound": false,
+      "note": "Model and distance metric were fixed a priori, no hyperparameter search on 2026."
+    }
+  },
+  "major_limitations": [
+    "No negative examples of flyable/nonflyable days; not P(flyable).",
+    "Number of published flights and pilot choice influence day q75 distance.",
+    "Only 2024+ and multiple pilots per day retained for this prototype; narrow site seasonal distribution.",
+    "The real route distance is score route km from XContest, not total GPS track length.",
+    "ERA5 hindsight antecedents must be replaced with preflight-available historic forecasts/station observations before use operationally.",
+    "No hyperparameter tuning on 2026 held-out data; nearest analogs not guarantees of similar lift.",
+    "Different flight sites in Gudauri/Mestia sometimes grouped into a single site; harmonize exact launches before true physical calibration."
+  ]
+}
