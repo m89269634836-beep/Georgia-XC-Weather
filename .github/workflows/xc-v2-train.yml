@@ -1,0 +1,58 @@
+name: XC v2 year-held-out model training and validation
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/learning/train_conditional_v2.py'
+      - 'data/xc_v2_issued_forecast_features.csv'
+      - '.github/workflows/xc-v2-train.yml'
+permissions:
+  contents: write
+concurrency:
+  group: xc-v2-train
+  cancel-in-progress: false
+jobs:
+  train:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install model dependencies
+        run: pip install 'numpy>=1.26,<3' 'pandas>=2.2,<3' 'scikit-learn>=1.5,<2'
+      - name: Train and validate against later-year flown days
+        run: |
+          python -m py_compile scripts/learning/train_conditional_v2.py
+          python -u scripts/learning/train_conditional_v2.py
+      - name: Publish reproducible numerical metrics and accepted models
+        if: always()
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [[ ! -f data/xc_v2_validation_report.json ]]; then
+            printf '{"error":"No trained model. Inspect workflow logs and weather archive status."}\n' > data/xc_v2_validation_report.json
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          cp data/xc_v2_validation_report.json /tmp/xc_v2_validation_report.json
+          for name in xc_v2_model.json xc_v2_validation_report.md xc_v2_training_joined.csv; do
+            if [[ -f data/$name ]]; then cp data/$name "/tmp/$name"; fi
+          done
+          for attempt in 1 2 3 4 5; do
+            git fetch origin main
+            git reset --hard origin/main
+            cp /tmp/xc_v2_validation_report.json data/
+            for name in xc_v2_model.json xc_v2_validation_report.md xc_v2_training_joined.csv; do
+              if [[ -f /tmp/$name ]]; then cp "/tmp/$name" data/; fi
+            done
+            git add data/xc_v2_validation_report.json
+            git add data/xc_v2_model.json data/xc_v2_validation_report.md data/xc_v2_training_joined.csv 2>/dev/null || true
+            if git diff --cached --quiet; then exit 0; fi
+            git commit -m 'Publish v2 strict year-held-out weather calibration and conservative selected models'
+            if git push origin HEAD:main; then exit 0; fi
+            sleep 3
+          done
+          exit 1
