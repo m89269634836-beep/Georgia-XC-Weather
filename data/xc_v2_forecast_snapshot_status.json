@@ -1,0 +1,7 @@
+{
+  "last_issued_utc": "2026-11-21T12:21:45.866453+00:00",
+  "snapshot_path": "data/forecast_issue_snapshots/xc_wind_20261121_122145UTC.json.gz",
+  "sites": 20,
+  "records": 480,
+  "size_bytes": 16466
+}
