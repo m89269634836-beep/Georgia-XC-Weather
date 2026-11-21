@@ -1,0 +1,49 @@
+name: Persist issued Georgia soaring forecast snapshots
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '56 2,8 * * *'
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/learning/archive_issued_snapshots.py'
+      - '.github/workflows/xc-v2-forecast-snapshots.yml'
+permissions:
+  contents: write
+concurrency:
+  group: xc-v2-forecast-snapshots
+  cancel-in-progress: false
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Capture observed forecast versions before flight dates
+        run: python scripts/learning/archive_issued_snapshots.py
+      - name: Commit immutable archive version
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          staging="$(mktemp -d)"
+          mkdir -p "$staging/forecast_issue_snapshots"
+          cp data/forecast_issue_snapshots/xc_wind_*.json.gz "$staging/forecast_issue_snapshots/"
+          cp data/xc_v2_forecast_snapshot_status.json "$staging/"
+          for attempt in 1 2 3 4 5; do
+            git fetch origin main
+            git reset --hard origin/main
+            mkdir -p data/forecast_issue_snapshots
+            cp "$staging/forecast_issue_snapshots/"* data/forecast_issue_snapshots/
+            cp "$staging/xc_v2_forecast_snapshot_status.json" data/
+            git add data/forecast_issue_snapshots/ data/xc_v2_forecast_snapshot_status.json
+            if git diff --cached --quiet; then exit 0; fi
+            git commit -m 'Archive exact retrieved NWP forecast for future honest flight validation'
+            if git push origin HEAD:main; then exit 0; fi
+            sleep 3
+          done
+          exit 1
