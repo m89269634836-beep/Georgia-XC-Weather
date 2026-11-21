@@ -1,1 +1,94 @@
-{"error":"No trained model. Inspect workflow logs and weather archive status."}
+{
+  "n_cases_from_traces": 116,
+  "n_weather_matched": 116,
+  "n_training_2024_25": 71,
+  "n_test_2026": 45,
+  "data_model": "Open-Meteo previous runs ECMWF IFS 0.25 D-1 (fixed validity lead)",
+  "inputs_weather": [
+    "d1_wind10_ms",
+    "wx10",
+    "wy10",
+    "d1_wind80_ms",
+    "wx80",
+    "wy80",
+    "d1_sun_wm2",
+    "d1_cloud_pct",
+    "d1_rain_11_16_mm",
+    "d1_temp_c",
+    "d1_rh_pct"
+  ],
+  "sites": {
+    "lalisquri": 36,
+    "mestia": 33,
+    "gudauri": 32,
+    "ananuri": 5,
+    "jidgeti": 5,
+    "sagarejo": 2,
+    "udzilaurta": 2,
+    "tsivi": 1
+  },
+  "targets": {
+    "ridge_signature_rate": {
+      "baseline": {
+        "mae": 0.0904,
+        "rmse": 0.1445
+      },
+      "weather": {
+        "mae": 0.0894,
+        "rmse": 0.1425
+      },
+      "gain_mae": 0.001,
+      "gain_bootstrap_ci95": [
+        -0.0099,
+        0.0109
+      ],
+      "selected": "baseline",
+      "activated_weather_correction": false,
+      "heldout_positive_day_fraction": 0.2
+    },
+    "thermal_signature_rate": {
+      "baseline": {
+        "mae": 0.1606,
+        "rmse": 0.1887
+      },
+      "weather": {
+        "mae": 0.1765,
+        "rmse": 0.2035
+      },
+      "gain_mae": -0.0159,
+      "gain_bootstrap_ci95": [
+        -0.036,
+        0.0083
+      ],
+      "selected": "baseline",
+      "activated_weather_correction": false,
+      "heldout_positive_day_fraction": 0.4
+    },
+    "local_hold_proxy": {
+      "baseline": {
+        "mae": 0.1973,
+        "rmse": 0.2414
+      },
+      "weather": {
+        "mae": 0.2212,
+        "rmse": 0.2578
+      },
+      "gain_mae": -0.0239,
+      "gain_bootstrap_ci95": [
+        -0.0426,
+        -0.0038
+      ],
+      "selected": "baseline",
+      "activated_weather_correction": false,
+      "heldout_positive_day_fraction": 1.0
+    }
+  },
+  "warning": "This predicts GPS ridge/thermal signatures GIVEN a published flight, not whether the day is flyable or safe. Unflown days are not labelled negative.",
+  "caveats": [
+    "Launch choices, pilot skills and glider type are unobserved confounders.",
+    "Gudauri and Mestia include multiple launch positions and aspect sectors.",
+    "GPS does not identify source of lift; ridge and thermal proxy thresholds are hypotheses.",
+    "Year 2026 is held out from initial fit. Bootstrap groups by date.",
+    "Any selection of a model using 2026 is deployment validation, not independent proof of future skill."
+  ]
+}
