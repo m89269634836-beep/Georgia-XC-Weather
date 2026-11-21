@@ -15,9 +15,9 @@ if SCOUT_FILE.exists():
         SITES.append(("scout_"+point["id"],point["region"]+" "+point["possible_face"],
              float(point["lat"]),float(point["lon"]),
              "Hypothetical DEM candidate; NOT a launch",point["possible_face"]))
-MODELS={"icon_eu":"dwd_icon_eu","ecmwf_ifs":"ecmwf_ifs","gfs":"ncep_gfs_global"}
+MODELS={"icon_eu":"dwd_icon_eu","ecmwf_ifs":"ecmwf_ifs","ecmwf_ifs025":"ecmwf_ifs025","gfs":"ncep_gfs_global"}
 BASE="https://api.open-meteo.com/v1/forecast"
-HOUR=["wind_speed_10m","wind_direction_10m","wind_gusts_10m","wind_speed_80m","wind_direction_80m","temperature_2m","precipitation","cloud_cover"]
+HOUR=["wind_speed_10m","wind_direction_10m","wind_gusts_10m","wind_speed_80m","wind_direction_80m","temperature_2m","relative_humidity_2m","shortwave_radiation","cloud_cover_low","precipitation","cloud_cover"]
 START=datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=4))).date()
 DAYS=[(START+datetime.timedelta(days=i)).isoformat() for i in range(1,7)]
 def avg(values):
@@ -75,6 +75,9 @@ for short,model in MODELS.items():
           "gust10_ms_mean":avg(getv("wind_gusts_10m")),
           "gust10_ms_max":max((v for v in getv("wind_gusts_10m") if isinstance(v,(int,float))),default=None),
           "temp_c":avg(getv("temperature_2m")),
+          "rh_pct":avg(getv("relative_humidity_2m")),
+          "sun_wm2":avg(getv("shortwave_radiation")),
+          "low_cloud_pct":avg(getv("cloud_cover_low")),
           "cloud_pct":avg(getv("cloud_cover")),
           "precip_11_16_mm":round(sum(v or 0 for v in getv("precipitation")),2)
         }
