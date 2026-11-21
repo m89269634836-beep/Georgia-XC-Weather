@@ -22,6 +22,7 @@ allrows["hold_target"]=allrows.local_soaring_proxy.clip(0,1)
 allrows.to_csv(OUT/"xc_v2_training_joined.csv",index=False)
 data=allrows[allrows.d1_wind10_ms.notna()].copy()
 if len(data)<30:raise SystemExit("Too few real archived prior-run forecasts: "+str(len(data)))
+print("START year-separated XC weather validation:",len(data),"real D-1 cases, target rates conditional on flights",flush=True)
 for level in ("10","80"):
  s=pd.to_numeric(data[f"d1_wind{level}_ms"],errors="coerce")
  d=np.deg2rad(pd.to_numeric(data[f"d1_wind{level}_from_deg"],errors="coerce"))
