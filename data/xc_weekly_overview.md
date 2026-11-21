@@ -1,6 +1,6 @@
 # Weekly XC model overview
 
-Forecast issued: 2026-11-21T13:25:51.156352+00:00 UTC
+Forecast issued: 2026-11-21T13:30:16.406489+00:00 UTC
 Local time Georgia (Asia/Tbilisi). All daytime statistics: 11:00–16:00.
 Wind FROM directions. Fixed-altitude winds are linearly interpolated model pressure-level vectors.
 Note: model ground/10m wind may poorly resolve launch slope; pressure levels below terrain are ignored.
@@ -11,6 +11,7 @@ LCL is derived from gridded surface T/RH, and is NOT observed cloudbase or therm
 
 | Start | Model | Sun W/m² | Cloud % | Rain 11–16 mm | Low cloud % | Wind 2000m | Wind 3000m | LCL estimate AMSL |
 |---|---|---:|---:|---:|---:|---|---|---:|
+| Лалискури | ecmwf | 64.5 | 99.2 | 0.0 | 2.5 | З 5.1 m/s | ЗЮЗ 12.2 m/s | 1513 |
 | Лалискури | gfs | 29.5 | 100.0 | 0.0 | 100.0 | ЗЮЗ 2.9 m/s | ЗЮЗ 14.0 m/s | 1640 |
 | Лалискури | icon | 67.2 | 100.0 | 1.3 | 21.8 | ЗСЗ 2.9 m/s | ЮЗ 11.3 m/s | 1377 |
 | Джиджети | ecmwf | 83.2 | 100.0 | 2.4 | 85.0 | ЗЮЗ 3.8 m/s | ЗЮЗ 9.3 m/s | 1861 |
@@ -30,6 +31,7 @@ LCL is derived from gridded surface T/RH, and is NOT observed cloudbase or therm
 
 | Start | Model | Sun W/m² | Cloud % | Rain 11–16 mm | Low cloud % | Wind 2000m | Wind 3000m | LCL estimate AMSL |
 |---|---|---:|---:|---:|---:|---|---|---:|
+| Лалискури | ecmwf | 215.5 | 86.5 | 0.0 | 5.0 | ЗСЗ 10.1 m/s | З 15.8 m/s | 2035 |
 | Лалискури | gfs | 166.8 | 100.0 | 0.0 | 64.7 | ЗСЗ 9.7 m/s | ЗСЗ 13.0 m/s | 1440 |
 | Лалискури | icon | 274.2 | 87.5 | 0.0 | 18.8 | ЗСЗ 9.8 m/s | З 15.3 m/s | 1820 |
 | Джиджети | ecmwf | 306.7 | 71.0 | 0.0 | 24.8 | З 8.2 m/s | З 15.5 m/s | 2500 |
@@ -49,6 +51,7 @@ LCL is derived from gridded surface T/RH, and is NOT observed cloudbase or therm
 
 | Start | Model | Sun W/m² | Cloud % | Rain 11–16 mm | Low cloud % | Wind 2000m | Wind 3000m | LCL estimate AMSL |
 |---|---|---:|---:|---:|---:|---|---|---:|
+| Лалискури | ecmwf | 351.0 | 53.3 | 0.0 | 1.7 | З 6.0 m/s | З 11.4 m/s | 2261 |
 | Лалискури | gfs | 342.3 | 84.3 | 0.0 | 0.8 | ЗСЗ 5.7 m/s | З 9.7 m/s | 1801 |
 | Лалискури | icon | 320.8 | 68.7 | 0.0 | 1.3 | ЗСЗ 5.9 m/s | З 11.7 m/s | 1993 |
 | Джиджети | ecmwf | 349.2 | 57.8 | 0.0 | 0.8 | ЗЮЗ 4.3 m/s | ЗЮЗ 11.2 m/s | 3367 |
@@ -68,6 +71,7 @@ LCL is derived from gridded surface T/RH, and is NOT observed cloudbase or therm
 
 | Start | Model | Sun W/m² | Cloud % | Rain 11–16 mm | Low cloud % | Wind 2000m | Wind 3000m | LCL estimate AMSL |
 |---|---|---:|---:|---:|---:|---|---|---:|
+| Лалискури | ecmwf | 373.5 | 4.2 | 0.0 | 1.8 | ЗЮЗ 3.6 m/s | ЗЮЗ 10.0 m/s | 2646 |
 | Лалискури | gfs | 306.3 | 100.0 | 0.0 | 3.3 | З 3.4 m/s | З 11.6 m/s | 2637 |
 | Лалискури | icon | 241.2 | 72.8 | 0.0 | 0.0 | Ю 2.0 m/s | ЗЮЗ 10.4 m/s | 2428 |
 | Джиджети | ecmwf | 355.3 | 21.0 | 0.0 | 6.8 | ЮЗ 2.8 m/s | ЗЮЗ 9.3 m/s | 3315 |
@@ -87,6 +91,7 @@ LCL is derived from gridded surface T/RH, and is NOT observed cloudbase or therm
 
 | Start | Model | Sun W/m² | Cloud % | Rain 11–16 mm | Low cloud % | Wind 2000m | Wind 3000m | LCL estimate AMSL |
 |---|---|---:|---:|---:|---:|---|---|---:|
+| Лалискури | ecmwf | 130.8 | 93.3 | 0.0 | 10.0 | ЗСЗ 8.4 m/s | З 11.2 m/s | 1910 |
 | Лалискури | gfs | 196.0 | 91.0 | 0.0 | 79.0 | ЗСЗ 12.2 m/s | ЗСЗ 18.9 m/s | 1472 |
 | Лалискури | icon | 107.5 | 100.0 | 0.0 | 13.0 | ЗСЗ 8.7 m/s | З 17.5 m/s | 1429 |
 | Джиджети | ecmwf | 170.8 | 76.3 | 0.3 | 30.3 | З 7.7 m/s | З 16.0 m/s | 2367 |
@@ -106,6 +111,7 @@ LCL is derived from gridded surface T/RH, and is NOT observed cloudbase or therm
 
 | Start | Model | Sun W/m² | Cloud % | Rain 11–16 mm | Low cloud % | Wind 2000m | Wind 3000m | LCL estimate AMSL |
 |---|---|---:|---:|---:|---:|---|---|---:|
+| Лалискури | ecmwf | 348.3 | 19.8 | 0.0 | 9.0 | З 11.7 m/s | ЗСЗ 19.8 m/s | 2296 |
 | Лалискури | gfs | 292.0 | 78.3 | 0.3 | 75.8 | ЗСЗ 17.0 m/s | З 22.4 m/s | 1966 |
 | Лалискури | icon | 210.8 | 88.0 | 0.0 | 80.2 | ЗСЗ 7.8 m/s | ЗСЗ 20.8 m/s | 1630 |
 | Джиджети | ecmwf | 304.2 | 59.0 | 0.0 | 59.0 | З 8.0 m/s | З 17.3 m/s | 2547 |
@@ -125,6 +131,7 @@ LCL is derived from gridded surface T/RH, and is NOT observed cloudbase or therm
 
 | Start | Model | Sun W/m² | Cloud % | Rain 11–16 mm | Low cloud % | Wind 2000m | Wind 3000m | LCL estimate AMSL |
 |---|---|---:|---:|---:|---:|---|---|---:|
+| Лалискури | ecmwf | 374.0 | 23.0 | 0.0 | 0.0 | З 9.5 m/s | З 18.9 m/s | 2709 |
 | Лалискури | gfs | 379.3 | 6.2 | 0.0 | 0.0 | З 2.2 m/s | З 15.1 m/s | 3086 |
 | Лалискури | icon | 359.0 | 83.3 | 0.0 | 0.0 | З 4.3 m/s | З 15.9 m/s | 2538 |
 | Джиджети | ecmwf | 374.2 | 22.3 | 0.0 | 0.0 | З 5.9 m/s | З 17.0 m/s | 3630 |
@@ -144,6 +151,7 @@ LCL is derived from gridded surface T/RH, and is NOT observed cloudbase or therm
 
 | Start | Model | Sun W/m² | Cloud % | Rain 11–16 mm | Low cloud % | Wind 2000m | Wind 3000m | LCL estimate AMSL |
 |---|---|---:|---:|---:|---:|---|---|---:|
+| Лалискури | ecmwf | 349.2 | 76.3 | 0.0 | 1.5 | З 3.5 m/s | З 12.2 m/s | 2481 |
 | Лалискури | gfs | 367.7 | 43.8 | 0.0 | 5.0 | З 4.6 m/s | З 13.9 m/s | 2869 |
 | Лалискури | icon | 248.0 | 100.0 | 0.0 | 0.0 | З 7.7 m/s | З 15.6 m/s | 2565 |
 | Джиджети | ecmwf | 335.7 | 81.8 | 0.0 | 16.3 | З 3.5 m/s | З 12.0 m/s | 3291 |

@@ -1,6 +1,6 @@
 # XC weather diagnostics
 
-Forecast issued: 2026-11-21T13:25:51.156352+00:00 UTC
+Forecast issued: 2026-11-21T13:30:16.406489+00:00 UTC
 Time: 11:00–16:00 Georgia; wind direction is **FROM**; heights are **AMSL**.
 
 This report does not certify safe launch conditions. Thin inversions may not be resolved.
@@ -9,6 +9,7 @@ This report does not certify safe launch conditions. Thin inversions may not be 
 
 | Site / sample | Model | Radiation W/m² | Cloud % | Rain mm | Wind 10m | Wind 925hPa | Wind 850hPa | Wind 700hPa | RH 700hPa |
 |---|---|---:|---:|---:|---|---|---|---|---:|
+| lalisquri | ecmwf | 64.5 | 99.2 | 0 | ЗСЗ 1.8m/s | ЗСЗ 2.4m/s | СЗ 2.4m/s | ЗЮЗ 12.6m/s | 99.7 |
 | lalisquri | gfs | 29.5 | 100.0 | 0 | ССВ 2.1m/s | СЗ 3.2m/s | С 2.2m/s | ЗЮЗ 14.5m/s | 98.8 |
 | lalisquri | icon | 67.2 | 100.0 | 1.3 | ССЗ 0.9m/s | ССЗ 1.2m/s | С 0.8m/s | ЮЗ 11.7m/s | 100.0 |
 | jidgeti | ecmwf | 83.2 | 100.0 | 2.4 | ЮЗ 0.6m/s | Ю 0.7m/s | ЗЮЗ 0.8m/s | ЗЮЗ 9.5m/s | 96.0 |
@@ -70,6 +71,7 @@ This report does not certify safe launch conditions. Thin inversions may not be 
 
 | Site / sample | Model | Radiation W/m² | Cloud % | Rain mm | Wind 10m | Wind 925hPa | Wind 850hPa | Wind 700hPa | RH 700hPa |
 |---|---|---:|---:|---:|---|---|---|---|---:|
+| lalisquri | ecmwf | 215.5 | 86.5 | 0 | ЗСЗ 2.3m/s | З 2.5m/s | ЗСЗ 7.0m/s | З 15.9m/s | 53.5 |
 | lalisquri | gfs | 166.8 | 100.0 | 0 | ЗЮЗ 1.4m/s | ЗСЗ 7.8m/s | ЗСЗ 9.1m/s | ЗСЗ 13.1m/s | 63.0 |
 | lalisquri | icon | 274.2 | 87.5 | 0 | З 1.1m/s | З 1.3m/s | ЗСЗ 4.9m/s | З 15.5m/s | 74.7 |
 | jidgeti | ecmwf | 306.7 | 71.0 | 0 | З 3.2m/s | ЗЮЗ 2.2m/s | З 4.3m/s | З 15.7m/s | 56.0 |
@@ -131,6 +133,7 @@ This report does not certify safe launch conditions. Thin inversions may not be 
 
 | Site / sample | Model | Radiation W/m² | Cloud % | Rain mm | Wind 10m | Wind 925hPa | Wind 850hPa | Wind 700hPa | RH 700hPa |
 |---|---|---:|---:|---:|---|---|---|---|---:|
+| lalisquri | ecmwf | 351.0 | 53.3 | 0 | В 0.2m/s | Ю 0.3m/s | ЗСЗ 3.6m/s | З 11.7m/s | 28.2 |
 | lalisquri | gfs | 342.3 | 84.3 | 0 | ЮЮЗ 1.0m/s | ЗСЗ 2.1m/s | З 2.6m/s | З 10.0m/s | 28.2 |
 | lalisquri | icon | 320.8 | 68.7 | 0 | ВЮВ 0.7m/s | ВЮВ 0.6m/s | СЗ 1.5m/s | З 12.1m/s | 18.2 |
 | jidgeti | ecmwf | 349.2 | 57.8 | 0 | ЗЮЗ 1.5m/s | ЮЗ 0.7m/s | ЗЮЗ 0.9m/s | ЗЮЗ 11.6m/s | 28.0 |
@@ -192,6 +195,7 @@ This report does not certify safe launch conditions. Thin inversions may not be 
 
 | Site / sample | Model | Radiation W/m² | Cloud % | Rain mm | Wind 10m | Wind 925hPa | Wind 850hPa | Wind 700hPa | RH 700hPa |
 |---|---|---:|---:|---:|---|---|---|---|---:|
+| lalisquri | ecmwf | 373.5 | 4.2 | 0 | СВ 0.7m/s | ВЮВ 0.2m/s | Ю 0.7m/s | ЗЮЗ 10.4m/s | 65.7 |
 | lalisquri | gfs | 306.3 | 100.0 | 0 | ЗЮЗ 0.9m/s | СЗ 2.8m/s | ЗСЗ 1.2m/s | З 12.0m/s | 63.5 |
 | lalisquri | icon | 241.2 | 72.8 | 0 | ВСВ 0.5m/s | СВ 0.5m/s | В 2.4m/s | ЗЮЗ 11.0m/s | 83.5 |
 | jidgeti | ecmwf | 355.3 | 21.0 | 0 | ЮЮВ 1.1m/s | ЮВ 1.0m/s | ЮВ 1.5m/s | ЗЮЗ 9.7m/s | 73.3 |
@@ -253,6 +257,7 @@ This report does not certify safe launch conditions. Thin inversions may not be 
 
 | Site / sample | Model | Radiation W/m² | Cloud % | Rain mm | Wind 10m | Wind 925hPa | Wind 850hPa | Wind 700hPa | RH 700hPa |
 |---|---|---:|---:|---:|---|---|---|---|---:|
+| lalisquri | ecmwf | 130.8 | 93.3 | 0 | ЗСЗ 2.9m/s | З 3.2m/s | ЗСЗ 7.6m/s | З 11.2m/s | 87.8 |
 | lalisquri | gfs | 196.0 | 91.0 | 0 | ЗЮЗ 2.4m/s | ЗСЗ 8.2m/s | ЗСЗ 10.0m/s | ЗСЗ 18.9m/s | 41.2 |
 | lalisquri | icon | 107.5 | 100.0 | 0 | ЗСЗ 1.2m/s | ЗСЗ 1.5m/s | ЗСЗ 4.2m/s | З 17.5m/s | 62.7 |
 | jidgeti | ecmwf | 170.8 | 76.3 | 0.3 | ЗЮЗ 2.4m/s | ЮЗ 1.9m/s | ЗЮЗ 3.1m/s | З 16.0m/s | 66.2 |
@@ -314,6 +319,7 @@ This report does not certify safe launch conditions. Thin inversions may not be 
 
 | Site / sample | Model | Radiation W/m² | Cloud % | Rain mm | Wind 10m | Wind 925hPa | Wind 850hPa | Wind 700hPa | RH 700hPa |
 |---|---|---:|---:|---:|---|---|---|---|---:|
+| lalisquri | ecmwf | 348.3 | 19.8 | 0 | ССЗ 2.0m/s | З 2.4m/s | З 7.9m/s | ЗСЗ 20.1m/s | 53.7 |
 | lalisquri | gfs | 292.0 | 78.3 | 0.3 | З 1.7m/s | ЗСЗ 8.9m/s | ЗСЗ 12.4m/s | З 22.7m/s | 36.3 |
 | lalisquri | icon | 210.8 | 88.0 | 0 | С 0.6m/s | СЗ 0.6m/s | З 4.2m/s | ЗСЗ 21.2m/s | 73.2 |
 | jidgeti | ecmwf | 304.2 | 59.0 | 0 | ЗЮЗ 3.0m/s | ЗЮЗ 2.0m/s | ЗЮЗ 3.8m/s | З 17.6m/s | 71.2 |
@@ -375,6 +381,7 @@ This report does not certify safe launch conditions. Thin inversions may not be 
 
 | Site / sample | Model | Radiation W/m² | Cloud % | Rain mm | Wind 10m | Wind 925hPa | Wind 850hPa | Wind 700hPa | RH 700hPa |
 |---|---|---:|---:|---:|---|---|---|---|---:|
+| lalisquri | ecmwf | 374.0 | 23.0 | 0 | ССВ 0.9m/s | В 0.1m/s | З 5.1m/s | З 19.6m/s | 59.8 |
 | lalisquri | gfs | 379.3 | 6.2 | 0 | ЮЮЗ 1.0m/s | ЗСЗ 1.1m/s | ССЗ 0.9m/s | З 16.0m/s | 52.5 |
 | lalisquri | icon | 359.0 | 83.3 | 0 | ССЗ 0.2m/s | СЗ 0.5m/s | СЗ 1.2m/s | З 16.9m/s | 50.2 |
 | jidgeti | ecmwf | 374.2 | 22.3 | 0 | ЮЮВ 0.6m/s | ЮЮВ 0.7m/s | ЗЮЗ 0.8m/s | З 17.8m/s | 67.5 |
@@ -436,6 +443,7 @@ This report does not certify safe launch conditions. Thin inversions may not be 
 
 | Site / sample | Model | Radiation W/m² | Cloud % | Rain mm | Wind 10m | Wind 925hPa | Wind 850hPa | Wind 700hPa | RH 700hPa |
 |---|---|---:|---:|---:|---|---|---|---|---:|
+| lalisquri | ecmwf | 349.2 | 76.3 | 0 | СВ 0.6m/s | В 0.7m/s | ВЮВ 0.6m/s | З 13.0m/s | 72.7 |
 | lalisquri | gfs | 367.7 | 43.8 | 0 | ЮЮВ 1.3m/s | ВЮВ 1.4m/s | ЗСЗ 1.4m/s | З 14.7m/s | 46.0 |
 | lalisquri | icon | 248.0 | 100.0 | 0 | В 1.3m/s | В 1.3m/s | ЗСЗ 1.5m/s | З 16.3m/s | 86.2 |
 | jidgeti | ecmwf | 335.7 | 81.8 | 0 | ЮВ 0.9m/s | ЮЮВ 0.6m/s | ЮВ 0.7m/s | З 12.7m/s | 80.2 |
@@ -499,27 +507,35 @@ Temperature and relative humidity by pressure level. Levels below local terrain 
 
 ### Лалискури (780 m AMSL)
 **2026-11-21**
+- ecmwf: 764m 13.6°C RH69% ЗСЗ 3.25m/s; 1470m 9.1°C RH71% СЗ 4.04m/s; 3049m -0.6°C RH100% ЗЮЗ 12.81m/s; 4267m -7.2°C RH99% ЗЮЗ 21.28m/s; 5667m -15.9°C RH89% З 25.27m/s
 - gfs: 760m 14.2°C RH54% ССЗ 3.6m/s; 990m 12.3°C RH58% ССЗ 3.39m/s; 1466m 8.6°C RH70% ССЗ 2.49m/s; 1964m 4.8°C RH83% ЗСЗ 4.11m/s; 3042m -0.6°C RH98% ЗЮЗ 15.96m/s; 4260m -7.4°C RH88% З 24.03m/s; 5662m -14.7°C RH67% З 25.37m/s
 - icon: 756m 14.5°C RH59% ССЗ 1.2m/s; 987m 12.9°C RH61% СЗ 1.74m/s; 1465m 9.7°C RH66% СЗ 1.27m/s; 1965m 6.2°C RH70% ЗСЗ 3.85m/s; 3045m -0.9°C RH100% ЗЮЗ 10.95m/s; 4264m -7.2°C RH91% ЗЮЗ 21.99m/s; 5662m -15.9°C RH84% З 26.39m/s
 **2026-11-22**
+- ecmwf: 761m 12.3°C RH58% З 2.24m/s; 1461m 6.5°C RH71% ЗСЗ 7.25m/s; 3025m -3.2°C RH52% З 17.09m/s; 4225m -12.3°C RH93% ЗЮЗ 16.76m/s; 5593m -21.7°C RH34% ЗЮЗ 30.71m/s
 - gfs: 765m 11.0°C RH60% З 8.77m/s; 993m 8.8°C RH68% З 9.93m/s; 1462m 4.2°C RH86% З 10.96m/s; 1953m 1.3°C RH90% ЗСЗ 9.01m/s; 3018m -4.1°C RH69% З 12.41m/s; 4215m -12.9°C RH91% З 13.65m/s; 5585m -19.8°C RH67% ЗЮЗ 38.32m/s
 - icon: 760m 12.4°C RH59% ЗЮЗ 1.49m/s; 989m 10.3°C RH66% З 2.58m/s; 1461m 6.0°C RH75% З 5.41m/s; 1955m 2.5°C RH81% ЗСЗ 8.92m/s; 3021m -4.6°C RH82% З 15.59m/s; 4217m -12.3°C RH73% З 17.68m/s; 5582m -22.4°C RH69% ЗЮЗ 21.67m/s
 **2026-11-23**
+- ecmwf: 821m 9.7°C RH45% ЮЗ 0.4m/s; 1516m 4.7°C RH45% ЗСЗ 4.18m/s; 3065m -6.1°C RH23% З 12.41m/s; 4256m -12.0°C RH6% ЗЮЗ 16.1m/s; 5632m -19.4°C RH40% З 23.45m/s
 - gfs: 831m 8.5°C RH56% СЗ 2.45m/s; 1056m 6.4°C RH62% СЗ 2.52m/s; 1522m 3.4°C RH52% ЗСЗ 3.75m/s; 2011m 0.3°C RH36% З 8.04m/s; 3067m -6.7°C RH21% З 12.22m/s; 4254m -12.9°C RH11% З 12.7m/s; 5626m -19.4°C RH4% З 18.34m/s
 - icon: 825m 9.0°C RH57% ЮВ 0.56m/s; 1051m 7.0°C RH64% ЮВ 0.42m/s; 1518m 2.9°C RH75% СЗ 1.25m/s; 2006m -0.1°C RH53% ЗСЗ 6.29m/s; 3063m -5.6°C RH16% З 12.64m/s; 4255m -12.5°C RH13% З 14.05m/s; 5627m -19.4°C RH11% З 18.77m/s
 **2026-11-24**
+- ecmwf: 782m 13.7°C RH33% ВЮВ 0.25m/s; 1487m 8.2°C RH39% ЮЮЗ 0.57m/s; 3061m -0.9°C RH64% ЗЮЗ 10.47m/s; 4274m -8.3°C RH48% ЗЮЗ 21.91m/s; 5666m -17.0°C RH23% ЗЮЗ 28.78m/s
 - gfs: 781m 12.3°C RH33% ЗСЗ 3.26m/s; 1010m 11.1°C RH29% ЗСЗ 2.72m/s; 1483m 7.2°C RH35% З 1.27m/s; 1978m 3.8°C RH42% З 2.64m/s; 3051m -2.0°C RH63% З 11.77m/s; 4260m -9.4°C RH89% З 17.34m/s; 5643m -19.4°C RH43% ЗЮЗ 30.05m/s
 - icon: 791m 12.7°C RH38% ССВ 0.5m/s; 1020m 11.5°C RH31% СВ 0.58m/s; 1494m 8.2°C RH38% В 2.03m/s; 1991m 4.3°C RH52% ЮЮЗ 2.43m/s; 3065m -2.1°C RH78% ЗЮЗ 11.19m/s; 4273m -9.9°C RH95% ЗЮЗ 18.8m/s; 5658m -18.4°C RH41% ЗЮЗ 32.44m/s
 **2026-11-25**
+- ecmwf: 763m 8.0°C RH65% З 3.15m/s; 1454m 3.9°C RH57% ЗСЗ 6.97m/s; 3000m -7.0°C RH93% ЗЮЗ 10.58m/s; 4184m -14.7°C RH100% ЗЮЗ 23.99m/s; 5545m -22.9°C RH100% ЮЗ 35.12m/s
 - gfs: 787m 5.5°C RH59% ЗСЗ 8.27m/s; 1010m 3.4°C RH66% ЗСЗ 8.46m/s; 1470m -0.5°C RH77% ЗСЗ 9.63m/s; 1955m -1.4°C RH45% ЗСЗ 11.37m/s; 3004m -8.4°C RH36% З 18.91m/s; 4181m -16.4°C RH39% ЗЮЗ 23.82m/s; 5523m -26.8°C RH100% ЮЗ 28.07m/s
 - icon: 758m 7.8°C RH72% СЗ 1.11m/s; 983m 6.0°C RH75% СЗ 1.42m/s; 1448m 2.7°C RH74% З 2.83m/s; 1936m -0.1°C RH68% З 6.81m/s; 2989m -7.9°C RH67% ЗСЗ 17.1m/s; 4168m -15.3°C RH90% ЗЮЗ 17.31m/s; 5518m -25.7°C RH73% ЗЮЗ 29.12m/s
 **2026-11-26**
+- ecmwf: 844m 3.9°C RH52% ЗСЗ 2.17m/s; 1524m -1.6°C RH66% З 7.65m/s; 3037m -11.7°C RH60% З 20.05m/s; 4210m -15.1°C RH8% ЗСЗ 30.22m/s; 5572m -21.0°C RH7% ЗСЗ 39.97m/s
 - gfs: 847m 4.8°C RH49% ЗСЗ 9.71m/s; 1069m 2.7°C RH55% ЗСЗ 10.59m/s; 1528m -1.7°C RH70% ЗСЗ 11.86m/s; 2007m -5.4°C RH77% ЗСЗ 16.58m/s; 3044m -10.0°C RH34% З 22.17m/s; 4222m -13.8°C RH11% З 29.68m/s; 5583m -22.6°C RH34% ЗСЗ 34.68m/s
 - icon: 852m 2.6°C RH66% ЗСЗ 0.35m/s; 1073m 0.7°C RH75% ЗЮЗ 0.96m/s; 1528m -3.1°C RH88% З 4.08m/s; 2005m -6.7°C RH100% З 7.19m/s; 3035m -13.2°C RH83% ЗСЗ 22.93m/s; 4203m -14.9°C RH11% ЗСЗ 33.85m/s; 5567m -21.2°C RH14% ЗСЗ 39.07m/s
 **2026-11-27**
+- ecmwf: 851m 5.7°C RH29% З 0.22m/s; 1536m 1.3°C RH28% З 5.97m/s; 3069m -7.8°C RH59% З 20.11m/s; 4262m -10.7°C RH44% ЗСЗ 26.75m/s; 5643m -18.0°C RH36% ЗСЗ 33.63m/s
 - gfs: 831m 6.1°C RH24% ЗСЗ 1.38m/s; 1055m 5.1°C RH19% ЗСЗ 1.2m/s; 1519m 3.7°C RH18% ССЗ 1.04m/s; 2009m 0.9°C RH22% З 1.94m/s; 3071m -4.3°C RH57% З 15.35m/s; 4275m -9.2°C RH50% З 17.59m/s; 5661m -18.2°C RH57% З 21.17m/s
 - icon: 848m 6.2°C RH36% СЗ 0.32m/s; 1071m 4.4°C RH38% ССЗ 0.68m/s; 1534m 1.4°C RH42% СЗ 0.9m/s; 2020m 0.3°C RH16% З 4.03m/s; 3082m -4.0°C RH47% З 15.87m/s; 4289m -8.8°C RH55% З 22.28m/s; 5677m -17.7°C RH59% З 25.34m/s
 **2026-11-28**
+- ecmwf: 848m 7.3°C RH36% В 0.68m/s; 1538m 3.1°C RH39% ВЮВ 0.52m/s; 3092m -3.7°C RH74% З 13.29m/s; 4295m -9.6°C RH38% З 20.13m/s; 5680m -18.9°C RH79% З 19.62m/s
 - gfs: 825m 7.9°C RH30% ЮВ 1.27m/s; 1051m 7.9°C RH21% ЮЮВ 0.26m/s; 1521m 6.2°C RH18% ЗСЗ 1.81m/s; 2014m 2.6°C RH21% З 5.37m/s; 3079m -3.8°C RH40% З 13.18m/s; 4281m -9.6°C RH91% З 19.25m/s; 5667m -18.4°C RH73% З 18.05m/s
 - icon: 845m 9.6°C RH28% В 1.34m/s; 1071m 7.7°C RH31% В 1.19m/s; 1538m 3.9°C RH46% ЗСЗ 2.32m/s; 2028m 0.6°C RH60% З 9.87m/s; 3089m -4.7°C RH84% З 16.81m/s; 4288m -11.1°C RH78% З 19.63m/s; 5671m -18.7°C RH70% З 22.73m/s
 
