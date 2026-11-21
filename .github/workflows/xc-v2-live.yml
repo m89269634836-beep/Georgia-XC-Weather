@@ -1,0 +1,55 @@
+name: XC v2 conditional model current-week diagnostics
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/learning/predict_live_v2.py'
+      - 'data/xc_v2_model.json'
+      - 'data/dynamic_ridge_forecast.json'
+      - '.github/workflows/xc-v2-live.yml'
+permissions:
+  contents: write
+concurrency:
+  group: xc-v2-live
+  cancel-in-progress: false
+jobs:
+  evaluate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Generate conditional diagnostics if a validated model exists
+        shell: bash
+        run: |
+          if [[ -f data/xc_v2_model.json ]]; then
+            python -u scripts/learning/predict_live_v2.py
+          else
+            echo 'Model not yet validated; no new diagnostics'
+          fi
+      - name: Commit diagnostics when model is available
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [[ ! -f data/xc_v2_live_diagnostics.json ]]; then
+            echo 'No trained model, skipping publication'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          cp data/xc_v2_live_diagnostics.json /tmp/xc_v2_live_diagnostics.json
+          cp data/xc_v2_live_diagnostics.md /tmp/xc_v2_live_diagnostics.md
+          for attempt in 1 2 3 4 5; do
+            git fetch origin main
+            git reset --hard origin/main
+            cp /tmp/xc_v2_live_diagnostics.json /tmp/xc_v2_live_diagnostics.md data/
+            git add data/xc_v2_live_diagnostics.json data/xc_v2_live_diagnostics.md
+            if git diff --cached --quiet; then exit 0; fi
+            git commit -m 'Publish conditional flight-signature forecasts with no flight-clearance claims'
+            if git push origin HEAD:main; then exit 0; fi
+            sleep 3
+          done
+          exit 1
