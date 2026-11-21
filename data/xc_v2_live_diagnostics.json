@@ -1,0 +1,3792 @@
+{
+  "generated_utc": "2026-11-21T12:21:45.866453+00:00",
+  "trained_version": "xc-v2-2026-11-21",
+  "never_safe_to_launch_score": true,
+  "weather_adjustments_activated": {
+    "ridge_signature_rate": false,
+    "thermal_signature_rate": false,
+    "local_hold_proxy": false
+  },
+  "scope": "Experimental conditional ridge/thermal holding on recorded flight days; normal wind component is physical not a rating",
+  "notes": [
+    "Only lead==1 with trained site >=15 historical multi-flight cases yields a calibrated conditional score.",
+    "Unknown start, complex gorges, rotors, landing, ridge shape and airspace are not modeled as safe/unsafe here.",
+    "WindNinja neutral scenarios are NOT equivalent to hour-by-hour data-driven dynamic lift forecast.",
+    "For other days only uncalibrated physical forecast features are shown."
+  ],
+  "rows": [
+    {
+      "date": "2026-11-22",
+      "forecast_lead_days": 1,
+      "site": "lalisquri",
+      "site_name": "Лалискури",
+      "model": "ecmwf_ifs025",
+      "model_issued_time": "2026-11-21T12:21:45.866453+00:00",
+      "training_site_day_cases": 36,
+      "wind10": {
+        "mean_speed_ms": 3.45,
+        "wind_from_deg": 289,
+        "resultant_speed_ms": 3.45
+      },
+      "wind80": {
+        "mean_speed_ms": 5.36,
+        "wind_from_deg": 284,
+        "resultant_speed_ms": 5.35
+      },
+      "wind_component_to_confirmed_windward_slope_ms": 1.12,
+      "surface_gust_max_ms": 9.4,
+      "cloud_pct": 93.0,
+      "cloud_low_pct": 5.33,
+      "radiation_wm2": 221.67,
+      "rain_daytime_mm": 0,
+      "trained_flight_signature_prediction": {
+        "ridge_signature_rate": {
+          "observed_flight_proxy": 0.001,
+          "rough_80pct_holdout_abs_error": 0.1098,
+          "model_component": "baseline",
+          "forecast_weather_adjustment_validated": false,
+          "warning": "GPS signature conditioned on pilots having flown. Not probability of safety or a flyable day."
+        },
+        "thermal_signature_rate": {
+          "observed_flight_proxy": 0.131,
+          "rough_80pct_holdout_abs_error": 0.2039,
+          "model_component": "baseline",
+          "forecast_weather_adjustment_validated": false,
+          "warning": "GPS signature conditioned on pilots having flown. Not probability of safety or a flyable day."
+        },
+        "local_hold_proxy": {
+          "observed_flight_proxy": 0.159,
+          "rough_80pct_holdout_abs_error": 0.2709,
+          "model_component": "baseline",
+          "forecast_weather_adjustment_validated": false,
+          "warning": "GPS signature conditioned on pilots having flown. Not probability of safety or a flyable day."
+        }
+      },
+      "unverified_reasons": []
+    },
+    {
+      "date": "2026-11-23",
+      "forecast_lead_days": 2,
+      "site": "lalisquri",
+      "site_name": "Лалискури",
+      "model": "ecmwf_ifs025",
+      "model_issued_time": "2026-11-21T12:21:45.866453+00:00",
+      "training_site_day_cases": 36,
+      "wind10": {
+        "mean_speed_ms": 0.69,
+        "wind_from_deg": 55,
+        "resultant_speed_ms": 0.2
+      },
+      "wind80": {
+        "mean_speed_ms": 1.12,
+        "wind_from_deg": 32,
+        "resultant_speed_ms": 0.22
+      },
+      "wind_component_to_confirmed_windward_slope_ms": 0.4,
+      "surface_gust_max_ms": 5.0,
+      "cloud_pct": 48.5,
+      "cloud_low_pct": 2.17,
+      "radiation_wm2": 357.33,
+      "rain_daytime_mm": 0,
+      "trained_flight_signature_prediction": null,
+      "unverified_reasons": [
+        "D-1 training lead does not match today's lead; score withheld"
+      ]
+    },
+    {
+      "date": "2026-11-24",
+      "forecast_lead_days": 3,
+      "site": "lalisquri",
+      "site_name": "Лалискури",
+      "model": "ecmwf_ifs025",
+      "model_issued_time": "2026-11-21T12:21:45.866453+00:00",
+      "training_site_day_cases": 36,
+      "wind10": {
+        "mean_speed_ms": 0.75,
+        "wind_from_deg": 29,
+        "resultant_speed_ms": 0.61
+      },
+      "wind80": {
+        "mean_speed_ms": 1.06,
+        "wind_from_deg": 24,
+        "resultant_speed_ms": 0.82
+      },
+      "wind_component_to_confirmed_windward_slope_ms": 0.66,
+      "surface_gust_max_ms": 4.1,
+      "cloud_pct": 8.33,
+      "cloud_low_pct": 1.0,
+      "radiation_wm2": 367.83,
+      "rain_daytime_mm": 0,
+      "trained_flight_signature_prediction": null,
+      "unverified_reasons": [
+        "D-1 training lead does not match today's lead; score withheld"
+      ]
+    },
+    {
+      "date": "2026-11-25",
+      "forecast_lead_days": 4,
+      "site": "lalisquri",
+      "site_name": "Лалискури",
+      "model": "ecmwf_ifs025",
+      "model_issued_time": "2026-11-21T12:21:45.866453+00:00",
+      "training_site_day_cases": 36,
+      "wind10": {
+        "mean_speed_ms": 3.97,
+        "wind_from_deg": 271,
+        "resultant_speed_ms": 3.97
+      },
+      "wind80": {
+        "mean_speed_ms": 6.22,
+        "wind_from_deg": 270,
+        "resultant_speed_ms": 6.22
+      },
+      "wind_component_to_confirmed_windward_slope_ms": 0.07,
+      "surface_gust_max_ms": 12.3,
+      "cloud_pct": 94.83,
+      "cloud_low_pct": 4.17,
+      "radiation_wm2": 109.83,
+      "rain_daytime_mm": 0,
+      "trained_flight_signature_prediction": null,
+      "unverified_reasons": [
+        "forecast gusts: verify slope/ridge turbulence",
+        "D-1 training lead does not match today's lead; score withheld"
+      ]
+    },
+    {
+      "date": "2026-11-26",
+      "forecast_lead_days": 5,
+      "site": "lalisquri",
+      "site_name": "Лалискури",
+      "model": "ecmwf_ifs025",
+      "model_issued_time": "2026-11-21T12:21:45.866453+00:00",
+      "training_site_day_cases": 36,
+      "wind10": {
+        "mean_speed_ms": 1.9,
+        "wind_from_deg": 337,
+        "resultant_speed_ms": 1.87
+      },
+      "wind80": {
+        "mean_speed_ms": 2.47,
+        "wind_from_deg": 324,
+        "resultant_speed_ms": 2.41
+      },
+      "wind_component_to_confirmed_windward_slope_ms": 1.75,
+      "surface_gust_max_ms": 11.3,
+      "cloud_pct": 35.0,
+      "cloud_low_pct": 11.17,
+      "radiation_wm2": 278.0,
+      "rain_daytime_mm": 0,
+      "trained_flight_signature_prediction": null,
+      "unverified_reasons": [
+        "forecast gusts: verify slope/ridge turbulence",
+        "D-1 training lead does not match today's lead; score withheld"
+      ]
+    },
+    {
+      "date": "2026-11-27",
+      "forecast_lead_days": 6,
+      "site": "lalisquri",
+      "site_name": "Лалискури",
+      "model": "ecmwf_ifs025",
+      "model_issued_time": "2026-11-21T12:21:45.866453+00:00",
+      "training_site_day_cases": 36,
+      "wind10": {
+        "mean_speed_ms": 1.16,
+        "wind_from_deg": 30,
+        "resultant_speed_ms": 1.02
+      },
+      "wind80": {
+        "mean_speed_ms": 1.87,
+        "wind_from_deg": 34,
+        "resultant_speed_ms": 1.71
+      },
+      "wind_component_to_confirmed_windward_slope_ms": 1.0,
+      "surface_gust_max_ms": 7.6,
+      "cloud_pct": 17.0,
+      "cloud_low_pct": 0.0,
+      "radiation_wm2": 373.83,
+      "rain_daytime_mm": 0,
+      "trained_flight_signature_prediction": null,
+      "unverified_reasons": [
+        "D-1 training lead does not match today's lead; score withheld"
+      ]
+    },
+    {
+      "date": "2026-11-22",
+      "forecast_lead_days": 1,
+      "site": "jidgeti",
+      "site_name": "Джиджети",
+      "model": "ecmwf_ifs025",
+      "model_issued_time": "2026-11-21T12:21:45.866453+00:00",
+      "training_site_day_cases": 5,
+      "wind10": {
+        "mean_speed_ms": 2.85,
+        "wind_from_deg": 260,
+        "resultant_speed_ms": 2.79
+      },
+      "wind80": {
+        "mean_speed_ms": 3.91,
+        "wind_from_deg": 264,
+        "resultant_speed_ms": 3.84
+      },
+      "wind_component_to_confirmed_windward_slope_ms": -0.49,
+      "surface_gust_max_ms": 11.8,
+      "cloud_pct": 65.67,
+      "cloud_low_pct": 19.17,
+      "radiation_wm2": 275.0,
+      "rain_daytime_mm": 0,
+      "trained_flight_signature_prediction": null,
+      "unverified_reasons": [
+        "forecast gusts: verify slope/ridge turbulence"
+      ]
+    },
+    {
+      "date": "2026-11-23",
+      "forecast_lead_days": 2,
+      "site": "jidgeti",
+      "site_name": "Джиджети",
+      "model": "ecmwf_ifs025",
+      "model_issued_time": "2026-11-21T12:21:45.866453+00:00",
+      "training_site_day_cases": 5,
+      "wind10": {
+        "mean_speed_ms": 1.48,
+        "wind_from_deg": 232,
+        "resultant_speed_ms": 1.32
+      },
+      "wind80": {
+        "mean_speed_ms": 1.96,
+        "wind_from_deg": 240,
+        "resultant_speed_ms": 1.66
+      },
+      "wind_component_to_confirmed_windward_slope_ms": -0.91,
+      "surface_gust_max_ms": 6.4,
+      "cloud_pct": 62.33,
+      "cloud_low_pct": 2.5,
+      "radiation_wm2": 340.0,
+      "rain_daytime_mm": 0,
+      "trained_flight_signature_prediction": null,
+      "unverified_reasons": [
+        "D-1 training lead does not match today's lead; score withheld"
+      ]
+    },
+    {
+      "date": "2026-11-24",
+      "forecast_lead_days": 3,
+      "site": "jidgeti",
+      "site_name": "Джиджети",
+      "model": "ecmwf_ifs025",
+      "model_issued_time": "2026-11-21T12:21:45.866453+00:00",
+      "training_site_day_cases": 5,
+      "wind10": {
+        "mean_speed_ms": 1.05,
+        "wind_from_deg": 162,
+        "resultant_speed_ms": 0.84
+      },
+      "wind80": {
+        "mean_speed_ms": 1.42,
+        "wind_from_deg": 151,
+        "resultant_speed_ms": 1.06
+      },
+      "wind_component_to_confirmed_windward_slope_ms": -1.0,
+      "surface_gust_max_ms": 4.8,
+      "cloud_pct": 36.83,
+      "cloud_low_pct": 11.0,
+      "radiation_wm2": 325.83,
+      "rain_daytime_mm": 0,
+      "trained_flight_signature_prediction": null,
+      "unverified_reasons": [
+        "D-1 training lead does not match today's lead; score withheld"
+      ]
+    },
+    {
+      "date": "2026-11-25",
+      "forecast_lead_days": 4,
+      "site": "jidgeti",
+      "site_name": "Джиджети",
+      "model": "ecmwf_ifs025",
+      "model_issued_time": "2026-11-21T12:21:45.866453+00:00",
+      "training_site_day_cases": 5,
+      "wind10": {
+        "mean_speed_ms": 3.0,
+        "wind_from_deg": 257,
+        "resultant_speed_ms": 2.95
+      },
+      "wind80": {
+        "mean_speed_ms": 4.5,
+        "wind_from_deg": 261,
+        "resultant_speed_ms": 4.42
+      },
+      "wind_component_to_confirmed_windward_slope_ms": -0.67,
+      "surface_gust_max_ms": 14.6,
+      "cloud_pct": 87.83,
+      "cloud_low_pct": 15.0,
+      "radiation_wm2": 238.17,
+      "rain_daytime_mm": 0,
+      "trained_flight_signature_prediction": null,
+      "unverified_reasons": [
+        "forecast gusts: verify slope/ridge turbulence",
+        "D-1 training lead does not match today's lead; score withheld"
+      ]
+    },
+    {
+      "date": "2026-11-26",
+      "forecast_lead_days": 5,
+      "site": "jidgeti",
+      "site_name": "Джиджети",
+      "model": "ecmwf_ifs025",
+      "model_issued_time": "2026-11-21T12:21:45.866453+00:00",
+      "training_site_day_cases": 5,
+      "wind10": {
+        "mean_speed_ms": 3.08,
+        "wind_from_deg": 244,
+        "resultant_speed_ms": 3.07
+      },
+      "wind80": {
+        "mean_speed_ms": 4.3,
+        "wind_from_deg": 248,
+        "resultant_speed_ms": 4.29
+      },
+      "wind_component_to_confirmed_windward_slope_ms": -1.35,
+      "surface_gust_max_ms": 14.5,
+      "cloud_pct": 88.0,
+      "cloud_low_pct": 88.0,
+      "radiation_wm2": 254.67,
+      "rain_daytime_mm": 0,
+      "trained_flight_signature_prediction": null,
+      "unverified_reasons": [
+        "forecast low cloud / potential visibility",
+        "forecast gusts: verify slope/ridge turbulence",
+        "D-1 training lead does not match today's lead; score withheld"
+      ]
+    },
+    {
+      "date": "2026-11-27",
+      "forecast_lead_days": 6,
+      "site": "jidgeti",
+      "site_name": "Джиджети",
+      "model": "ecmwf_ifs025",
+      "model_issued_time": "2026-11-21T12:21:45.866453+00:00",
+      "training_site_day_cases": 5,
+      "wind10": {
+        "mean_speed_ms": 0.49,
+        "wind_from_deg": 151,
+        "resultant_speed_ms": 0.42
+      },
+      "wind80": {
+        "mean_speed_ms": 0.62,
+        "wind_from_deg": 143,
+        "resultant_speed_ms": 0.51
+      },
+      "wind_component_to_confirmed_windward_slope_ms": -0.43,
+      "surface_gust_max_ms": 7.5,
+      "cloud_pct": 28.67,
+      "cloud_low_pct": 0.0,
+      "radiation_wm2": 376.5,
+      "rain_daytime_mm": 0,
+      "trained_flight_signature_prediction": null,
+      "unverified_reasons": [
+        "D-1 training lead does not match today's lead; score withheld"
+      ]
+    },
+    {
+      "date": "2026-11-22",
+      "forecast_lead_days": 1,
+      "site": "ananuri",
+      "site_name": "Ананури",
+      "model": "ecmwf_ifs025",
+      "model_issued_time": "2026-11-21T12:21:45.866453+00:00",
+      "training_site_day_cases": 5,
+      "wind10": {
+        "mean_speed_ms": 2.55,
+        "wind_from_deg": 248,
+        "resultant_speed_ms": 2.48
+      },
+      "wind80": {
+        "mean_speed_ms": 3.64,
+        "wind_from_deg": 254,
+        "resultant_speed_ms": 3.53
+      },
+      "wind_component_to_confirmed_windward_slope_ms": -0.96,
+      "surface_gust_max_ms": 12.6,
+      "cloud_pct": 65.33,
+      "cloud_low_pct": 19.5,
+      "radiation_wm2": 263.17,
+      "rain_daytime_mm": 0,
+      "trained_flight_signature_prediction": null,
+      "unverified_reasons": [
+        "forecast gusts: verify slope/ridge turbulence"
+      ]
+    },
+    {
+      "date": "2026-11-23",
+      "forecast_lead_days": 2,
+      "site": "ananuri",
+      "site_name": "Ананури",
+      "model": "ecmwf_ifs025",
+      "model_issued_time": "2026-11-21T12:21:45.866453+00:00",
+      "training_site_day_cases": 5,
+      "wind10": {
+        "mean_speed_ms": 1.37,
+        "wind_from_deg": 218,
+        "resultant_speed_ms": 0.95
+      },
+      "wind80": {
+        "mean_speed_ms": 1.91,
+        "wind_from_deg": 231,
+        "resultant_speed_ms": 1.18
+      },
+      "wind_component_to_confirmed_windward_slope_ms": -1.08,
+      "surface_gust_max_ms": 7.1,
+      "cloud_pct": 60.0,
+      "cloud_low_pct": 3.0,
+      "radiation_wm2": 349.33,
+      "rain_daytime_mm": 0,
+      "trained_flight_signature_prediction": null,
+      "unverified_reasons": [
+        "D-1 training lead does not match today's lead; score withheld"
+      ]
+    },
+    {
+      "date": "2026-11-24",
+      "forecast_lead_days": 3,
+      "site": "ananuri",
+      "site_name": "Ананури",
+      "model": "ecmwf_ifs025",
+      "model_issued_time": "2026-11-21T12:21:45.866453+00:00",
+      "training_site_day_cases": 5,
+      "wind10": {
+        "mean_speed_ms": 1.12,
+        "wind_from_deg": 65,
+        "resultant_speed_ms": 0.94
+      },
+      "wind80": {
+        "mean_speed_ms": 1.61,
+        "wind_from_deg": 70,
+        "resultant_speed_ms": 1.44
+      },
+      "wind_component_to_confirmed_windward_slope_ms": 0.47,
+      "surface_gust_max_ms": 6.0,
+      "cloud_pct": 53.5,
+      "cloud_low_pct": 11.67,
+      "radiation_wm2": 290.17,
+      "rain_daytime_mm": 0,
+      "trained_flight_signature_prediction": null,
+      "unverified_reasons": [
+        "D-1 training lead does not match today's lead; score withheld"
+      ]
+    },
+    {
+      "date": "2026-11-25",
+      "forecast_lead_days": 4,
+      "site": "ananuri",
+      "site_name": "Ананури",
+      "model": "ecmwf_ifs025",
+      "model_issued_time": "2026-11-21T12:21:45.866453+00:00",
+      "training_site_day_cases": 5,
+      "wind10": {
+        "mean_speed_ms": 3.08,
+        "wind_from_deg": 240,
+        "resultant_speed_ms": 3.06
+      },
+      "wind80": {
+        "mean_speed_ms": 4.33,
+        "wind_from_deg": 245,
+        "resultant_speed_ms": 4.29
+      },
+      "wind_component_to_confirmed_windward_slope_ms": -1.54,
+      "surface_gust_max_ms": 16.6,
+      "cloud_pct": 79.83,
+      "cloud_low_pct": 15.17,
+      "radiation_wm2": 238.67,
+      "rain_daytime_mm": 0,
+      "trained_flight_signature_prediction": null,
+      "unverified_reasons": [
+        "forecast gusts: verify slope/ridge turbulence",
+        "D-1 training lead does not match today's lead; score withheld"
+      ]
+    },
+    {
+      "date": "2026-11-26",
+      "forecast_lead_days": 5,
+      "site": "ananuri",
+      "site_name": "Ананури",
+      "model": "ecmwf_ifs025",
+      "model_issued_time": "2026-11-21T12:21:45.866453+00:00",
+      "training_site_day_cases": 5,
+      "wind10": {
+        "mean_speed_ms": 3.09,
+        "wind_from_deg": 246,
+        "resultant_speed_ms": 3.09
+      },
+      "wind80": {
+        "mean_speed_ms": 4.42,
+        "wind_from_deg": 250,
+        "resultant_speed_ms": 4.42
+      },
+      "wind_component_to_confirmed_windward_slope_ms": -1.26,
+      "surface_gust_max_ms": 14.6,
+      "cloud_pct": 65.67,
+      "cloud_low_pct": 60.5,
+      "radiation_wm2": 240.83,
+      "rain_daytime_mm": 0,
+      "trained_flight_signature_prediction": null,
+      "unverified_reasons": [
+        "forecast gusts: verify slope/ridge turbulence",
+        "D-1 training lead does not match today's lead; score withheld"
+      ]
+    },
+    {
+      "date": "2026-11-27",
+      "forecast_lead_days": 6,
+      "site": "ananuri",
+      "site_name": "Ананури",
+      "model": "ecmwf_ifs025",
+      "model_issued_time": "2026-11-21T12:21:45.866453+00:00",
+      "training_site_day_cases": 5,
+      "wind10": {
+        "mean_speed_ms": 0.98,
+        "wind_from_deg": 179,
+        "resultant_speed_ms": 0.85
+      },
+      "wind80": {
+        "mean_speed_ms": 1.27,
+        "wind_from_deg": 175,
+        "resultant_speed_ms": 1.01
+      },
+      "wind_component_to_confirmed_windward_slope_ms": -0.98,
+      "surface_gust_max_ms": 8.8,
+      "cloud_pct": 26.0,
+      "cloud_low_pct": 0.5,
+      "radiation_wm2": 385.83,
+      "rain_daytime_mm": 0,
+      "trained_flight_signature_prediction": null,
+      "unverified_reasons": [
+        "D-1 training lead does not match today's lead; score withheld"
+      ]
+    },
+    {
+      "date": "2026-11-22",
+      "forecast_lead_days": 1,
+      "site": "tsivi",
+      "site_name": "Циви",
+      "model": "ecmwf_ifs025",
+      "model_issued_time": "2026-11-21T12:21:45.866453+00:00",
+      "training_site_day_cases": 1,
+      "wind10": {
+        "mean_speed_ms": 1.88,
+        "wind_from_deg": 278,
+        "resultant_speed_ms": 1.87
+      },
+      "wind80": {
+        "mean_speed_ms": 2.77,
+        "wind_from_deg": 289,
+        "resultant_speed_ms": 2.76
+      },
+      "wind_component_to_confirmed_windward_slope_ms": 0.26,
+      "surface_gust_max_ms": 8.3,
+      "cloud_pct": 97.83,
+      "cloud_low_pct": 5.83,
+      "radiation_wm2": 186.67,
+      "rain_daytime_mm": 0,
+      "trained_flight_signature_prediction": null,
+      "unverified_reasons": [
+        "fewer than 15 historical multi-flight site-days"
+      ]
+    },
+    {
+      "date": "2026-11-23",
+      "forecast_lead_days": 2,
+      "site": "tsivi",
+      "site_name": "Циви",
+      "model": "ecmwf_ifs025",
+      "model_issued_time": "2026-11-21T12:21:45.866453+00:00",
+      "training_site_day_cases": 1,
+      "wind10": {
+        "mean_speed_ms": 0.97,
+        "wind_from_deg": 177,
+        "resultant_speed_ms": 0.95
+      },
+      "wind80": {
+        "mean_speed_ms": 1.08,
+        "wind_from_deg": 198,
+        "resultant_speed_ms": 0.97
+      },
+      "wind_component_to_confirmed_windward_slope_ms": -0.97,
+      "surface_gust_max_ms": 5.0,
+      "cloud_pct": 41.0,
+      "cloud_low_pct": 1.33,
+      "radiation_wm2": 356.0,
+      "rain_daytime_mm": 0,
+      "trained_flight_signature_prediction": null,
+      "unverified_reasons": [
+        "fewer than 15 historical multi-flight site-days",
+        "D-1 training lead does not match today's lead; score withheld"
+      ]
+    },
+    {
+      "date": "2026-11-24",
+      "forecast_lead_days": 3,
+      "site": "tsivi",
+      "site_name": "Циви",
+      "model": "ecmwf_ifs025",
+      "model_issued_time": "2026-11-21T12:21:45.866453+00:00",
+      "training_site_day_cases": 1,
+      "wind10": {
+        "mean_speed_ms": 0.72,
+        "wind_from_deg": 174,
+        "resultant_speed_ms": 0.67
+      },
+      "wind80": {
+        "mean_speed_ms": 0.87,
+        "wind_from_deg": 186,
+        "resultant_speed_ms": 0.78
+      },
+      "wind_component_to_confirmed_windward_slope_ms": -0.72,
+      "surface_gust_max_ms": 4.2,
+      "cloud_pct": 3.33,
+      "cloud_low_pct": 0.0,
+      "radiation_wm2": 368.83,
+      "rain_daytime_mm": 0,
+      "trained_flight_signature_prediction": null,
+      "unverified_reasons": [
+        "fewer than 15 historical multi-flight site-days",
+        "D-1 training lead does not match today's lead; score withheld"
+      ]
+    },
+    {
+      "date": "2026-11-25",
+      "forecast_lead_days": 4,
+      "site": "tsivi",
+      "site_name": "Циви",
+      "model": "ecmwf_ifs025",
+      "model_issued_time": "2026-11-21T12:21:45.866453+00:00",
+      "training_site_day_cases": 1,
+      "wind10": {
+        "mean_speed_ms": 1.84,
+        "wind_from_deg": 280,
+        "resultant_speed_ms": 1.83
+      },
+      "wind80": {
+        "mean_speed_ms": 3.75,
+        "wind_from_deg": 294,
+        "resultant_speed_ms": 3.74
+      },
+      "wind_component_to_confirmed_windward_slope_ms": 0.32,
+      "surface_gust_max_ms": 16.1,
+      "cloud_pct": 97.5,
+      "cloud_low_pct": 19.33,
+      "radiation_wm2": 82.0,
+      "rain_daytime_mm": 1.8,
+      "trained_flight_signature_prediction": null,
+      "unverified_reasons": [
+        "forecast precipitation",
+        "forecast gusts: verify slope/ridge turbulence",
+        "fewer than 15 historical multi-flight site-days",
+        "D-1 training lead does not match today's lead; score withheld"
+      ]
+    },
+    {
+      "date": "2026-11-26",
+      "forecast_lead_days": 5,
+      "site": "tsivi",
+      "site_name": "Циви",
+      "model": "ecmwf_ifs025",
+      "model_issued_time": "2026-11-21T12:21:45.866453+00:00",
+      "training_site_day_cases": 1,
+      "wind10": {
+        "mean_speed_ms": 3.71,
+        "wind_from_deg": 300,
+        "resultant_speed_ms": 3.7
+      },
+      "wind80": {
+        "mean_speed_ms": 5.55,
+        "wind_from_deg": 300,
+        "resultant_speed_ms": 5.54
+      },
+      "wind_component_to_confirmed_windward_slope_ms": 1.86,
+      "surface_gust_max_ms": 10.8,
+      "cloud_pct": 18.0,
+      "cloud_low_pct": 14.17,
+      "radiation_wm2": 362.33,
+      "rain_daytime_mm": 0,
+      "trained_flight_signature_prediction": null,
+      "unverified_reasons": [
+        "fewer than 15 historical multi-flight site-days",
+        "D-1 training lead does not match today's lead; score withheld"
+      ]
+    },
+    {
+      "date": "2026-11-27",
+      "forecast_lead_days": 6,
+      "site": "tsivi",
+      "site_name": "Циви",
+      "model": "ecmwf_ifs025",
+      "model_issued_time": "2026-11-21T12:21:45.866453+00:00",
+      "training_site_day_cases": 1,
+      "wind10": {
+        "mean_speed_ms": 0.74,
+        "wind_from_deg": 229,
+        "resultant_speed_ms": 0.73
+      },
+      "wind80": {
+        "mean_speed_ms": 1.24,
+        "wind_from_deg": 259,
+        "resultant_speed_ms": 1.22
+      },
+      "wind_component_to_confirmed_windward_slope_ms": -0.49,
+      "surface_gust_max_ms": 7.8,
+      "cloud_pct": 26.17,
+      "cloud_low_pct": 0.0,
+      "radiation_wm2": 362.5,
+      "rain_daytime_mm": 0,
+      "trained_flight_signature_prediction": null,
+      "unverified_reasons": [
+        "fewer than 15 historical multi-flight site-days",
+        "D-1 training lead does not match today's lead; score withheld"
+      ]
+    },
+    {
+      "date": "2026-11-22",
+      "forecast_lead_days": 1,
+      "site": "udzilaurta",
+      "site_name": "Удзилаурта",
+      "model": "ecmwf_ifs025",
+      "model_issued_time": "2026-11-21T12:21:45.866453+00:00",
+      "training_site_day_cases": 2,
+      "wind10": {
+        "mean_speed_ms": 1.46,
+        "wind_from_deg": 193,
+        "resultant_speed_ms": 1.46
+      },
+      "wind80": {
+        "mean_speed_ms": 2.49,
+        "wind_from_deg": 193,
+        "resultant_speed_ms": 2.47
+      },
+      "wind_component_to_confirmed_windward_slope_ms": -1.44,
+      "surface_gust_max_ms": 8.4,
+      "cloud_pct": 81.0,
+      "cloud_low_pct": 79.83,
+      "radiation_wm2": 286.0,
+      "rain_daytime_mm": 0.3,
+      "trained_flight_signature_prediction": null,
+      "unverified_reasons": [
+        "fewer than 15 historical multi-flight site-days"
+      ]
+    },
+    {
+      "date": "2026-11-23",
+      "forecast_lead_days": 2,
+      "site": "udzilaurta",
+      "site_name": "Удзилаурта",
+      "model": "ecmwf_ifs025",
+      "model_issued_time": "2026-11-21T12:21:45.866453+00:00",
+      "training_site_day_cases": 2,
+      "wind10": {
+        "mean_speed_ms": 1.77,
+        "wind_from_deg": 177,
+        "resultant_speed_ms": 1.75
+      },
+      "wind80": {
+        "mean_speed_ms": 3.38,
+        "wind_from_deg": 176,
+        "resultant_speed_ms": 3.32
+      },
+      "wind_component_to_confirmed_windward_slope_ms": -1.6,
+      "surface_gust_max_ms": 9.7,
+      "cloud_pct": 72.5,
+      "cloud_low_pct": 10.5,
+      "radiation_wm2": 381.0,
+      "rain_daytime_mm": 0,
+      "trained_flight_signature_prediction": null,
+      "unverified_reasons": [
+        "fewer than 15 historical multi-flight site-days",
+        "D-1 training lead does not match today's lead; score withheld"
+      ]
+    },
+    {
+      "date": "2026-11-24",
+      "forecast_lead_days": 3,
+      "site": "udzilaurta",
+      "site_name": "Удзилаурта",
+      "model": "ecmwf_ifs025",
+      "model_issued_time": "2026-11-21T12:21:45.866453+00:00",
+      "training_site_day_cases": 2,
+      "wind10": {
+        "mean_speed_ms": 1.32,
+        "wind_from_deg": 181,
+        "resultant_speed_ms": 1.31
+      },
+      "wind80": {
+        "mean_speed_ms": 2.6,
+        "wind_from_deg": 178,
+        "resultant_speed_ms": 2.58
+      },
+      "wind_component_to_confirmed_windward_slope_ms": -1.23,
+      "surface_gust_max_ms": 9.4,
+      "cloud_pct": 71.67,
+      "cloud_low_pct": 58.83,
+      "radiation_wm2": 348.5,
+      "rain_daytime_mm": 0,
+      "trained_flight_signature_prediction": null,
+      "unverified_reasons": [
+        "fewer than 15 historical multi-flight site-days",
+        "D-1 training lead does not match today's lead; score withheld"
+      ]
+    },
+    {
+      "date": "2026-11-25",
+      "forecast_lead_days": 4,
+      "site": "udzilaurta",
+      "site_name": "Удзилаурта",
+      "model": "ecmwf_ifs025",
+      "model_issued_time": "2026-11-21T12:21:45.866453+00:00",
+      "training_site_day_cases": 2,
+      "wind10": {
+        "mean_speed_ms": 1.39,
+        "wind_from_deg": 201,
+        "resultant_speed_ms": 1.39
+      },
+      "wind80": {
+        "mean_speed_ms": 2.25,
+        "wind_from_deg": 197,
+        "resultant_speed_ms": 2.24
+      },
+      "wind_component_to_confirmed_windward_slope_ms": -1.39,
+      "surface_gust_max_ms": 10.2,
+      "cloud_pct": 91.33,
+      "cloud_low_pct": 70.17,
+      "radiation_wm2": 278.67,
+      "rain_daytime_mm": 0.3,
+      "trained_flight_signature_prediction": null,
+      "unverified_reasons": [
+        "fewer than 15 historical multi-flight site-days",
+        "D-1 training lead does not match today's lead; score withheld"
+      ]
+    },
+    {
+      "date": "2026-11-26",
+      "forecast_lead_days": 5,
+      "site": "udzilaurta",
+      "site_name": "Удзилаурта",
+      "model": "ecmwf_ifs025",
+      "model_issued_time": "2026-11-21T12:21:45.866453+00:00",
+      "training_site_day_cases": 2,
+      "wind10": {
+        "mean_speed_ms": 1.95,
+        "wind_from_deg": 210,
+        "resultant_speed_ms": 1.94
+      },
+      "wind80": {
+        "mean_speed_ms": 2.84,
+        "wind_from_deg": 202,
+        "resultant_speed_ms": 2.79
+      },
+      "wind_component_to_confirmed_windward_slope_ms": -1.93,
+      "surface_gust_max_ms": 16.0,
+      "cloud_pct": 95.33,
+      "cloud_low_pct": 95.33,
+      "radiation_wm2": 254.83,
+      "rain_daytime_mm": 0.6,
+      "trained_flight_signature_prediction": null,
+      "unverified_reasons": [
+        "forecast low cloud / potential visibility",
+        "forecast gusts: verify slope/ridge turbulence",
+        "fewer than 15 historical multi-flight site-days",
+        "D-1 training lead does not match today's lead; score withheld"
+      ]
+    },
+    {
+      "date": "2026-11-27",
+      "forecast_lead_days": 6,
+      "site": "udzilaurta",
+      "site_name": "Удзилаурта",
+      "model": "ecmwf_ifs025",
+      "model_issued_time": "2026-11-21T12:21:45.866453+00:00",
+      "training_site_day_cases": 2,
+      "wind10": {
+        "mean_speed_ms": 0.9,
+        "wind_from_deg": 168,
+        "resultant_speed_ms": 0.88
+      },
+      "wind80": {
+        "mean_speed_ms": 2.73,
+        "wind_from_deg": 168,
+        "resultant_speed_ms": 2.72
+      },
+      "wind_component_to_confirmed_windward_slope_ms": -0.74,
+      "surface_gust_max_ms": 8.9,
+      "cloud_pct": 7.67,
+      "cloud_low_pct": 0.83,
+      "radiation_wm2": 410.0,
+      "rain_daytime_mm": 0,
+      "trained_flight_signature_prediction": null,
+      "unverified_reasons": [
+        "fewer than 15 historical multi-flight site-days",
+        "D-1 training lead does not match today's lead; score withheld"
+      ]
+    },
+    {
+      "date": "2026-11-22",
+      "forecast_lead_days": 1,
+      "site": "gudauri",
+      "site_name": "Гудаури район",
+      "model": "ecmwf_ifs025",
+      "model_issued_time": "2026-11-21T12:21:45.866453+00:00",
+      "training_site_day_cases": 32,
+      "wind10": {
+        "mean_speed_ms": 1.05,
+        "wind_from_deg": 226,
+        "resultant_speed_ms": 1.02
+      },
+      "wind80": {
+        "mean_speed_ms": 1.62,
+        "wind_from_deg": 253,
+        "resultant_speed_ms": 1.56
+      },
+      "wind_component_to_confirmed_windward_slope_ms": null,
+      "surface_gust_max_ms": 6.7,
+      "cloud_pct": 77.33,
+      "cloud_low_pct": 57.0,
+      "radiation_wm2": 317.67,
+      "rain_daytime_mm": 0.9,
+      "trained_flight_signature_prediction": {
+        "ridge_signature_rate": {
+          "observed_flight_proxy": 0.064,
+          "rough_80pct_holdout_abs_error": 0.1098,
+          "model_component": "baseline",
+          "forecast_weather_adjustment_validated": false,
+          "warning": "GPS signature conditioned on pilots having flown. Not probability of safety or a flyable day."
+        },
+        "thermal_signature_rate": {
+          "observed_flight_proxy": 0.111,
+          "rough_80pct_holdout_abs_error": 0.2039,
+          "model_component": "baseline",
+          "forecast_weather_adjustment_validated": false,
+          "warning": "GPS signature conditioned on pilots having flown. Not probability of safety or a flyable day."
+        },
+        "local_hold_proxy": {
+          "observed_flight_proxy": 0.203,
+          "rough_80pct_holdout_abs_error": 0.2709,
+          "model_component": "baseline",
+          "forecast_weather_adjustment_validated": false,
+          "warning": "GPS signature conditioned on pilots having flown. Not probability of safety or a flyable day."
+        }
+      },
+      "unverified_reasons": [
+        "exact takeoff or ridge face unverified",
+        "check local airspace/access"
+      ]
+    },
+    {
+      "date": "2026-11-23",
+      "forecast_lead_days": 2,
+      "site": "gudauri",
+      "site_name": "Гудаури район",
+      "model": "ecmwf_ifs025",
+      "model_issued_time": "2026-11-21T12:21:45.866453+00:00",
+      "training_site_day_cases": 32,
+      "wind10": {
+        "mean_speed_ms": 0.68,
+        "wind_from_deg": 248,
+        "resultant_speed_ms": 0.36
+      },
+      "wind80": {
+        "mean_speed_ms": 0.59,
+        "wind_from_deg": 228,
+        "resultant_speed_ms": 0.46
+      },
+      "wind_component_to_confirmed_windward_slope_ms": null,
+      "surface_gust_max_ms": 5.5,
+      "cloud_pct": 64.5,
+      "cloud_low_pct": 1.67,
+      "radiation_wm2": 411.17,
+      "rain_daytime_mm": 0,
+      "trained_flight_signature_prediction": null,
+      "unverified_reasons": [
+        "exact takeoff or ridge face unverified",
+        "check local airspace/access",
+        "D-1 training lead does not match today's lead; score withheld"
+      ]
+    },
+    {
+      "date": "2026-11-24",
+      "forecast_lead_days": 3,
+      "site": "gudauri",
+      "site_name": "Гудаури район",
+      "model": "ecmwf_ifs025",
+      "model_issued_time": "2026-11-21T12:21:45.866453+00:00",
+      "training_site_day_cases": 32,
+      "wind10": {
+        "mean_speed_ms": 0.68,
+        "wind_from_deg": 328,
+        "resultant_speed_ms": 0.19
+      },
+      "wind80": {
+        "mean_speed_ms": 0.81,
+        "wind_from_deg": 43,
+        "resultant_speed_ms": 0.38
+      },
+      "wind_component_to_confirmed_windward_slope_ms": null,
+      "surface_gust_max_ms": 6.7,
+      "cloud_pct": 93.17,
+      "cloud_low_pct": 82.17,
+      "radiation_wm2": 212.67,
+      "rain_daytime_mm": 1.2,
+      "trained_flight_signature_prediction": null,
+      "unverified_reasons": [
+        "exact takeoff or ridge face unverified",
+        "check local airspace/access",
+        "forecast precipitation",
+        "forecast low cloud / potential visibility",
+        "D-1 training lead does not match today's lead; score withheld"
+      ]
+    },
+    {
+      "date": "2026-11-25",
+      "forecast_lead_days": 4,
+      "site": "gudauri",
+      "site_name": "Гудаури район",
+      "model": "ecmwf_ifs025",
+      "model_issued_time": "2026-11-21T12:21:45.866453+00:00",
+      "training_site_day_cases": 32,
+      "wind10": {
+        "mean_speed_ms": 1.32,
+        "wind_from_deg": 270,
+        "resultant_speed_ms": 1.28
+      },
+      "wind80": {
+        "mean_speed_ms": 2.47,
+        "wind_from_deg": 282,
+        "resultant_speed_ms": 2.41
+      },
+      "wind_component_to_confirmed_windward_slope_ms": null,
+      "surface_gust_max_ms": 12.0,
+      "cloud_pct": 73.17,
+      "cloud_low_pct": 65.5,
+      "radiation_wm2": 334.67,
+      "rain_daytime_mm": 0.3,
+      "trained_flight_signature_prediction": null,
+      "unverified_reasons": [
+        "exact takeoff or ridge face unverified",
+        "check local airspace/access",
+        "forecast gusts: verify slope/ridge turbulence",
+        "D-1 training lead does not match today's lead; score withheld"
+      ]
+    },
+    {
+      "date": "2026-11-26",
+      "forecast_lead_days": 5,
+      "site": "gudauri",
+      "site_name": "Гудаури район",
+      "model": "ecmwf_ifs025",
+      "model_issued_time": "2026-11-21T12:21:45.866453+00:00",
+      "training_site_day_cases": 32,
+      "wind10": {
+        "mean_speed_ms": 1.77,
+        "wind_from_deg": 231,
+        "resultant_speed_ms": 1.77
+      },
+      "wind80": {
+        "mean_speed_ms": 3.19,
+        "wind_from_deg": 248,
+        "resultant_speed_ms": 3.19
+      },
+      "wind_component_to_confirmed_windward_slope_ms": null,
+      "surface_gust_max_ms": 16.0,
+      "cloud_pct": 83.0,
+      "cloud_low_pct": 83.0,
+      "radiation_wm2": 325.5,
+      "rain_daytime_mm": 0,
+      "trained_flight_signature_prediction": null,
+      "unverified_reasons": [
+        "exact takeoff or ridge face unverified",
+        "check local airspace/access",
+        "forecast low cloud / potential visibility",
+        "forecast gusts: verify slope/ridge turbulence",
+        "D-1 training lead does not match today's lead; score withheld"
+      ]
+    },
+    {
+      "date": "2026-11-27",
+      "forecast_lead_days": 6,
+      "site": "gudauri",
+      "site_name": "Гудаури район",
+      "model": "ecmwf_ifs025",
+      "model_issued_time": "2026-11-21T12:21:45.866453+00:00",
+      "training_site_day_cases": 32,
+      "wind10": {
+        "mean_speed_ms": 0.48,
+        "wind_from_deg": 258,
+        "resultant_speed_ms": 0.24
+      },
+      "wind80": {
+        "mean_speed_ms": 0.53,
+        "wind_from_deg": 273,
+        "resultant_speed_ms": 0.29
+      },
+      "wind_component_to_confirmed_windward_slope_ms": null,
+      "surface_gust_max_ms": 9.1,
+      "cloud_pct": 8.67,
+      "cloud_low_pct": 1.83,
+      "radiation_wm2": 421.5,
+      "rain_daytime_mm": 0,
+      "trained_flight_signature_prediction": null,
+      "unverified_reasons": [
+        "exact takeoff or ridge face unverified",
+        "check local airspace/access",
+        "D-1 training lead does not match today's lead; score withheld"
+      ]
+    },
+    {
+      "date": "2026-11-22",
+      "forecast_lead_days": 1,
+      "site": "tbilisi_sea_area",
+      "site_name": "Тбилисское море",
+      "model": "ecmwf_ifs025",
+      "model_issued_time": "2026-11-21T12:21:45.866453+00:00",
+      "training_site_day_cases": 0,
+      "wind10": {
+        "mean_speed_ms": 6.83,
+        "wind_from_deg": 310,
+        "resultant_speed_ms": 6.81
+      },
+      "wind80": {
+        "mean_speed_ms": 10.19,
+        "wind_from_deg": 311,
+        "resultant_speed_ms": 10.17
+      },
+      "wind_component_to_confirmed_windward_slope_ms": null,
+      "surface_gust_max_ms": 14.7,
+      "cloud_pct": 95.5,
+      "cloud_low_pct": 10.33,
+      "radiation_wm2": 190.17,
+      "rain_daytime_mm": 0,
+      "trained_flight_signature_prediction": null,
+      "unverified_reasons": [
+        "exact takeoff or ridge face unverified",
+        "check local airspace/access",
+        "forecast gusts: verify slope/ridge turbulence",
+        "no historical calibration at this site"
+      ]
+    },
+    {
+      "date": "2026-11-23",
+      "forecast_lead_days": 2,
+      "site": "tbilisi_sea_area",
+      "site_name": "Тбилисское море",
+      "model": "ecmwf_ifs025",
+      "model_issued_time": "2026-11-21T12:21:45.866453+00:00",
+      "training_site_day_cases": 0,
+      "wind10": {
+        "mean_speed_ms": 2.79,
+        "wind_from_deg": 312,
+        "resultant_speed_ms": 2.75
+      },
+      "wind80": {
+        "mean_speed_ms": 4.0,
+        "wind_from_deg": 317,
+        "resultant_speed_ms": 3.99
+      },
+      "wind_component_to_confirmed_windward_slope_ms": null,
+      "surface_gust_max_ms": 10.8,
+      "cloud_pct": 54.67,
+      "cloud_low_pct": 0.0,
+      "radiation_wm2": 337.67,
+      "rain_daytime_mm": 0,
+      "trained_flight_signature_prediction": null,
+      "unverified_reasons": [
+        "exact takeoff or ridge face unverified",
+        "check local airspace/access",
+        "no historical calibration at this site",
+        "D-1 training lead does not match today's lead; score withheld"
+      ]
+    },
+    {
+      "date": "2026-11-24",
+      "forecast_lead_days": 3,
+      "site": "tbilisi_sea_area",
+      "site_name": "Тбилисское море",
+      "model": "ecmwf_ifs025",
+      "model_issued_time": "2026-11-21T12:21:45.866453+00:00",
+      "training_site_day_cases": 0,
+      "wind10": {
+        "mean_speed_ms": 0.75,
+        "wind_from_deg": 164,
+        "resultant_speed_ms": 0.68
+      },
+      "wind80": {
+        "mean_speed_ms": 0.94,
+        "wind_from_deg": 150,
+        "resultant_speed_ms": 0.92
+      },
+      "wind_component_to_confirmed_windward_slope_ms": null,
+      "surface_gust_max_ms": 4.2,
+      "cloud_pct": 28.67,
+      "cloud_low_pct": 0.0,
+      "radiation_wm2": 350.33,
+      "rain_daytime_mm": 0,
+      "trained_flight_signature_prediction": null,
+      "unverified_reasons": [
+        "exact takeoff or ridge face unverified",
+        "check local airspace/access",
+        "no historical calibration at this site",
+        "D-1 training lead does not match today's lead; score withheld"
+      ]
+    },
+    {
+      "date": "2026-11-25",
+      "forecast_lead_days": 4,
+      "site": "tbilisi_sea_area",
+      "site_name": "Тбилисское море",
+      "model": "ecmwf_ifs025",
+      "model_issued_time": "2026-11-21T12:21:45.866453+00:00",
+      "training_site_day_cases": 0,
+      "wind10": {
+        "mean_speed_ms": 7.76,
+        "wind_from_deg": 316,
+        "resultant_speed_ms": 7.76
+      },
+      "wind80": {
+        "mean_speed_ms": 11.89,
+        "wind_from_deg": 318,
+        "resultant_speed_ms": 11.89
+      },
+      "wind_component_to_confirmed_windward_slope_ms": null,
+      "surface_gust_max_ms": 20.7,
+      "cloud_pct": 94.83,
+      "cloud_low_pct": 16.0,
+      "radiation_wm2": 116.83,
+      "rain_daytime_mm": 0,
+      "trained_flight_signature_prediction": null,
+      "unverified_reasons": [
+        "exact takeoff or ridge face unverified",
+        "check local airspace/access",
+        "forecast gusts: verify slope/ridge turbulence",
+        "no historical calibration at this site",
+        "D-1 training lead does not match today's lead; score withheld"
+      ]
+    },
+    {
+      "date": "2026-11-26",
+      "forecast_lead_days": 5,
+      "site": "tbilisi_sea_area",
+      "site_name": "Тбилисское море",
+      "model": "ecmwf_ifs025",
+      "model_issued_time": "2026-11-21T12:21:45.866453+00:00",
+      "training_site_day_cases": 0,
+      "wind10": {
+        "mean_speed_ms": 5.77,
+        "wind_from_deg": 324,
+        "resultant_speed_ms": 5.75
+      },
+      "wind80": {
+        "mean_speed_ms": 8.44,
+        "wind_from_deg": 324,
+        "resultant_speed_ms": 8.42
+      },
+      "wind_component_to_confirmed_windward_slope_ms": null,
+      "surface_gust_max_ms": 13.7,
+      "cloud_pct": 25.83,
+      "cloud_low_pct": 16.0,
+      "radiation_wm2": 327.67,
+      "rain_daytime_mm": 0,
+      "trained_flight_signature_prediction": null,
+      "unverified_reasons": [
+        "exact takeoff or ridge face unverified",
+        "check local airspace/access",
+        "forecast gusts: verify slope/ridge turbulence",
+        "no historical calibration at this site",
+        "D-1 training lead does not match today's lead; score withheld"
+      ]
+    },
+    {
+      "date": "2026-11-27",
+      "forecast_lead_days": 6,
+      "site": "tbilisi_sea_area",
+      "site_name": "Тбилисское море",
+      "model": "ecmwf_ifs025",
+      "model_issued_time": "2026-11-21T12:21:45.866453+00:00",
+      "training_site_day_cases": 0,
+      "wind10": {
+        "mean_speed_ms": 2.69,
+        "wind_from_deg": 288,
+        "resultant_speed_ms": 2.62
+      },
+      "wind80": {
+        "mean_speed_ms": 4.45,
+        "wind_from_deg": 299,
+        "resultant_speed_ms": 4.36
+      },
+      "wind_component_to_confirmed_windward_slope_ms": null,
+      "surface_gust_max_ms": 15.2,
+      "cloud_pct": 11.83,
+      "cloud_low_pct": 0.0,
+      "radiation_wm2": 373.83,
+      "rain_daytime_mm": 0,
+      "trained_flight_signature_prediction": null,
+      "unverified_reasons": [
+        "exact takeoff or ridge face unverified",
+        "check local airspace/access",
+        "forecast gusts: verify slope/ridge turbulence",
+        "no historical calibration at this site",
+        "D-1 training lead does not match today's lead; score withheld"
+      ]
+    },
+    {
+      "date": "2026-11-22",
+      "forecast_lead_days": 1,
+      "site": "sighnaghi_area",
+      "site_name": "Сигнахи",
+      "model": "ecmwf_ifs025",
+      "model_issued_time": "2026-11-21T12:21:45.866453+00:00",
+      "training_site_day_cases": 0,
+      "wind10": {
+        "mean_speed_ms": 2.77,
+        "wind_from_deg": 251,
+        "resultant_speed_ms": 2.68
+      },
+      "wind80": {
+        "mean_speed_ms": 4.41,
+        "wind_from_deg": 262,
+        "resultant_speed_ms": 4.25
+      },
+      "wind_component_to_confirmed_windward_slope_ms": null,
+      "surface_gust_max_ms": 9.3,
+      "cloud_pct": 99.67,
+      "cloud_low_pct": 0.5,
+      "radiation_wm2": 121.0,
+      "rain_daytime_mm": 0.3,
+      "trained_flight_signature_prediction": null,
+      "unverified_reasons": [
+        "exact takeoff or ridge face unverified",
+        "check local airspace/access",
+        "no historical calibration at this site"
+      ]
+    },
+    {
+      "date": "2026-11-23",
+      "forecast_lead_days": 2,
+      "site": "sighnaghi_area",
+      "site_name": "Сигнахи",
+      "model": "ecmwf_ifs025",
+      "model_issued_time": "2026-11-21T12:21:45.866453+00:00",
+      "training_site_day_cases": 0,
+      "wind10": {
+        "mean_speed_ms": 0.58,
+        "wind_from_deg": 64,
+        "resultant_speed_ms": 0.54
+      },
+      "wind80": {
+        "mean_speed_ms": 0.75,
+        "wind_from_deg": 60,
+        "resultant_speed_ms": 0.65
+      },
+      "wind_component_to_confirmed_windward_slope_ms": null,
+      "surface_gust_max_ms": 4.6,
+      "cloud_pct": 26.83,
+      "cloud_low_pct": 0.0,
+      "radiation_wm2": 373.17,
+      "rain_daytime_mm": 0,
+      "trained_flight_signature_prediction": null,
+      "unverified_reasons": [
+        "exact takeoff or ridge face unverified",
+        "check local airspace/access",
+        "no historical calibration at this site",
+        "D-1 training lead does not match today's lead; score withheld"
+      ]
+    },
+    {
+      "date": "2026-11-24",
+      "forecast_lead_days": 3,
+      "site": "sighnaghi_area",
+      "site_name": "Сигнахи",
+      "model": "ecmwf_ifs025",
+      "model_issued_time": "2026-11-21T12:21:45.866453+00:00",
+      "training_site_day_cases": 0,
+      "wind10": {
+        "mean_speed_ms": 1.45,
+        "wind_from_deg": 304,
+        "resultant_speed_ms": 1.26
+      },
+      "wind80": {
+        "mean_speed_ms": 2.1,
+        "wind_from_deg": 313,
+        "resultant_speed_ms": 1.92
+      },
+      "wind_component_to_confirmed_windward_slope_ms": null,
+      "surface_gust_max_ms": 5.2,
+      "cloud_pct": 0.5,
+      "cloud_low_pct": 0.0,
+      "radiation_wm2": 373.17,
+      "rain_daytime_mm": 0,
+      "trained_flight_signature_prediction": null,
+      "unverified_reasons": [
+        "exact takeoff or ridge face unverified",
+        "check local airspace/access",
+        "no historical calibration at this site",
+        "D-1 training lead does not match today's lead; score withheld"
+      ]
+    },
+    {
+      "date": "2026-11-25",
+      "forecast_lead_days": 4,
+      "site": "sighnaghi_area",
+      "site_name": "Сигнахи",
+      "model": "ecmwf_ifs025",
+      "model_issued_time": "2026-11-21T12:21:45.866453+00:00",
+      "training_site_day_cases": 0,
+      "wind10": {
+        "mean_speed_ms": 2.84,
+        "wind_from_deg": 280,
+        "resultant_speed_ms": 2.79
+      },
+      "wind80": {
+        "mean_speed_ms": 3.93,
+        "wind_from_deg": 284,
+        "resultant_speed_ms": 3.84
+      },
+      "wind_component_to_confirmed_windward_slope_ms": null,
+      "surface_gust_max_ms": 9.5,
+      "cloud_pct": 99.17,
+      "cloud_low_pct": 31.33,
+      "radiation_wm2": 130.67,
+      "rain_daytime_mm": 0.3,
+      "trained_flight_signature_prediction": null,
+      "unverified_reasons": [
+        "exact takeoff or ridge face unverified",
+        "check local airspace/access",
+        "no historical calibration at this site",
+        "D-1 training lead does not match today's lead; score withheld"
+      ]
+    },
+    {
+      "date": "2026-11-26",
+      "forecast_lead_days": 5,
+      "site": "sighnaghi_area",
+      "site_name": "Сигнахи",
+      "model": "ecmwf_ifs025",
+      "model_issued_time": "2026-11-21T12:21:45.866453+00:00",
+      "training_site_day_cases": 0,
+      "wind10": {
+        "mean_speed_ms": 1.85,
+        "wind_from_deg": 343,
+        "resultant_speed_ms": 1.85
+      },
+      "wind80": {
+        "mean_speed_ms": 2.29,
+        "wind_from_deg": 337,
+        "resultant_speed_ms": 2.28
+      },
+      "wind_component_to_confirmed_windward_slope_ms": null,
+      "surface_gust_max_ms": 8.2,
+      "cloud_pct": 0.17,
+      "cloud_low_pct": 0.17,
+      "radiation_wm2": 373.17,
+      "rain_daytime_mm": 0,
+      "trained_flight_signature_prediction": null,
+      "unverified_reasons": [
+        "exact takeoff or ridge face unverified",
+        "check local airspace/access",
+        "no historical calibration at this site",
+        "D-1 training lead does not match today's lead; score withheld"
+      ]
+    },
+    {
+      "date": "2026-11-27",
+      "forecast_lead_days": 6,
+      "site": "sighnaghi_area",
+      "site_name": "Сигнахи",
+      "model": "ecmwf_ifs025",
+      "model_issued_time": "2026-11-21T12:21:45.866453+00:00",
+      "training_site_day_cases": 0,
+      "wind10": {
+        "mean_speed_ms": 1.37,
+        "wind_from_deg": 228,
+        "resultant_speed_ms": 1.36
+      },
+      "wind80": {
+        "mean_speed_ms": 1.8,
+        "wind_from_deg": 237,
+        "resultant_speed_ms": 1.8
+      },
+      "wind_component_to_confirmed_windward_slope_ms": null,
+      "surface_gust_max_ms": 4.7,
+      "cloud_pct": 13.5,
+      "cloud_low_pct": 0.0,
+      "radiation_wm2": 373.67,
+      "rain_daytime_mm": 0,
+      "trained_flight_signature_prediction": null,
+      "unverified_reasons": [
+        "exact takeoff or ridge face unverified",
+        "check local airspace/access",
+        "no historical calibration at this site",
+        "D-1 training lead does not match today's lead; score withheld"
+      ]
+    },
+    {
+      "date": "2026-11-22",
+      "forecast_lead_days": 1,
+      "site": "kazaniani_area",
+      "site_name": "Казаниани",
+      "model": "ecmwf_ifs025",
+      "model_issued_time": "2026-11-21T12:21:45.866453+00:00",
+      "training_site_day_cases": 0,
+      "wind10": {
+        "mean_speed_ms": 5.2,
+        "wind_from_deg": 297,
+        "resultant_speed_ms": 5.17
+      },
+      "wind80": {
+        "mean_speed_ms": 7.86,
+        "wind_from_deg": 302,
+        "resultant_speed_ms": 7.82
+      },
+      "wind_component_to_confirmed_windward_slope_ms": null,
+      "surface_gust_max_ms": 13.1,
+      "cloud_pct": 96.0,
+      "cloud_low_pct": 6.83,
+      "radiation_wm2": 182.17,
+      "rain_daytime_mm": 0,
+      "trained_flight_signature_prediction": null,
+      "unverified_reasons": [
+        "exact takeoff or ridge face unverified",
+        "check local airspace/access",
+        "forecast gusts: verify slope/ridge turbulence",
+        "no historical calibration at this site"
+      ]
+    },
+    {
+      "date": "2026-11-23",
+      "forecast_lead_days": 2,
+      "site": "kazaniani_area",
+      "site_name": "Казаниани",
+      "model": "ecmwf_ifs025",
+      "model_issued_time": "2026-11-21T12:21:45.866453+00:00",
+      "training_site_day_cases": 0,
+      "wind10": {
+        "mean_speed_ms": 2.64,
+        "wind_from_deg": 290,
+        "resultant_speed_ms": 2.53
+      },
+      "wind80": {
+        "mean_speed_ms": 3.74,
+        "wind_from_deg": 297,
+        "resultant_speed_ms": 3.62
+      },
+      "wind_component_to_confirmed_windward_slope_ms": null,
+      "surface_gust_max_ms": 9.5,
+      "cloud_pct": 51.33,
+      "cloud_low_pct": 0.0,
+      "radiation_wm2": 344.67,
+      "rain_daytime_mm": 0,
+      "trained_flight_signature_prediction": null,
+      "unverified_reasons": [
+        "exact takeoff or ridge face unverified",
+        "check local airspace/access",
+        "no historical calibration at this site",
+        "D-1 training lead does not match today's lead; score withheld"
+      ]
+    },
+    {
+      "date": "2026-11-24",
+      "forecast_lead_days": 3,
+      "site": "kazaniani_area",
+      "site_name": "Казаниани",
+      "model": "ecmwf_ifs025",
+      "model_issued_time": "2026-11-21T12:21:45.866453+00:00",
+      "training_site_day_cases": 0,
+      "wind10": {
+        "mean_speed_ms": 0.57,
+        "wind_from_deg": 199,
+        "resultant_speed_ms": 0.48
+      },
+      "wind80": {
+        "mean_speed_ms": 0.73,
+        "wind_from_deg": 185,
+        "resultant_speed_ms": 0.39
+      },
+      "wind_component_to_confirmed_windward_slope_ms": null,
+      "surface_gust_max_ms": 4.1,
+      "cloud_pct": 9.33,
+      "cloud_low_pct": 0.0,
+      "radiation_wm2": 368.0,
+      "rain_daytime_mm": 0,
+      "trained_flight_signature_prediction": null,
+      "unverified_reasons": [
+        "exact takeoff or ridge face unverified",
+        "check local airspace/access",
+        "no historical calibration at this site",
+        "D-1 training lead does not match today's lead; score withheld"
+      ]
+    },
+    {
+      "date": "2026-11-25",
+      "forecast_lead_days": 4,
+      "site": "kazaniani_area",
+      "site_name": "Казаниани",
+      "model": "ecmwf_ifs025",
+      "model_issued_time": "2026-11-21T12:21:45.866453+00:00",
+      "training_site_day_cases": 0,
+      "wind10": {
+        "mean_speed_ms": 4.18,
+        "wind_from_deg": 315,
+        "resultant_speed_ms": 4.16
+      },
+      "wind80": {
+        "mean_speed_ms": 6.8,
+        "wind_from_deg": 319,
+        "resultant_speed_ms": 6.79
+      },
+      "wind_component_to_confirmed_windward_slope_ms": null,
+      "surface_gust_max_ms": 17.1,
+      "cloud_pct": 97.17,
+      "cloud_low_pct": 10.83,
+      "radiation_wm2": 95.33,
+      "rain_daytime_mm": 0.3,
+      "trained_flight_signature_prediction": null,
+      "unverified_reasons": [
+        "exact takeoff or ridge face unverified",
+        "check local airspace/access",
+        "forecast gusts: verify slope/ridge turbulence",
+        "no historical calibration at this site",
+        "D-1 training lead does not match today's lead; score withheld"
+      ]
+    },
+    {
+      "date": "2026-11-26",
+      "forecast_lead_days": 5,
+      "site": "kazaniani_area",
+      "site_name": "Казаниани",
+      "model": "ecmwf_ifs025",
+      "model_issued_time": "2026-11-21T12:21:45.866453+00:00",
+      "training_site_day_cases": 0,
+      "wind10": {
+        "mean_speed_ms": 5.27,
+        "wind_from_deg": 312,
+        "resultant_speed_ms": 5.27
+      },
+      "wind80": {
+        "mean_speed_ms": 7.89,
+        "wind_from_deg": 312,
+        "resultant_speed_ms": 7.89
+      },
+      "wind_component_to_confirmed_windward_slope_ms": null,
+      "surface_gust_max_ms": 13.9,
+      "cloud_pct": 34.17,
+      "cloud_low_pct": 28.0,
+      "radiation_wm2": 339.33,
+      "rain_daytime_mm": 0,
+      "trained_flight_signature_prediction": null,
+      "unverified_reasons": [
+        "exact takeoff or ridge face unverified",
+        "check local airspace/access",
+        "forecast gusts: verify slope/ridge turbulence",
+        "no historical calibration at this site",
+        "D-1 training lead does not match today's lead; score withheld"
+      ]
+    },
+    {
+      "date": "2026-11-27",
+      "forecast_lead_days": 6,
+      "site": "kazaniani_area",
+      "site_name": "Казаниани",
+      "model": "ecmwf_ifs025",
+      "model_issued_time": "2026-11-21T12:21:45.866453+00:00",
+      "training_site_day_cases": 0,
+      "wind10": {
+        "mean_speed_ms": 3.21,
+        "wind_from_deg": 276,
+        "resultant_speed_ms": 3.2
+      },
+      "wind80": {
+        "mean_speed_ms": 4.79,
+        "wind_from_deg": 285,
+        "resultant_speed_ms": 4.78
+      },
+      "wind_component_to_confirmed_windward_slope_ms": null,
+      "surface_gust_max_ms": 14.3,
+      "cloud_pct": 20.33,
+      "cloud_low_pct": 0.0,
+      "radiation_wm2": 371.33,
+      "rain_daytime_mm": 0,
+      "trained_flight_signature_prediction": null,
+      "unverified_reasons": [
+        "exact takeoff or ridge face unverified",
+        "check local airspace/access",
+        "forecast gusts: verify slope/ridge turbulence",
+        "no historical calibration at this site",
+        "D-1 training lead does not match today's lead; score withheld"
+      ]
+    },
+    {
+      "date": "2026-11-22",
+      "forecast_lead_days": 1,
+      "site": "rustavi",
+      "site_name": "Рустави",
+      "model": "ecmwf_ifs025",
+      "model_issued_time": "2026-11-21T12:21:45.866453+00:00",
+      "training_site_day_cases": 0,
+      "wind10": {
+        "mean_speed_ms": 0.94,
+        "wind_from_deg": 300,
+        "resultant_speed_ms": 0.69
+      },
+      "wind80": {
+        "mean_speed_ms": 1.34,
+        "wind_from_deg": 305,
+        "resultant_speed_ms": 1.19
+      },
+      "wind_component_to_confirmed_windward_slope_ms": null,
+      "surface_gust_max_ms": 3.5,
+      "cloud_pct": 97.83,
+      "cloud_low_pct": 5.83,
+      "radiation_wm2": 186.0,
+      "rain_daytime_mm": 0,
+      "trained_flight_signature_prediction": null,
+      "unverified_reasons": [
+        "exact takeoff or ridge face unverified",
+        "check local airspace/access",
+        "no historical calibration at this site"
+      ]
+    },
+    {
+      "date": "2026-11-23",
+      "forecast_lead_days": 2,
+      "site": "rustavi",
+      "site_name": "Рустави",
+      "model": "ecmwf_ifs025",
+      "model_issued_time": "2026-11-21T12:21:45.866453+00:00",
+      "training_site_day_cases": 0,
+      "wind10": {
+        "mean_speed_ms": 0.83,
+        "wind_from_deg": 266,
+        "resultant_speed_ms": 0.68
+      },
+      "wind80": {
+        "mean_speed_ms": 1.26,
+        "wind_from_deg": 290,
+        "resultant_speed_ms": 1.07
+      },
+      "wind_component_to_confirmed_windward_slope_ms": null,
+      "surface_gust_max_ms": 4.8,
+      "cloud_pct": 50.5,
+      "cloud_low_pct": 0.0,
+      "radiation_wm2": 321.5,
+      "rain_daytime_mm": 0,
+      "trained_flight_signature_prediction": null,
+      "unverified_reasons": [
+        "exact takeoff or ridge face unverified",
+        "check local airspace/access",
+        "no historical calibration at this site",
+        "D-1 training lead does not match today's lead; score withheld"
+      ]
+    },
+    {
+      "date": "2026-11-24",
+      "forecast_lead_days": 3,
+      "site": "rustavi",
+      "site_name": "Рустави",
+      "model": "ecmwf_ifs025",
+      "model_issued_time": "2026-11-21T12:21:45.866453+00:00",
+      "training_site_day_cases": 0,
+      "wind10": {
+        "mean_speed_ms": 0.33,
+        "wind_from_deg": 194,
+        "resultant_speed_ms": 0.21
+      },
+      "wind80": {
+        "mean_speed_ms": 0.56,
+        "wind_from_deg": 246,
+        "resultant_speed_ms": 0.48
+      },
+      "wind_component_to_confirmed_windward_slope_ms": null,
+      "surface_gust_max_ms": 3.5,
+      "cloud_pct": 7.33,
+      "cloud_low_pct": 0.0,
+      "radiation_wm2": 356.33,
+      "rain_daytime_mm": 0,
+      "trained_flight_signature_prediction": null,
+      "unverified_reasons": [
+        "exact takeoff or ridge face unverified",
+        "check local airspace/access",
+        "no historical calibration at this site",
+        "D-1 training lead does not match today's lead; score withheld"
+      ]
+    },
+    {
+      "date": "2026-11-25",
+      "forecast_lead_days": 4,
+      "site": "rustavi",
+      "site_name": "Рустави",
+      "model": "ecmwf_ifs025",
+      "model_issued_time": "2026-11-21T12:21:45.866453+00:00",
+      "training_site_day_cases": 0,
+      "wind10": {
+        "mean_speed_ms": 3.57,
+        "wind_from_deg": 312,
+        "resultant_speed_ms": 3.56
+      },
+      "wind80": {
+        "mean_speed_ms": 5.51,
+        "wind_from_deg": 314,
+        "resultant_speed_ms": 5.49
+      },
+      "wind_component_to_confirmed_windward_slope_ms": null,
+      "surface_gust_max_ms": 14.2,
+      "cloud_pct": 99.33,
+      "cloud_low_pct": 5.0,
+      "radiation_wm2": 70.5,
+      "rain_daytime_mm": 0.6,
+      "trained_flight_signature_prediction": null,
+      "unverified_reasons": [
+        "exact takeoff or ridge face unverified",
+        "check local airspace/access",
+        "forecast gusts: verify slope/ridge turbulence",
+        "no historical calibration at this site",
+        "D-1 training lead does not match today's lead; score withheld"
+      ]
+    },
+    {
+      "date": "2026-11-26",
+      "forecast_lead_days": 5,
+      "site": "rustavi",
+      "site_name": "Рустави",
+      "model": "ecmwf_ifs025",
+      "model_issued_time": "2026-11-21T12:21:45.866453+00:00",
+      "training_site_day_cases": 0,
+      "wind10": {
+        "mean_speed_ms": 2.77,
+        "wind_from_deg": 349,
+        "resultant_speed_ms": 2.69
+      },
+      "wind80": {
+        "mean_speed_ms": 3.78,
+        "wind_from_deg": 344,
+        "resultant_speed_ms": 3.69
+      },
+      "wind_component_to_confirmed_windward_slope_ms": null,
+      "surface_gust_max_ms": 12.2,
+      "cloud_pct": 1.67,
+      "cloud_low_pct": 1.33,
+      "radiation_wm2": 371.17,
+      "rain_daytime_mm": 0,
+      "trained_flight_signature_prediction": null,
+      "unverified_reasons": [
+        "exact takeoff or ridge face unverified",
+        "check local airspace/access",
+        "forecast gusts: verify slope/ridge turbulence",
+        "no historical calibration at this site",
+        "D-1 training lead does not match today's lead; score withheld"
+      ]
+    },
+    {
+      "date": "2026-11-27",
+      "forecast_lead_days": 6,
+      "site": "rustavi",
+      "site_name": "Рустави",
+      "model": "ecmwf_ifs025",
+      "model_issued_time": "2026-11-21T12:21:45.866453+00:00",
+      "training_site_day_cases": 0,
+      "wind10": {
+        "mean_speed_ms": 0.39,
+        "wind_from_deg": 170,
+        "resultant_speed_ms": 0.39
+      },
+      "wind80": {
+        "mean_speed_ms": 0.91,
+        "wind_from_deg": 242,
+        "resultant_speed_ms": 0.84
+      },
+      "wind_component_to_confirmed_windward_slope_ms": null,
+      "surface_gust_max_ms": 3.6,
+      "cloud_pct": 12.33,
+      "cloud_low_pct": 0.0,
+      "radiation_wm2": 362.33,
+      "rain_daytime_mm": 0,
+      "trained_flight_signature_prediction": null,
+      "unverified_reasons": [
+        "exact takeoff or ridge face unverified",
+        "check local airspace/access",
+        "no historical calibration at this site",
+        "D-1 training lead does not match today's lead; score withheld"
+      ]
+    },
+    {
+      "date": "2026-11-22",
+      "forecast_lead_days": 1,
+      "site": "medvezhiy",
+      "site_name": "Медвежий",
+      "model": "ecmwf_ifs025",
+      "model_issued_time": "2026-11-21T12:21:45.866453+00:00",
+      "training_site_day_cases": 0,
+      "wind10": {
+        "mean_speed_ms": 1.46,
+        "wind_from_deg": 193,
+        "resultant_speed_ms": 1.46
+      },
+      "wind80": {
+        "mean_speed_ms": 2.49,
+        "wind_from_deg": 193,
+        "resultant_speed_ms": 2.47
+      },
+      "wind_component_to_confirmed_windward_slope_ms": null,
+      "surface_gust_max_ms": 8.4,
+      "cloud_pct": 81.0,
+      "cloud_low_pct": 79.83,
+      "radiation_wm2": 286.0,
+      "rain_daytime_mm": 0.3,
+      "trained_flight_signature_prediction": null,
+      "unverified_reasons": [
+        "exact takeoff or ridge face unverified",
+        "check local airspace/access",
+        "no historical calibration at this site"
+      ]
+    },
+    {
+      "date": "2026-11-23",
+      "forecast_lead_days": 2,
+      "site": "medvezhiy",
+      "site_name": "Медвежий",
+      "model": "ecmwf_ifs025",
+      "model_issued_time": "2026-11-21T12:21:45.866453+00:00",
+      "training_site_day_cases": 0,
+      "wind10": {
+        "mean_speed_ms": 1.77,
+        "wind_from_deg": 177,
+        "resultant_speed_ms": 1.75
+      },
+      "wind80": {
+        "mean_speed_ms": 3.38,
+        "wind_from_deg": 176,
+        "resultant_speed_ms": 3.32
+      },
+      "wind_component_to_confirmed_windward_slope_ms": null,
+      "surface_gust_max_ms": 9.7,
+      "cloud_pct": 72.5,
+      "cloud_low_pct": 10.5,
+      "radiation_wm2": 381.0,
+      "rain_daytime_mm": 0,
+      "trained_flight_signature_prediction": null,
+      "unverified_reasons": [
+        "exact takeoff or ridge face unverified",
+        "check local airspace/access",
+        "no historical calibration at this site",
+        "D-1 training lead does not match today's lead; score withheld"
+      ]
+    },
+    {
+      "date": "2026-11-24",
+      "forecast_lead_days": 3,
+      "site": "medvezhiy",
+      "site_name": "Медвежий",
+      "model": "ecmwf_ifs025",
+      "model_issued_time": "2026-11-21T12:21:45.866453+00:00",
+      "training_site_day_cases": 0,
+      "wind10": {
+        "mean_speed_ms": 1.32,
+        "wind_from_deg": 181,
+        "resultant_speed_ms": 1.31
+      },
+      "wind80": {
+        "mean_speed_ms": 2.6,
+        "wind_from_deg": 178,
+        "resultant_speed_ms": 2.58
+      },
+      "wind_component_to_confirmed_windward_slope_ms": null,
+      "surface_gust_max_ms": 9.4,
+      "cloud_pct": 71.67,
+      "cloud_low_pct": 58.83,
+      "radiation_wm2": 348.5,
+      "rain_daytime_mm": 0,
+      "trained_flight_signature_prediction": null,
+      "unverified_reasons": [
+        "exact takeoff or ridge face unverified",
+        "check local airspace/access",
+        "no historical calibration at this site",
+        "D-1 training lead does not match today's lead; score withheld"
+      ]
+    },
+    {
+      "date": "2026-11-25",
+      "forecast_lead_days": 4,
+      "site": "medvezhiy",
+      "site_name": "Медвежий",
+      "model": "ecmwf_ifs025",
+      "model_issued_time": "2026-11-21T12:21:45.866453+00:00",
+      "training_site_day_cases": 0,
+      "wind10": {
+        "mean_speed_ms": 1.39,
+        "wind_from_deg": 201,
+        "resultant_speed_ms": 1.39
+      },
+      "wind80": {
+        "mean_speed_ms": 2.25,
+        "wind_from_deg": 197,
+        "resultant_speed_ms": 2.24
+      },
+      "wind_component_to_confirmed_windward_slope_ms": null,
+      "surface_gust_max_ms": 10.2,
+      "cloud_pct": 91.33,
+      "cloud_low_pct": 70.17,
+      "radiation_wm2": 278.67,
+      "rain_daytime_mm": 0.3,
+      "trained_flight_signature_prediction": null,
+      "unverified_reasons": [
+        "exact takeoff or ridge face unverified",
+        "check local airspace/access",
+        "no historical calibration at this site",
+        "D-1 training lead does not match today's lead; score withheld"
+      ]
+    },
+    {
+      "date": "2026-11-26",
+      "forecast_lead_days": 5,
+      "site": "medvezhiy",
+      "site_name": "Медвежий",
+      "model": "ecmwf_ifs025",
+      "model_issued_time": "2026-11-21T12:21:45.866453+00:00",
+      "training_site_day_cases": 0,
+      "wind10": {
+        "mean_speed_ms": 1.95,
+        "wind_from_deg": 210,
+        "resultant_speed_ms": 1.94
+      },
+      "wind80": {
+        "mean_speed_ms": 2.84,
+        "wind_from_deg": 202,
+        "resultant_speed_ms": 2.79
+      },
+      "wind_component_to_confirmed_windward_slope_ms": null,
+      "surface_gust_max_ms": 16.0,
+      "cloud_pct": 95.33,
+      "cloud_low_pct": 95.33,
+      "radiation_wm2": 254.83,
+      "rain_daytime_mm": 0.6,
+      "trained_flight_signature_prediction": null,
+      "unverified_reasons": [
+        "exact takeoff or ridge face unverified",
+        "check local airspace/access",
+        "forecast low cloud / potential visibility",
+        "forecast gusts: verify slope/ridge turbulence",
+        "no historical calibration at this site",
+        "D-1 training lead does not match today's lead; score withheld"
+      ]
+    },
+    {
+      "date": "2026-11-27",
+      "forecast_lead_days": 6,
+      "site": "medvezhiy",
+      "site_name": "Медвежий",
+      "model": "ecmwf_ifs025",
+      "model_issued_time": "2026-11-21T12:21:45.866453+00:00",
+      "training_site_day_cases": 0,
+      "wind10": {
+        "mean_speed_ms": 0.9,
+        "wind_from_deg": 168,
+        "resultant_speed_ms": 0.88
+      },
+      "wind80": {
+        "mean_speed_ms": 2.73,
+        "wind_from_deg": 168,
+        "resultant_speed_ms": 2.72
+      },
+      "wind_component_to_confirmed_windward_slope_ms": null,
+      "surface_gust_max_ms": 8.9,
+      "cloud_pct": 7.67,
+      "cloud_low_pct": 0.83,
+      "radiation_wm2": 410.0,
+      "rain_daytime_mm": 0,
+      "trained_flight_signature_prediction": null,
+      "unverified_reasons": [
+        "exact takeoff or ridge face unverified",
+        "check local airspace/access",
+        "no historical calibration at this site",
+        "D-1 training lead does not match today's lead; score withheld"
+      ]
+    },
+    {
+      "date": "2026-11-22",
+      "forecast_lead_days": 1,
+      "site": "sagarejo",
+      "site_name": "Сагареджо",
+      "model": "ecmwf_ifs025",
+      "model_issued_time": "2026-11-21T12:21:45.866453+00:00",
+      "training_site_day_cases": 2,
+      "wind10": {
+        "mean_speed_ms": 5.2,
+        "wind_from_deg": 297,
+        "resultant_speed_ms": 5.17
+      },
+      "wind80": {
+        "mean_speed_ms": 7.86,
+        "wind_from_deg": 302,
+        "resultant_speed_ms": 7.82
+      },
+      "wind_component_to_confirmed_windward_slope_ms": null,
+      "surface_gust_max_ms": 13.1,
+      "cloud_pct": 96.0,
+      "cloud_low_pct": 6.83,
+      "radiation_wm2": 182.17,
+      "rain_daytime_mm": 0,
+      "trained_flight_signature_prediction": null,
+      "unverified_reasons": [
+        "exact takeoff or ridge face unverified",
+        "check local airspace/access",
+        "forecast gusts: verify slope/ridge turbulence",
+        "fewer than 15 historical multi-flight site-days"
+      ]
+    },
+    {
+      "date": "2026-11-23",
+      "forecast_lead_days": 2,
+      "site": "sagarejo",
+      "site_name": "Сагареджо",
+      "model": "ecmwf_ifs025",
+      "model_issued_time": "2026-11-21T12:21:45.866453+00:00",
+      "training_site_day_cases": 2,
+      "wind10": {
+        "mean_speed_ms": 2.64,
+        "wind_from_deg": 290,
+        "resultant_speed_ms": 2.53
+      },
+      "wind80": {
+        "mean_speed_ms": 3.74,
+        "wind_from_deg": 297,
+        "resultant_speed_ms": 3.62
+      },
+      "wind_component_to_confirmed_windward_slope_ms": null,
+      "surface_gust_max_ms": 9.5,
+      "cloud_pct": 51.33,
+      "cloud_low_pct": 0.0,
+      "radiation_wm2": 344.67,
+      "rain_daytime_mm": 0,
+      "trained_flight_signature_prediction": null,
+      "unverified_reasons": [
+        "exact takeoff or ridge face unverified",
+        "check local airspace/access",
+        "fewer than 15 historical multi-flight site-days",
+        "D-1 training lead does not match today's lead; score withheld"
+      ]
+    },
+    {
+      "date": "2026-11-24",
+      "forecast_lead_days": 3,
+      "site": "sagarejo",
+      "site_name": "Сагареджо",
+      "model": "ecmwf_ifs025",
+      "model_issued_time": "2026-11-21T12:21:45.866453+00:00",
+      "training_site_day_cases": 2,
+      "wind10": {
+        "mean_speed_ms": 0.57,
+        "wind_from_deg": 199,
+        "resultant_speed_ms": 0.48
+      },
+      "wind80": {
+        "mean_speed_ms": 0.73,
+        "wind_from_deg": 185,
+        "resultant_speed_ms": 0.39
+      },
+      "wind_component_to_confirmed_windward_slope_ms": null,
+      "surface_gust_max_ms": 4.1,
+      "cloud_pct": 9.33,
+      "cloud_low_pct": 0.0,
+      "radiation_wm2": 368.0,
+      "rain_daytime_mm": 0,
+      "trained_flight_signature_prediction": null,
+      "unverified_reasons": [
+        "exact takeoff or ridge face unverified",
+        "check local airspace/access",
+        "fewer than 15 historical multi-flight site-days",
+        "D-1 training lead does not match today's lead; score withheld"
+      ]
+    },
+    {
+      "date": "2026-11-25",
+      "forecast_lead_days": 4,
+      "site": "sagarejo",
+      "site_name": "Сагареджо",
+      "model": "ecmwf_ifs025",
+      "model_issued_time": "2026-11-21T12:21:45.866453+00:00",
+      "training_site_day_cases": 2,
+      "wind10": {
+        "mean_speed_ms": 4.18,
+        "wind_from_deg": 315,
+        "resultant_speed_ms": 4.16
+      },
+      "wind80": {
+        "mean_speed_ms": 6.8,
+        "wind_from_deg": 319,
+        "resultant_speed_ms": 6.79
+      },
+      "wind_component_to_confirmed_windward_slope_ms": null,
+      "surface_gust_max_ms": 17.1,
+      "cloud_pct": 97.17,
+      "cloud_low_pct": 10.83,
+      "radiation_wm2": 95.33,
+      "rain_daytime_mm": 0.3,
+      "trained_flight_signature_prediction": null,
+      "unverified_reasons": [
+        "exact takeoff or ridge face unverified",
+        "check local airspace/access",
+        "forecast gusts: verify slope/ridge turbulence",
+        "fewer than 15 historical multi-flight site-days",
+        "D-1 training lead does not match today's lead; score withheld"
+      ]
+    },
+    {
+      "date": "2026-11-26",
+      "forecast_lead_days": 5,
+      "site": "sagarejo",
+      "site_name": "Сагареджо",
+      "model": "ecmwf_ifs025",
+      "model_issued_time": "2026-11-21T12:21:45.866453+00:00",
+      "training_site_day_cases": 2,
+      "wind10": {
+        "mean_speed_ms": 5.27,
+        "wind_from_deg": 312,
+        "resultant_speed_ms": 5.27
+      },
+      "wind80": {
+        "mean_speed_ms": 7.89,
+        "wind_from_deg": 312,
+        "resultant_speed_ms": 7.89
+      },
+      "wind_component_to_confirmed_windward_slope_ms": null,
+      "surface_gust_max_ms": 13.9,
+      "cloud_pct": 34.17,
+      "cloud_low_pct": 28.0,
+      "radiation_wm2": 339.33,
+      "rain_daytime_mm": 0,
+      "trained_flight_signature_prediction": null,
+      "unverified_reasons": [
+        "exact takeoff or ridge face unverified",
+        "check local airspace/access",
+        "forecast gusts: verify slope/ridge turbulence",
+        "fewer than 15 historical multi-flight site-days",
+        "D-1 training lead does not match today's lead; score withheld"
+      ]
+    },
+    {
+      "date": "2026-11-27",
+      "forecast_lead_days": 6,
+      "site": "sagarejo",
+      "site_name": "Сагареджо",
+      "model": "ecmwf_ifs025",
+      "model_issued_time": "2026-11-21T12:21:45.866453+00:00",
+      "training_site_day_cases": 2,
+      "wind10": {
+        "mean_speed_ms": 3.21,
+        "wind_from_deg": 276,
+        "resultant_speed_ms": 3.2
+      },
+      "wind80": {
+        "mean_speed_ms": 4.79,
+        "wind_from_deg": 285,
+        "resultant_speed_ms": 4.78
+      },
+      "wind_component_to_confirmed_windward_slope_ms": null,
+      "surface_gust_max_ms": 14.3,
+      "cloud_pct": 20.33,
+      "cloud_low_pct": 0.0,
+      "radiation_wm2": 371.33,
+      "rain_daytime_mm": 0,
+      "trained_flight_signature_prediction": null,
+      "unverified_reasons": [
+        "exact takeoff or ridge face unverified",
+        "check local airspace/access",
+        "forecast gusts: verify slope/ridge turbulence",
+        "fewer than 15 historical multi-flight site-days",
+        "D-1 training lead does not match today's lead; score withheld"
+      ]
+    },
+    {
+      "date": "2026-11-22",
+      "forecast_lead_days": 1,
+      "site": "kaspi",
+      "site_name": "Каспи",
+      "model": "ecmwf_ifs025",
+      "model_issued_time": "2026-11-21T12:21:45.866453+00:00",
+      "training_site_day_cases": 0,
+      "wind10": {
+        "mean_speed_ms": 6.92,
+        "wind_from_deg": 285,
+        "resultant_speed_ms": 6.91
+      },
+      "wind80": {
+        "mean_speed_ms": 10.31,
+        "wind_from_deg": 287,
+        "resultant_speed_ms": 10.28
+      },
+      "wind_component_to_confirmed_windward_slope_ms": null,
+      "surface_gust_max_ms": 16.9,
+      "cloud_pct": 69.33,
+      "cloud_low_pct": 47.17,
+      "radiation_wm2": 274.33,
+      "rain_daytime_mm": 0,
+      "trained_flight_signature_prediction": null,
+      "unverified_reasons": [
+        "exact takeoff or ridge face unverified",
+        "check local airspace/access",
+        "forecast gusts: verify slope/ridge turbulence",
+        "no historical calibration at this site"
+      ]
+    },
+    {
+      "date": "2026-11-23",
+      "forecast_lead_days": 2,
+      "site": "kaspi",
+      "site_name": "Каспи",
+      "model": "ecmwf_ifs025",
+      "model_issued_time": "2026-11-21T12:21:45.866453+00:00",
+      "training_site_day_cases": 0,
+      "wind10": {
+        "mean_speed_ms": 2.33,
+        "wind_from_deg": 244,
+        "resultant_speed_ms": 1.91
+      },
+      "wind80": {
+        "mean_speed_ms": 3.01,
+        "wind_from_deg": 255,
+        "resultant_speed_ms": 2.48
+      },
+      "wind_component_to_confirmed_windward_slope_ms": null,
+      "surface_gust_max_ms": 8.7,
+      "cloud_pct": 68.0,
+      "cloud_low_pct": 0.0,
+      "radiation_wm2": 320.5,
+      "rain_daytime_mm": 0,
+      "trained_flight_signature_prediction": null,
+      "unverified_reasons": [
+        "exact takeoff or ridge face unverified",
+        "check local airspace/access",
+        "no historical calibration at this site",
+        "D-1 training lead does not match today's lead; score withheld"
+      ]
+    },
+    {
+      "date": "2026-11-24",
+      "forecast_lead_days": 3,
+      "site": "kaspi",
+      "site_name": "Каспи",
+      "model": "ecmwf_ifs025",
+      "model_issued_time": "2026-11-21T12:21:45.866453+00:00",
+      "training_site_day_cases": 0,
+      "wind10": {
+        "mean_speed_ms": 2.51,
+        "wind_from_deg": 109,
+        "resultant_speed_ms": 2.49
+      },
+      "wind80": {
+        "mean_speed_ms": 3.46,
+        "wind_from_deg": 104,
+        "resultant_speed_ms": 3.43
+      },
+      "wind_component_to_confirmed_windward_slope_ms": null,
+      "surface_gust_max_ms": 7.4,
+      "cloud_pct": 41.17,
+      "cloud_low_pct": 0.0,
+      "radiation_wm2": 331.67,
+      "rain_daytime_mm": 0,
+      "trained_flight_signature_prediction": null,
+      "unverified_reasons": [
+        "exact takeoff or ridge face unverified",
+        "check local airspace/access",
+        "no historical calibration at this site",
+        "D-1 training lead does not match today's lead; score withheld"
+      ]
+    },
+    {
+      "date": "2026-11-25",
+      "forecast_lead_days": 4,
+      "site": "kaspi",
+      "site_name": "Каспи",
+      "model": "ecmwf_ifs025",
+      "model_issued_time": "2026-11-21T12:21:45.866453+00:00",
+      "training_site_day_cases": 0,
+      "wind10": {
+        "mean_speed_ms": 6.66,
+        "wind_from_deg": 277,
+        "resultant_speed_ms": 6.65
+      },
+      "wind80": {
+        "mean_speed_ms": 9.65,
+        "wind_from_deg": 280,
+        "resultant_speed_ms": 9.65
+      },
+      "wind_component_to_confirmed_windward_slope_ms": null,
+      "surface_gust_max_ms": 20.1,
+      "cloud_pct": 93.67,
+      "cloud_low_pct": 47.83,
+      "radiation_wm2": 203.17,
+      "rain_daytime_mm": 0.3,
+      "trained_flight_signature_prediction": null,
+      "unverified_reasons": [
+        "exact takeoff or ridge face unverified",
+        "check local airspace/access",
+        "forecast gusts: verify slope/ridge turbulence",
+        "no historical calibration at this site",
+        "D-1 training lead does not match today's lead; score withheld"
+      ]
+    },
+    {
+      "date": "2026-11-26",
+      "forecast_lead_days": 5,
+      "site": "kaspi",
+      "site_name": "Каспи",
+      "model": "ecmwf_ifs025",
+      "model_issued_time": "2026-11-21T12:21:45.866453+00:00",
+      "training_site_day_cases": 0,
+      "wind10": {
+        "mean_speed_ms": 5.22,
+        "wind_from_deg": 277,
+        "resultant_speed_ms": 5.21
+      },
+      "wind80": {
+        "mean_speed_ms": 7.54,
+        "wind_from_deg": 280,
+        "resultant_speed_ms": 7.52
+      },
+      "wind_component_to_confirmed_windward_slope_ms": null,
+      "surface_gust_max_ms": 12.9,
+      "cloud_pct": 69.5,
+      "cloud_low_pct": 64.33,
+      "radiation_wm2": 253.0,
+      "rain_daytime_mm": 0.3,
+      "trained_flight_signature_prediction": null,
+      "unverified_reasons": [
+        "exact takeoff or ridge face unverified",
+        "check local airspace/access",
+        "forecast gusts: verify slope/ridge turbulence",
+        "no historical calibration at this site",
+        "D-1 training lead does not match today's lead; score withheld"
+      ]
+    },
+    {
+      "date": "2026-11-27",
+      "forecast_lead_days": 6,
+      "site": "kaspi",
+      "site_name": "Каспи",
+      "model": "ecmwf_ifs025",
+      "model_issued_time": "2026-11-21T12:21:45.866453+00:00",
+      "training_site_day_cases": 0,
+      "wind10": {
+        "mean_speed_ms": 1.59,
+        "wind_from_deg": 230,
+        "resultant_speed_ms": 1.58
+      },
+      "wind80": {
+        "mean_speed_ms": 2.41,
+        "wind_from_deg": 249,
+        "resultant_speed_ms": 2.3
+      },
+      "wind_component_to_confirmed_windward_slope_ms": null,
+      "surface_gust_max_ms": 13.5,
+      "cloud_pct": 3.83,
+      "cloud_low_pct": 0.83,
+      "radiation_wm2": 362.67,
+      "rain_daytime_mm": 0,
+      "trained_flight_signature_prediction": null,
+      "unverified_reasons": [
+        "exact takeoff or ridge face unverified",
+        "check local airspace/access",
+        "forecast gusts: verify slope/ridge turbulence",
+        "no historical calibration at this site",
+        "D-1 training lead does not match today's lead; score withheld"
+      ]
+    },
+    {
+      "date": "2026-11-22",
+      "forecast_lead_days": 1,
+      "site": "kaspi_2",
+      "site_name": "Каспи 2",
+      "model": "ecmwf_ifs025",
+      "model_issued_time": "2026-11-21T12:21:45.866453+00:00",
+      "training_site_day_cases": 0,
+      "wind10": {
+        "mean_speed_ms": 6.92,
+        "wind_from_deg": 285,
+        "resultant_speed_ms": 6.91
+      },
+      "wind80": {
+        "mean_speed_ms": 10.31,
+        "wind_from_deg": 287,
+        "resultant_speed_ms": 10.28
+      },
+      "wind_component_to_confirmed_windward_slope_ms": null,
+      "surface_gust_max_ms": 16.9,
+      "cloud_pct": 69.33,
+      "cloud_low_pct": 47.17,
+      "radiation_wm2": 274.33,
+      "rain_daytime_mm": 0,
+      "trained_flight_signature_prediction": null,
+      "unverified_reasons": [
+        "exact takeoff or ridge face unverified",
+        "check local airspace/access",
+        "forecast gusts: verify slope/ridge turbulence",
+        "no historical calibration at this site"
+      ]
+    },
+    {
+      "date": "2026-11-23",
+      "forecast_lead_days": 2,
+      "site": "kaspi_2",
+      "site_name": "Каспи 2",
+      "model": "ecmwf_ifs025",
+      "model_issued_time": "2026-11-21T12:21:45.866453+00:00",
+      "training_site_day_cases": 0,
+      "wind10": {
+        "mean_speed_ms": 2.33,
+        "wind_from_deg": 244,
+        "resultant_speed_ms": 1.91
+      },
+      "wind80": {
+        "mean_speed_ms": 3.01,
+        "wind_from_deg": 255,
+        "resultant_speed_ms": 2.48
+      },
+      "wind_component_to_confirmed_windward_slope_ms": null,
+      "surface_gust_max_ms": 8.7,
+      "cloud_pct": 68.0,
+      "cloud_low_pct": 0.0,
+      "radiation_wm2": 320.5,
+      "rain_daytime_mm": 0,
+      "trained_flight_signature_prediction": null,
+      "unverified_reasons": [
+        "exact takeoff or ridge face unverified",
+        "check local airspace/access",
+        "no historical calibration at this site",
+        "D-1 training lead does not match today's lead; score withheld"
+      ]
+    },
+    {
+      "date": "2026-11-24",
+      "forecast_lead_days": 3,
+      "site": "kaspi_2",
+      "site_name": "Каспи 2",
+      "model": "ecmwf_ifs025",
+      "model_issued_time": "2026-11-21T12:21:45.866453+00:00",
+      "training_site_day_cases": 0,
+      "wind10": {
+        "mean_speed_ms": 2.51,
+        "wind_from_deg": 109,
+        "resultant_speed_ms": 2.49
+      },
+      "wind80": {
+        "mean_speed_ms": 3.46,
+        "wind_from_deg": 104,
+        "resultant_speed_ms": 3.43
+      },
+      "wind_component_to_confirmed_windward_slope_ms": null,
+      "surface_gust_max_ms": 7.4,
+      "cloud_pct": 41.17,
+      "cloud_low_pct": 0.0,
+      "radiation_wm2": 331.67,
+      "rain_daytime_mm": 0,
+      "trained_flight_signature_prediction": null,
+      "unverified_reasons": [
+        "exact takeoff or ridge face unverified",
+        "check local airspace/access",
+        "no historical calibration at this site",
+        "D-1 training lead does not match today's lead; score withheld"
+      ]
+    },
+    {
+      "date": "2026-11-25",
+      "forecast_lead_days": 4,
+      "site": "kaspi_2",
+      "site_name": "Каспи 2",
+      "model": "ecmwf_ifs025",
+      "model_issued_time": "2026-11-21T12:21:45.866453+00:00",
+      "training_site_day_cases": 0,
+      "wind10": {
+        "mean_speed_ms": 6.66,
+        "wind_from_deg": 277,
+        "resultant_speed_ms": 6.65
+      },
+      "wind80": {
+        "mean_speed_ms": 9.65,
+        "wind_from_deg": 280,
+        "resultant_speed_ms": 9.65
+      },
+      "wind_component_to_confirmed_windward_slope_ms": null,
+      "surface_gust_max_ms": 20.1,
+      "cloud_pct": 93.67,
+      "cloud_low_pct": 47.83,
+      "radiation_wm2": 203.17,
+      "rain_daytime_mm": 0.3,
+      "trained_flight_signature_prediction": null,
+      "unverified_reasons": [
+        "exact takeoff or ridge face unverified",
+        "check local airspace/access",
+        "forecast gusts: verify slope/ridge turbulence",
+        "no historical calibration at this site",
+        "D-1 training lead does not match today's lead; score withheld"
+      ]
+    },
+    {
+      "date": "2026-11-26",
+      "forecast_lead_days": 5,
+      "site": "kaspi_2",
+      "site_name": "Каспи 2",
+      "model": "ecmwf_ifs025",
+      "model_issued_time": "2026-11-21T12:21:45.866453+00:00",
+      "training_site_day_cases": 0,
+      "wind10": {
+        "mean_speed_ms": 5.22,
+        "wind_from_deg": 277,
+        "resultant_speed_ms": 5.21
+      },
+      "wind80": {
+        "mean_speed_ms": 7.54,
+        "wind_from_deg": 280,
+        "resultant_speed_ms": 7.52
+      },
+      "wind_component_to_confirmed_windward_slope_ms": null,
+      "surface_gust_max_ms": 12.9,
+      "cloud_pct": 69.5,
+      "cloud_low_pct": 64.33,
+      "radiation_wm2": 253.0,
+      "rain_daytime_mm": 0.3,
+      "trained_flight_signature_prediction": null,
+      "unverified_reasons": [
+        "exact takeoff or ridge face unverified",
+        "check local airspace/access",
+        "forecast gusts: verify slope/ridge turbulence",
+        "no historical calibration at this site",
+        "D-1 training lead does not match today's lead; score withheld"
+      ]
+    },
+    {
+      "date": "2026-11-27",
+      "forecast_lead_days": 6,
+      "site": "kaspi_2",
+      "site_name": "Каспи 2",
+      "model": "ecmwf_ifs025",
+      "model_issued_time": "2026-11-21T12:21:45.866453+00:00",
+      "training_site_day_cases": 0,
+      "wind10": {
+        "mean_speed_ms": 1.59,
+        "wind_from_deg": 230,
+        "resultant_speed_ms": 1.58
+      },
+      "wind80": {
+        "mean_speed_ms": 2.41,
+        "wind_from_deg": 249,
+        "resultant_speed_ms": 2.3
+      },
+      "wind_component_to_confirmed_windward_slope_ms": null,
+      "surface_gust_max_ms": 13.5,
+      "cloud_pct": 3.83,
+      "cloud_low_pct": 0.83,
+      "radiation_wm2": 362.67,
+      "rain_daytime_mm": 0,
+      "trained_flight_signature_prediction": null,
+      "unverified_reasons": [
+        "exact takeoff or ridge face unverified",
+        "check local airspace/access",
+        "forecast gusts: verify slope/ridge turbulence",
+        "no historical calibration at this site",
+        "D-1 training lead does not match today's lead; score withheld"
+      ]
+    },
+    {
+      "date": "2026-11-22",
+      "forecast_lead_days": 1,
+      "site": "scout_mtskheta_west_NW_19_49",
+      "site_name": "К западу от Мцхеты NW",
+      "model": "ecmwf_ifs025",
+      "model_issued_time": "2026-11-21T12:21:45.866453+00:00",
+      "training_site_day_cases": 0,
+      "wind10": {
+        "mean_speed_ms": 5.17,
+        "wind_from_deg": 320,
+        "resultant_speed_ms": 5.17
+      },
+      "wind80": {
+        "mean_speed_ms": 7.95,
+        "wind_from_deg": 317,
+        "resultant_speed_ms": 7.95
+      },
+      "wind_component_to_confirmed_windward_slope_ms": null,
+      "surface_gust_max_ms": 14.1,
+      "cloud_pct": 92.0,
+      "cloud_low_pct": 16.17,
+      "radiation_wm2": 201.17,
+      "rain_daytime_mm": 0,
+      "trained_flight_signature_prediction": null,
+      "unverified_reasons": [
+        "forecast gusts: verify slope/ridge turbulence",
+        "no historical calibration at this site"
+      ]
+    },
+    {
+      "date": "2026-11-23",
+      "forecast_lead_days": 2,
+      "site": "scout_mtskheta_west_NW_19_49",
+      "site_name": "К западу от Мцхеты NW",
+      "model": "ecmwf_ifs025",
+      "model_issued_time": "2026-11-21T12:21:45.866453+00:00",
+      "training_site_day_cases": 0,
+      "wind10": {
+        "mean_speed_ms": 1.68,
+        "wind_from_deg": 341,
+        "resultant_speed_ms": 1.65
+      },
+      "wind80": {
+        "mean_speed_ms": 2.44,
+        "wind_from_deg": 335,
+        "resultant_speed_ms": 2.4
+      },
+      "wind_component_to_confirmed_windward_slope_ms": null,
+      "surface_gust_max_ms": 8.6,
+      "cloud_pct": 61.0,
+      "cloud_low_pct": 0.17,
+      "radiation_wm2": 326.17,
+      "rain_daytime_mm": 0,
+      "trained_flight_signature_prediction": null,
+      "unverified_reasons": [
+        "no historical calibration at this site",
+        "D-1 training lead does not match today's lead; score withheld"
+      ]
+    },
+    {
+      "date": "2026-11-24",
+      "forecast_lead_days": 3,
+      "site": "scout_mtskheta_west_NW_19_49",
+      "site_name": "К западу от Мцхеты NW",
+      "model": "ecmwf_ifs025",
+      "model_issued_time": "2026-11-21T12:21:45.866453+00:00",
+      "training_site_day_cases": 0,
+      "wind10": {
+        "mean_speed_ms": 1.01,
+        "wind_from_deg": 141,
+        "resultant_speed_ms": 0.9
+      },
+      "wind80": {
+        "mean_speed_ms": 1.31,
+        "wind_from_deg": 143,
+        "resultant_speed_ms": 1.22
+      },
+      "wind_component_to_confirmed_windward_slope_ms": null,
+      "surface_gust_max_ms": 4.0,
+      "cloud_pct": 35.17,
+      "cloud_low_pct": 0.0,
+      "radiation_wm2": 326.83,
+      "rain_daytime_mm": 0,
+      "trained_flight_signature_prediction": null,
+      "unverified_reasons": [
+        "no historical calibration at this site",
+        "D-1 training lead does not match today's lead; score withheld"
+      ]
+    },
+    {
+      "date": "2026-11-25",
+      "forecast_lead_days": 4,
+      "site": "scout_mtskheta_west_NW_19_49",
+      "site_name": "К западу от Мцхеты NW",
+      "model": "ecmwf_ifs025",
+      "model_issued_time": "2026-11-21T12:21:45.866453+00:00",
+      "training_site_day_cases": 0,
+      "wind10": {
+        "mean_speed_ms": 7.17,
+        "wind_from_deg": 324,
+        "resultant_speed_ms": 7.17
+      },
+      "wind80": {
+        "mean_speed_ms": 11.17,
+        "wind_from_deg": 321,
+        "resultant_speed_ms": 11.17
+      },
+      "wind_component_to_confirmed_windward_slope_ms": null,
+      "surface_gust_max_ms": 20.3,
+      "cloud_pct": 93.5,
+      "cloud_low_pct": 21.67,
+      "radiation_wm2": 142.83,
+      "rain_daytime_mm": 0.3,
+      "trained_flight_signature_prediction": null,
+      "unverified_reasons": [
+        "forecast gusts: verify slope/ridge turbulence",
+        "no historical calibration at this site",
+        "D-1 training lead does not match today's lead; score withheld"
+      ]
+    },
+    {
+      "date": "2026-11-26",
+      "forecast_lead_days": 5,
+      "site": "scout_mtskheta_west_NW_19_49",
+      "site_name": "К западу от Мцхеты NW",
+      "model": "ecmwf_ifs025",
+      "model_issued_time": "2026-11-21T12:21:45.866453+00:00",
+      "training_site_day_cases": 0,
+      "wind10": {
+        "mean_speed_ms": 3.96,
+        "wind_from_deg": 340,
+        "resultant_speed_ms": 3.95
+      },
+      "wind80": {
+        "mean_speed_ms": 5.71,
+        "wind_from_deg": 335,
+        "resultant_speed_ms": 5.71
+      },
+      "wind_component_to_confirmed_windward_slope_ms": null,
+      "surface_gust_max_ms": 12.1,
+      "cloud_pct": 14.83,
+      "cloud_low_pct": 8.0,
+      "radiation_wm2": 339.33,
+      "rain_daytime_mm": 0,
+      "trained_flight_signature_prediction": null,
+      "unverified_reasons": [
+        "forecast gusts: verify slope/ridge turbulence",
+        "no historical calibration at this site",
+        "D-1 training lead does not match today's lead; score withheld"
+      ]
+    },
+    {
+      "date": "2026-11-27",
+      "forecast_lead_days": 6,
+      "site": "scout_mtskheta_west_NW_19_49",
+      "site_name": "К западу от Мцхеты NW",
+      "model": "ecmwf_ifs025",
+      "model_issued_time": "2026-11-21T12:21:45.866453+00:00",
+      "training_site_day_cases": 0,
+      "wind10": {
+        "mean_speed_ms": 0.94,
+        "wind_from_deg": 4,
+        "resultant_speed_ms": 0.89
+      },
+      "wind80": {
+        "mean_speed_ms": 1.5,
+        "wind_from_deg": 352,
+        "resultant_speed_ms": 1.44
+      },
+      "wind_component_to_confirmed_windward_slope_ms": null,
+      "surface_gust_max_ms": 13.0,
+      "cloud_pct": 5.67,
+      "cloud_low_pct": 0.83,
+      "radiation_wm2": 362.5,
+      "rain_daytime_mm": 0,
+      "trained_flight_signature_prediction": null,
+      "unverified_reasons": [
+        "forecast gusts: verify slope/ridge turbulence",
+        "no historical calibration at this site",
+        "D-1 training lead does not match today's lead; score withheld"
+      ]
+    },
+    {
+      "date": "2026-11-22",
+      "forecast_lead_days": 1,
+      "site": "scout_martkopi_SW_44_24",
+      "site_name": "Марткопи SW",
+      "model": "ecmwf_ifs025",
+      "model_issued_time": "2026-11-21T12:21:45.866453+00:00",
+      "training_site_day_cases": 0,
+      "wind10": {
+        "mean_speed_ms": 6.83,
+        "wind_from_deg": 310,
+        "resultant_speed_ms": 6.81
+      },
+      "wind80": {
+        "mean_speed_ms": 10.19,
+        "wind_from_deg": 311,
+        "resultant_speed_ms": 10.17
+      },
+      "wind_component_to_confirmed_windward_slope_ms": null,
+      "surface_gust_max_ms": 14.7,
+      "cloud_pct": 95.5,
+      "cloud_low_pct": 10.33,
+      "radiation_wm2": 190.17,
+      "rain_daytime_mm": 0,
+      "trained_flight_signature_prediction": null,
+      "unverified_reasons": [
+        "forecast gusts: verify slope/ridge turbulence",
+        "no historical calibration at this site"
+      ]
+    },
+    {
+      "date": "2026-11-23",
+      "forecast_lead_days": 2,
+      "site": "scout_martkopi_SW_44_24",
+      "site_name": "Марткопи SW",
+      "model": "ecmwf_ifs025",
+      "model_issued_time": "2026-11-21T12:21:45.866453+00:00",
+      "training_site_day_cases": 0,
+      "wind10": {
+        "mean_speed_ms": 2.79,
+        "wind_from_deg": 312,
+        "resultant_speed_ms": 2.75
+      },
+      "wind80": {
+        "mean_speed_ms": 4.0,
+        "wind_from_deg": 317,
+        "resultant_speed_ms": 3.99
+      },
+      "wind_component_to_confirmed_windward_slope_ms": null,
+      "surface_gust_max_ms": 10.8,
+      "cloud_pct": 54.67,
+      "cloud_low_pct": 0.0,
+      "radiation_wm2": 337.67,
+      "rain_daytime_mm": 0,
+      "trained_flight_signature_prediction": null,
+      "unverified_reasons": [
+        "no historical calibration at this site",
+        "D-1 training lead does not match today's lead; score withheld"
+      ]
+    },
+    {
+      "date": "2026-11-24",
+      "forecast_lead_days": 3,
+      "site": "scout_martkopi_SW_44_24",
+      "site_name": "Марткопи SW",
+      "model": "ecmwf_ifs025",
+      "model_issued_time": "2026-11-21T12:21:45.866453+00:00",
+      "training_site_day_cases": 0,
+      "wind10": {
+        "mean_speed_ms": 0.75,
+        "wind_from_deg": 164,
+        "resultant_speed_ms": 0.68
+      },
+      "wind80": {
+        "mean_speed_ms": 0.94,
+        "wind_from_deg": 150,
+        "resultant_speed_ms": 0.92
+      },
+      "wind_component_to_confirmed_windward_slope_ms": null,
+      "surface_gust_max_ms": 4.2,
+      "cloud_pct": 28.67,
+      "cloud_low_pct": 0.0,
+      "radiation_wm2": 350.33,
+      "rain_daytime_mm": 0,
+      "trained_flight_signature_prediction": null,
+      "unverified_reasons": [
+        "no historical calibration at this site",
+        "D-1 training lead does not match today's lead; score withheld"
+      ]
+    },
+    {
+      "date": "2026-11-25",
+      "forecast_lead_days": 4,
+      "site": "scout_martkopi_SW_44_24",
+      "site_name": "Марткопи SW",
+      "model": "ecmwf_ifs025",
+      "model_issued_time": "2026-11-21T12:21:45.866453+00:00",
+      "training_site_day_cases": 0,
+      "wind10": {
+        "mean_speed_ms": 7.76,
+        "wind_from_deg": 316,
+        "resultant_speed_ms": 7.76
+      },
+      "wind80": {
+        "mean_speed_ms": 11.89,
+        "wind_from_deg": 318,
+        "resultant_speed_ms": 11.89
+      },
+      "wind_component_to_confirmed_windward_slope_ms": null,
+      "surface_gust_max_ms": 20.7,
+      "cloud_pct": 94.83,
+      "cloud_low_pct": 16.0,
+      "radiation_wm2": 116.83,
+      "rain_daytime_mm": 0,
+      "trained_flight_signature_prediction": null,
+      "unverified_reasons": [
+        "forecast gusts: verify slope/ridge turbulence",
+        "no historical calibration at this site",
+        "D-1 training lead does not match today's lead; score withheld"
+      ]
+    },
+    {
+      "date": "2026-11-26",
+      "forecast_lead_days": 5,
+      "site": "scout_martkopi_SW_44_24",
+      "site_name": "Марткопи SW",
+      "model": "ecmwf_ifs025",
+      "model_issued_time": "2026-11-21T12:21:45.866453+00:00",
+      "training_site_day_cases": 0,
+      "wind10": {
+        "mean_speed_ms": 5.77,
+        "wind_from_deg": 324,
+        "resultant_speed_ms": 5.75
+      },
+      "wind80": {
+        "mean_speed_ms": 8.44,
+        "wind_from_deg": 324,
+        "resultant_speed_ms": 8.42
+      },
+      "wind_component_to_confirmed_windward_slope_ms": null,
+      "surface_gust_max_ms": 13.7,
+      "cloud_pct": 25.83,
+      "cloud_low_pct": 16.0,
+      "radiation_wm2": 327.67,
+      "rain_daytime_mm": 0,
+      "trained_flight_signature_prediction": null,
+      "unverified_reasons": [
+        "forecast gusts: verify slope/ridge turbulence",
+        "no historical calibration at this site",
+        "D-1 training lead does not match today's lead; score withheld"
+      ]
+    },
+    {
+      "date": "2026-11-27",
+      "forecast_lead_days": 6,
+      "site": "scout_martkopi_SW_44_24",
+      "site_name": "Марткопи SW",
+      "model": "ecmwf_ifs025",
+      "model_issued_time": "2026-11-21T12:21:45.866453+00:00",
+      "training_site_day_cases": 0,
+      "wind10": {
+        "mean_speed_ms": 2.69,
+        "wind_from_deg": 288,
+        "resultant_speed_ms": 2.62
+      },
+      "wind80": {
+        "mean_speed_ms": 4.45,
+        "wind_from_deg": 299,
+        "resultant_speed_ms": 4.36
+      },
+      "wind_component_to_confirmed_windward_slope_ms": null,
+      "surface_gust_max_ms": 15.2,
+      "cloud_pct": 11.83,
+      "cloud_low_pct": 0.0,
+      "radiation_wm2": 373.83,
+      "rain_daytime_mm": 0,
+      "trained_flight_signature_prediction": null,
+      "unverified_reasons": [
+        "forecast gusts: verify slope/ridge turbulence",
+        "no historical calibration at this site",
+        "D-1 training lead does not match today's lead; score withheld"
+      ]
+    },
+    {
+      "date": "2026-11-22",
+      "forecast_lead_days": 1,
+      "site": "scout_martkopi_SW_37_56",
+      "site_name": "Марткопи SW",
+      "model": "ecmwf_ifs025",
+      "model_issued_time": "2026-11-21T12:21:45.866453+00:00",
+      "training_site_day_cases": 0,
+      "wind10": {
+        "mean_speed_ms": 6.83,
+        "wind_from_deg": 310,
+        "resultant_speed_ms": 6.81
+      },
+      "wind80": {
+        "mean_speed_ms": 10.19,
+        "wind_from_deg": 311,
+        "resultant_speed_ms": 10.17
+      },
+      "wind_component_to_confirmed_windward_slope_ms": null,
+      "surface_gust_max_ms": 14.7,
+      "cloud_pct": 95.5,
+      "cloud_low_pct": 10.33,
+      "radiation_wm2": 190.17,
+      "rain_daytime_mm": 0,
+      "trained_flight_signature_prediction": null,
+      "unverified_reasons": [
+        "forecast gusts: verify slope/ridge turbulence",
+        "no historical calibration at this site"
+      ]
+    },
+    {
+      "date": "2026-11-23",
+      "forecast_lead_days": 2,
+      "site": "scout_martkopi_SW_37_56",
+      "site_name": "Марткопи SW",
+      "model": "ecmwf_ifs025",
+      "model_issued_time": "2026-11-21T12:21:45.866453+00:00",
+      "training_site_day_cases": 0,
+      "wind10": {
+        "mean_speed_ms": 2.79,
+        "wind_from_deg": 312,
+        "resultant_speed_ms": 2.75
+      },
+      "wind80": {
+        "mean_speed_ms": 4.0,
+        "wind_from_deg": 317,
+        "resultant_speed_ms": 3.99
+      },
+      "wind_component_to_confirmed_windward_slope_ms": null,
+      "surface_gust_max_ms": 10.8,
+      "cloud_pct": 54.67,
+      "cloud_low_pct": 0.0,
+      "radiation_wm2": 337.67,
+      "rain_daytime_mm": 0,
+      "trained_flight_signature_prediction": null,
+      "unverified_reasons": [
+        "no historical calibration at this site",
+        "D-1 training lead does not match today's lead; score withheld"
+      ]
+    },
+    {
+      "date": "2026-11-24",
+      "forecast_lead_days": 3,
+      "site": "scout_martkopi_SW_37_56",
+      "site_name": "Марткопи SW",
+      "model": "ecmwf_ifs025",
+      "model_issued_time": "2026-11-21T12:21:45.866453+00:00",
+      "training_site_day_cases": 0,
+      "wind10": {
+        "mean_speed_ms": 0.75,
+        "wind_from_deg": 164,
+        "resultant_speed_ms": 0.68
+      },
+      "wind80": {
+        "mean_speed_ms": 0.94,
+        "wind_from_deg": 150,
+        "resultant_speed_ms": 0.92
+      },
+      "wind_component_to_confirmed_windward_slope_ms": null,
+      "surface_gust_max_ms": 4.2,
+      "cloud_pct": 28.67,
+      "cloud_low_pct": 0.0,
+      "radiation_wm2": 350.33,
+      "rain_daytime_mm": 0,
+      "trained_flight_signature_prediction": null,
+      "unverified_reasons": [
+        "no historical calibration at this site",
+        "D-1 training lead does not match today's lead; score withheld"
+      ]
+    },
+    {
+      "date": "2026-11-25",
+      "forecast_lead_days": 4,
+      "site": "scout_martkopi_SW_37_56",
+      "site_name": "Марткопи SW",
+      "model": "ecmwf_ifs025",
+      "model_issued_time": "2026-11-21T12:21:45.866453+00:00",
+      "training_site_day_cases": 0,
+      "wind10": {
+        "mean_speed_ms": 7.76,
+        "wind_from_deg": 316,
+        "resultant_speed_ms": 7.76
+      },
+      "wind80": {
+        "mean_speed_ms": 11.89,
+        "wind_from_deg": 318,
+        "resultant_speed_ms": 11.89
+      },
+      "wind_component_to_confirmed_windward_slope_ms": null,
+      "surface_gust_max_ms": 20.7,
+      "cloud_pct": 94.83,
+      "cloud_low_pct": 16.0,
+      "radiation_wm2": 116.83,
+      "rain_daytime_mm": 0,
+      "trained_flight_signature_prediction": null,
+      "unverified_reasons": [
+        "forecast gusts: verify slope/ridge turbulence",
+        "no historical calibration at this site",
+        "D-1 training lead does not match today's lead; score withheld"
+      ]
+    },
+    {
+      "date": "2026-11-26",
+      "forecast_lead_days": 5,
+      "site": "scout_martkopi_SW_37_56",
+      "site_name": "Марткопи SW",
+      "model": "ecmwf_ifs025",
+      "model_issued_time": "2026-11-21T12:21:45.866453+00:00",
+      "training_site_day_cases": 0,
+      "wind10": {
+        "mean_speed_ms": 5.77,
+        "wind_from_deg": 324,
+        "resultant_speed_ms": 5.75
+      },
+      "wind80": {
+        "mean_speed_ms": 8.44,
+        "wind_from_deg": 324,
+        "resultant_speed_ms": 8.42
+      },
+      "wind_component_to_confirmed_windward_slope_ms": null,
+      "surface_gust_max_ms": 13.7,
+      "cloud_pct": 25.83,
+      "cloud_low_pct": 16.0,
+      "radiation_wm2": 327.67,
+      "rain_daytime_mm": 0,
+      "trained_flight_signature_prediction": null,
+      "unverified_reasons": [
+        "forecast gusts: verify slope/ridge turbulence",
+        "no historical calibration at this site",
+        "D-1 training lead does not match today's lead; score withheld"
+      ]
+    },
+    {
+      "date": "2026-11-27",
+      "forecast_lead_days": 6,
+      "site": "scout_martkopi_SW_37_56",
+      "site_name": "Марткопи SW",
+      "model": "ecmwf_ifs025",
+      "model_issued_time": "2026-11-21T12:21:45.866453+00:00",
+      "training_site_day_cases": 0,
+      "wind10": {
+        "mean_speed_ms": 2.69,
+        "wind_from_deg": 288,
+        "resultant_speed_ms": 2.62
+      },
+      "wind80": {
+        "mean_speed_ms": 4.45,
+        "wind_from_deg": 299,
+        "resultant_speed_ms": 4.36
+      },
+      "wind_component_to_confirmed_windward_slope_ms": null,
+      "surface_gust_max_ms": 15.2,
+      "cloud_pct": 11.83,
+      "cloud_low_pct": 0.0,
+      "radiation_wm2": 373.83,
+      "rain_daytime_mm": 0,
+      "trained_flight_signature_prediction": null,
+      "unverified_reasons": [
+        "forecast gusts: verify slope/ridge turbulence",
+        "no historical calibration at this site",
+        "D-1 training lead does not match today's lead; score withheld"
+      ]
+    },
+    {
+      "date": "2026-11-22",
+      "forecast_lead_days": 1,
+      "site": "scout_martkopi_NW_87_62",
+      "site_name": "Марткопи NW",
+      "model": "ecmwf_ifs025",
+      "model_issued_time": "2026-11-21T12:21:45.866453+00:00",
+      "training_site_day_cases": 0,
+      "wind10": {
+        "mean_speed_ms": 6.83,
+        "wind_from_deg": 310,
+        "resultant_speed_ms": 6.81
+      },
+      "wind80": {
+        "mean_speed_ms": 10.19,
+        "wind_from_deg": 311,
+        "resultant_speed_ms": 10.17
+      },
+      "wind_component_to_confirmed_windward_slope_ms": null,
+      "surface_gust_max_ms": 14.7,
+      "cloud_pct": 95.5,
+      "cloud_low_pct": 10.33,
+      "radiation_wm2": 190.17,
+      "rain_daytime_mm": 0,
+      "trained_flight_signature_prediction": null,
+      "unverified_reasons": [
+        "forecast gusts: verify slope/ridge turbulence",
+        "no historical calibration at this site"
+      ]
+    },
+    {
+      "date": "2026-11-23",
+      "forecast_lead_days": 2,
+      "site": "scout_martkopi_NW_87_62",
+      "site_name": "Марткопи NW",
+      "model": "ecmwf_ifs025",
+      "model_issued_time": "2026-11-21T12:21:45.866453+00:00",
+      "training_site_day_cases": 0,
+      "wind10": {
+        "mean_speed_ms": 2.79,
+        "wind_from_deg": 312,
+        "resultant_speed_ms": 2.75
+      },
+      "wind80": {
+        "mean_speed_ms": 4.0,
+        "wind_from_deg": 317,
+        "resultant_speed_ms": 3.99
+      },
+      "wind_component_to_confirmed_windward_slope_ms": null,
+      "surface_gust_max_ms": 10.8,
+      "cloud_pct": 54.67,
+      "cloud_low_pct": 0.0,
+      "radiation_wm2": 337.67,
+      "rain_daytime_mm": 0,
+      "trained_flight_signature_prediction": null,
+      "unverified_reasons": [
+        "no historical calibration at this site",
+        "D-1 training lead does not match today's lead; score withheld"
+      ]
+    },
+    {
+      "date": "2026-11-24",
+      "forecast_lead_days": 3,
+      "site": "scout_martkopi_NW_87_62",
+      "site_name": "Марткопи NW",
+      "model": "ecmwf_ifs025",
+      "model_issued_time": "2026-11-21T12:21:45.866453+00:00",
+      "training_site_day_cases": 0,
+      "wind10": {
+        "mean_speed_ms": 0.75,
+        "wind_from_deg": 164,
+        "resultant_speed_ms": 0.68
+      },
+      "wind80": {
+        "mean_speed_ms": 0.94,
+        "wind_from_deg": 150,
+        "resultant_speed_ms": 0.92
+      },
+      "wind_component_to_confirmed_windward_slope_ms": null,
+      "surface_gust_max_ms": 4.2,
+      "cloud_pct": 28.67,
+      "cloud_low_pct": 0.0,
+      "radiation_wm2": 350.33,
+      "rain_daytime_mm": 0,
+      "trained_flight_signature_prediction": null,
+      "unverified_reasons": [
+        "no historical calibration at this site",
+        "D-1 training lead does not match today's lead; score withheld"
+      ]
+    },
+    {
+      "date": "2026-11-25",
+      "forecast_lead_days": 4,
+      "site": "scout_martkopi_NW_87_62",
+      "site_name": "Марткопи NW",
+      "model": "ecmwf_ifs025",
+      "model_issued_time": "2026-11-21T12:21:45.866453+00:00",
+      "training_site_day_cases": 0,
+      "wind10": {
+        "mean_speed_ms": 7.76,
+        "wind_from_deg": 316,
+        "resultant_speed_ms": 7.76
+      },
+      "wind80": {
+        "mean_speed_ms": 11.89,
+        "wind_from_deg": 318,
+        "resultant_speed_ms": 11.89
+      },
+      "wind_component_to_confirmed_windward_slope_ms": null,
+      "surface_gust_max_ms": 20.7,
+      "cloud_pct": 94.83,
+      "cloud_low_pct": 16.0,
+      "radiation_wm2": 116.83,
+      "rain_daytime_mm": 0,
+      "trained_flight_signature_prediction": null,
+      "unverified_reasons": [
+        "forecast gusts: verify slope/ridge turbulence",
+        "no historical calibration at this site",
+        "D-1 training lead does not match today's lead; score withheld"
+      ]
+    },
+    {
+      "date": "2026-11-26",
+      "forecast_lead_days": 5,
+      "site": "scout_martkopi_NW_87_62",
+      "site_name": "Марткопи NW",
+      "model": "ecmwf_ifs025",
+      "model_issued_time": "2026-11-21T12:21:45.866453+00:00",
+      "training_site_day_cases": 0,
+      "wind10": {
+        "mean_speed_ms": 5.77,
+        "wind_from_deg": 324,
+        "resultant_speed_ms": 5.75
+      },
+      "wind80": {
+        "mean_speed_ms": 8.44,
+        "wind_from_deg": 324,
+        "resultant_speed_ms": 8.42
+      },
+      "wind_component_to_confirmed_windward_slope_ms": null,
+      "surface_gust_max_ms": 13.7,
+      "cloud_pct": 25.83,
+      "cloud_low_pct": 16.0,
+      "radiation_wm2": 327.67,
+      "rain_daytime_mm": 0,
+      "trained_flight_signature_prediction": null,
+      "unverified_reasons": [
+        "forecast gusts: verify slope/ridge turbulence",
+        "no historical calibration at this site",
+        "D-1 training lead does not match today's lead; score withheld"
+      ]
+    },
+    {
+      "date": "2026-11-27",
+      "forecast_lead_days": 6,
+      "site": "scout_martkopi_NW_87_62",
+      "site_name": "Марткопи NW",
+      "model": "ecmwf_ifs025",
+      "model_issued_time": "2026-11-21T12:21:45.866453+00:00",
+      "training_site_day_cases": 0,
+      "wind10": {
+        "mean_speed_ms": 2.69,
+        "wind_from_deg": 288,
+        "resultant_speed_ms": 2.62
+      },
+      "wind80": {
+        "mean_speed_ms": 4.45,
+        "wind_from_deg": 299,
+        "resultant_speed_ms": 4.36
+      },
+      "wind_component_to_confirmed_windward_slope_ms": null,
+      "surface_gust_max_ms": 15.2,
+      "cloud_pct": 11.83,
+      "cloud_low_pct": 0.0,
+      "radiation_wm2": 373.83,
+      "rain_daytime_mm": 0,
+      "trained_flight_signature_prediction": null,
+      "unverified_reasons": [
+        "forecast gusts: verify slope/ridge turbulence",
+        "no historical calibration at this site",
+        "D-1 training lead does not match today's lead; score withheld"
+      ]
+    },
+    {
+      "date": "2026-11-22",
+      "forecast_lead_days": 1,
+      "site": "scout_kojori_NE_59_79",
+      "site_name": "Коджори NE",
+      "model": "ecmwf_ifs025",
+      "model_issued_time": "2026-11-21T12:21:45.866453+00:00",
+      "training_site_day_cases": 0,
+      "wind10": {
+        "mean_speed_ms": 5.17,
+        "wind_from_deg": 320,
+        "resultant_speed_ms": 5.17
+      },
+      "wind80": {
+        "mean_speed_ms": 7.95,
+        "wind_from_deg": 317,
+        "resultant_speed_ms": 7.95
+      },
+      "wind_component_to_confirmed_windward_slope_ms": null,
+      "surface_gust_max_ms": 14.1,
+      "cloud_pct": 92.0,
+      "cloud_low_pct": 16.17,
+      "radiation_wm2": 201.17,
+      "rain_daytime_mm": 0,
+      "trained_flight_signature_prediction": null,
+      "unverified_reasons": [
+        "forecast gusts: verify slope/ridge turbulence",
+        "no historical calibration at this site"
+      ]
+    },
+    {
+      "date": "2026-11-23",
+      "forecast_lead_days": 2,
+      "site": "scout_kojori_NE_59_79",
+      "site_name": "Коджори NE",
+      "model": "ecmwf_ifs025",
+      "model_issued_time": "2026-11-21T12:21:45.866453+00:00",
+      "training_site_day_cases": 0,
+      "wind10": {
+        "mean_speed_ms": 1.68,
+        "wind_from_deg": 341,
+        "resultant_speed_ms": 1.65
+      },
+      "wind80": {
+        "mean_speed_ms": 2.44,
+        "wind_from_deg": 335,
+        "resultant_speed_ms": 2.4
+      },
+      "wind_component_to_confirmed_windward_slope_ms": null,
+      "surface_gust_max_ms": 8.6,
+      "cloud_pct": 61.0,
+      "cloud_low_pct": 0.17,
+      "radiation_wm2": 326.17,
+      "rain_daytime_mm": 0,
+      "trained_flight_signature_prediction": null,
+      "unverified_reasons": [
+        "no historical calibration at this site",
+        "D-1 training lead does not match today's lead; score withheld"
+      ]
+    },
+    {
+      "date": "2026-11-24",
+      "forecast_lead_days": 3,
+      "site": "scout_kojori_NE_59_79",
+      "site_name": "Коджори NE",
+      "model": "ecmwf_ifs025",
+      "model_issued_time": "2026-11-21T12:21:45.866453+00:00",
+      "training_site_day_cases": 0,
+      "wind10": {
+        "mean_speed_ms": 1.01,
+        "wind_from_deg": 141,
+        "resultant_speed_ms": 0.9
+      },
+      "wind80": {
+        "mean_speed_ms": 1.31,
+        "wind_from_deg": 143,
+        "resultant_speed_ms": 1.22
+      },
+      "wind_component_to_confirmed_windward_slope_ms": null,
+      "surface_gust_max_ms": 4.0,
+      "cloud_pct": 35.17,
+      "cloud_low_pct": 0.0,
+      "radiation_wm2": 326.83,
+      "rain_daytime_mm": 0,
+      "trained_flight_signature_prediction": null,
+      "unverified_reasons": [
+        "no historical calibration at this site",
+        "D-1 training lead does not match today's lead; score withheld"
+      ]
+    },
+    {
+      "date": "2026-11-25",
+      "forecast_lead_days": 4,
+      "site": "scout_kojori_NE_59_79",
+      "site_name": "Коджори NE",
+      "model": "ecmwf_ifs025",
+      "model_issued_time": "2026-11-21T12:21:45.866453+00:00",
+      "training_site_day_cases": 0,
+      "wind10": {
+        "mean_speed_ms": 7.17,
+        "wind_from_deg": 324,
+        "resultant_speed_ms": 7.17
+      },
+      "wind80": {
+        "mean_speed_ms": 11.17,
+        "wind_from_deg": 321,
+        "resultant_speed_ms": 11.17
+      },
+      "wind_component_to_confirmed_windward_slope_ms": null,
+      "surface_gust_max_ms": 20.3,
+      "cloud_pct": 93.5,
+      "cloud_low_pct": 21.67,
+      "radiation_wm2": 142.83,
+      "rain_daytime_mm": 0.3,
+      "trained_flight_signature_prediction": null,
+      "unverified_reasons": [
+        "forecast gusts: verify slope/ridge turbulence",
+        "no historical calibration at this site",
+        "D-1 training lead does not match today's lead; score withheld"
+      ]
+    },
+    {
+      "date": "2026-11-26",
+      "forecast_lead_days": 5,
+      "site": "scout_kojori_NE_59_79",
+      "site_name": "Коджори NE",
+      "model": "ecmwf_ifs025",
+      "model_issued_time": "2026-11-21T12:21:45.866453+00:00",
+      "training_site_day_cases": 0,
+      "wind10": {
+        "mean_speed_ms": 3.96,
+        "wind_from_deg": 340,
+        "resultant_speed_ms": 3.95
+      },
+      "wind80": {
+        "mean_speed_ms": 5.71,
+        "wind_from_deg": 335,
+        "resultant_speed_ms": 5.71
+      },
+      "wind_component_to_confirmed_windward_slope_ms": null,
+      "surface_gust_max_ms": 12.1,
+      "cloud_pct": 14.83,
+      "cloud_low_pct": 8.0,
+      "radiation_wm2": 339.33,
+      "rain_daytime_mm": 0,
+      "trained_flight_signature_prediction": null,
+      "unverified_reasons": [
+        "forecast gusts: verify slope/ridge turbulence",
+        "no historical calibration at this site",
+        "D-1 training lead does not match today's lead; score withheld"
+      ]
+    },
+    {
+      "date": "2026-11-27",
+      "forecast_lead_days": 6,
+      "site": "scout_kojori_NE_59_79",
+      "site_name": "Коджори NE",
+      "model": "ecmwf_ifs025",
+      "model_issued_time": "2026-11-21T12:21:45.866453+00:00",
+      "training_site_day_cases": 0,
+      "wind10": {
+        "mean_speed_ms": 0.94,
+        "wind_from_deg": 4,
+        "resultant_speed_ms": 0.89
+      },
+      "wind80": {
+        "mean_speed_ms": 1.5,
+        "wind_from_deg": 352,
+        "resultant_speed_ms": 1.44
+      },
+      "wind_component_to_confirmed_windward_slope_ms": null,
+      "surface_gust_max_ms": 13.0,
+      "cloud_pct": 5.67,
+      "cloud_low_pct": 0.83,
+      "radiation_wm2": 362.5,
+      "rain_daytime_mm": 0,
+      "trained_flight_signature_prediction": null,
+      "unverified_reasons": [
+        "forecast gusts: verify slope/ridge turbulence",
+        "no historical calibration at this site",
+        "D-1 training lead does not match today's lead; score withheld"
+      ]
+    },
+    {
+      "date": "2026-11-22",
+      "forecast_lead_days": 1,
+      "site": "scout_kojori_SE_82_99",
+      "site_name": "Коджори SE",
+      "model": "ecmwf_ifs025",
+      "model_issued_time": "2026-11-21T12:21:45.866453+00:00",
+      "training_site_day_cases": 0,
+      "wind10": {
+        "mean_speed_ms": 5.17,
+        "wind_from_deg": 320,
+        "resultant_speed_ms": 5.17
+      },
+      "wind80": {
+        "mean_speed_ms": 7.95,
+        "wind_from_deg": 317,
+        "resultant_speed_ms": 7.95
+      },
+      "wind_component_to_confirmed_windward_slope_ms": null,
+      "surface_gust_max_ms": 14.1,
+      "cloud_pct": 92.0,
+      "cloud_low_pct": 16.17,
+      "radiation_wm2": 201.17,
+      "rain_daytime_mm": 0,
+      "trained_flight_signature_prediction": null,
+      "unverified_reasons": [
+        "forecast gusts: verify slope/ridge turbulence",
+        "no historical calibration at this site"
+      ]
+    },
+    {
+      "date": "2026-11-23",
+      "forecast_lead_days": 2,
+      "site": "scout_kojori_SE_82_99",
+      "site_name": "Коджори SE",
+      "model": "ecmwf_ifs025",
+      "model_issued_time": "2026-11-21T12:21:45.866453+00:00",
+      "training_site_day_cases": 0,
+      "wind10": {
+        "mean_speed_ms": 1.68,
+        "wind_from_deg": 341,
+        "resultant_speed_ms": 1.65
+      },
+      "wind80": {
+        "mean_speed_ms": 2.44,
+        "wind_from_deg": 335,
+        "resultant_speed_ms": 2.4
+      },
+      "wind_component_to_confirmed_windward_slope_ms": null,
+      "surface_gust_max_ms": 8.6,
+      "cloud_pct": 61.0,
+      "cloud_low_pct": 0.17,
+      "radiation_wm2": 326.17,
+      "rain_daytime_mm": 0,
+      "trained_flight_signature_prediction": null,
+      "unverified_reasons": [
+        "no historical calibration at this site",
+        "D-1 training lead does not match today's lead; score withheld"
+      ]
+    },
+    {
+      "date": "2026-11-24",
+      "forecast_lead_days": 3,
+      "site": "scout_kojori_SE_82_99",
+      "site_name": "Коджори SE",
+      "model": "ecmwf_ifs025",
+      "model_issued_time": "2026-11-21T12:21:45.866453+00:00",
+      "training_site_day_cases": 0,
+      "wind10": {
+        "mean_speed_ms": 1.01,
+        "wind_from_deg": 141,
+        "resultant_speed_ms": 0.9
+      },
+      "wind80": {
+        "mean_speed_ms": 1.31,
+        "wind_from_deg": 143,
+        "resultant_speed_ms": 1.22
+      },
+      "wind_component_to_confirmed_windward_slope_ms": null,
+      "surface_gust_max_ms": 4.0,
+      "cloud_pct": 35.17,
+      "cloud_low_pct": 0.0,
+      "radiation_wm2": 326.83,
+      "rain_daytime_mm": 0,
+      "trained_flight_signature_prediction": null,
+      "unverified_reasons": [
+        "no historical calibration at this site",
+        "D-1 training lead does not match today's lead; score withheld"
+      ]
+    },
+    {
+      "date": "2026-11-25",
+      "forecast_lead_days": 4,
+      "site": "scout_kojori_SE_82_99",
+      "site_name": "Коджори SE",
+      "model": "ecmwf_ifs025",
+      "model_issued_time": "2026-11-21T12:21:45.866453+00:00",
+      "training_site_day_cases": 0,
+      "wind10": {
+        "mean_speed_ms": 7.17,
+        "wind_from_deg": 324,
+        "resultant_speed_ms": 7.17
+      },
+      "wind80": {
+        "mean_speed_ms": 11.17,
+        "wind_from_deg": 321,
+        "resultant_speed_ms": 11.17
+      },
+      "wind_component_to_confirmed_windward_slope_ms": null,
+      "surface_gust_max_ms": 20.3,
+      "cloud_pct": 93.5,
+      "cloud_low_pct": 21.67,
+      "radiation_wm2": 142.83,
+      "rain_daytime_mm": 0.3,
+      "trained_flight_signature_prediction": null,
+      "unverified_reasons": [
+        "forecast gusts: verify slope/ridge turbulence",
+        "no historical calibration at this site",
+        "D-1 training lead does not match today's lead; score withheld"
+      ]
+    },
+    {
+      "date": "2026-11-26",
+      "forecast_lead_days": 5,
+      "site": "scout_kojori_SE_82_99",
+      "site_name": "Коджори SE",
+      "model": "ecmwf_ifs025",
+      "model_issued_time": "2026-11-21T12:21:45.866453+00:00",
+      "training_site_day_cases": 0,
+      "wind10": {
+        "mean_speed_ms": 3.96,
+        "wind_from_deg": 340,
+        "resultant_speed_ms": 3.95
+      },
+      "wind80": {
+        "mean_speed_ms": 5.71,
+        "wind_from_deg": 335,
+        "resultant_speed_ms": 5.71
+      },
+      "wind_component_to_confirmed_windward_slope_ms": null,
+      "surface_gust_max_ms": 12.1,
+      "cloud_pct": 14.83,
+      "cloud_low_pct": 8.0,
+      "radiation_wm2": 339.33,
+      "rain_daytime_mm": 0,
+      "trained_flight_signature_prediction": null,
+      "unverified_reasons": [
+        "forecast gusts: verify slope/ridge turbulence",
+        "no historical calibration at this site",
+        "D-1 training lead does not match today's lead; score withheld"
+      ]
+    },
+    {
+      "date": "2026-11-27",
+      "forecast_lead_days": 6,
+      "site": "scout_kojori_SE_82_99",
+      "site_name": "Коджори SE",
+      "model": "ecmwf_ifs025",
+      "model_issued_time": "2026-11-21T12:21:45.866453+00:00",
+      "training_site_day_cases": 0,
+      "wind10": {
+        "mean_speed_ms": 0.94,
+        "wind_from_deg": 4,
+        "resultant_speed_ms": 0.89
+      },
+      "wind80": {
+        "mean_speed_ms": 1.5,
+        "wind_from_deg": 352,
+        "resultant_speed_ms": 1.44
+      },
+      "wind_component_to_confirmed_windward_slope_ms": null,
+      "surface_gust_max_ms": 13.0,
+      "cloud_pct": 5.67,
+      "cloud_low_pct": 0.83,
+      "radiation_wm2": 362.5,
+      "rain_daytime_mm": 0,
+      "trained_flight_signature_prediction": null,
+      "unverified_reasons": [
+        "forecast gusts: verify slope/ridge turbulence",
+        "no historical calibration at this site",
+        "D-1 training lead does not match today's lead; score withheld"
+      ]
+    }
+  ]
+}
