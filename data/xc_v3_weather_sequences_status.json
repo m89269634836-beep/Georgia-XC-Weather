@@ -1,0 +1,10 @@
+{
+  "source": "Open-Meteo Historical Weather ERA5 daily reanalysis",
+  "warning": "REANALYSIS IS POST-HOC. Past weather variables must be replaced with data actually accessible D-1 in final operational validation.",
+  "date_alignment": "D−5...D−1 Europe/Asia Tbilisi local days plus ECMWF D−1 issued forecast for D0 in separate previous-runs file",
+  "groups": 16,
+  "group_ok": 16,
+  "group_failed": 0,
+  "matched": 117,
+  "errors": []
+}
