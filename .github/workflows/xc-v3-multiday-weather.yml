@@ -1,0 +1,55 @@
+name: XC v3 5-day weather sequences for scored route outcomes
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/learning/fetch_multiday_weather_v3.py'
+      - 'data/xc_v3_multiflight_route_targets_2024_2026.csv.gz.b64'
+      - '.github/workflows/xc-v3-multiday-weather.yml'
+permissions:
+  contents: write
+concurrency:
+  group: xc-v3-multiday-weather
+  cancel-in-progress: false
+jobs:
+  history:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Retrieve actual D-5 to D-1 reanalysis weather
+        run: python -u scripts/learning/fetch_multiday_weather_v3.py
+      - name: Publish dated trajectories and data limitations
+        if: always()
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p data
+          if [[ ! -f data/xc_v3_weather_sequences_status.json ]]; then
+            printf '{"error":"Failed before fetch status written"}\n' > data/xc_v3_weather_sequences_status.json
+          fi
+          cp data/xc_v3_weather_sequences_status.json /tmp/xc_v3_weather_sequences_status.json
+          if [[ -f data/xc_v3_five_day_weather_sequences.csv ]]; then
+            cp data/xc_v3_five_day_weather_sequences.csv /tmp/xc_v3_five_day_weather_sequences.csv
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          for attempt in 1 2 3 4 5; do
+            git fetch origin main
+            git reset --hard origin/main
+            cp /tmp/xc_v3_weather_sequences_status.json data/
+            if [[ -f /tmp/xc_v3_five_day_weather_sequences.csv ]]; then
+              cp /tmp/xc_v3_five_day_weather_sequences.csv data/
+            fi
+            git add data/xc_v3_weather_sequences_status.json
+            git add data/xc_v3_five_day_weather_sequences.csv 2>/dev/null || true
+            if git diff --cached --quiet; then exit 0; fi
+            git commit -m 'Record actual synoptic precursor weather sequences for XC route analog experiments'
+            if git push origin HEAD:main; then exit 0; fi
+            sleep 3
+          done
+          exit 1
