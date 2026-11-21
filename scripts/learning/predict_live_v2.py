@@ -5,13 +5,14 @@ probabilities of a safe launch. Never extrapolate to unseen starts as trained.
 D-1 model is flagged outside the one-day-ahead forecast horizon.
 """
 import json,datetime,math
+from zoneinfo import ZoneInfo
 from pathlib import Path
 D=Path("data")
 mdl=json.loads((D/"xc_v2_model.json").read_text(encoding="utf-8"))
 wx=json.loads((D/"dynamic_ridge_forecast.json").read_text(encoding="utf-8"))
 registry={x["id"]:x for x in json.loads((D/"dynamic_sites_registry.json").read_text(encoding="utf-8"))["sites"]}
 validation=json.loads((D/"xc_v2_validation_report.json").read_text(encoding="utf-8"))
-DAY=datetime.date.fromisoformat(wx["retrieved_utc"][:10])
+DAY=datetime.datetime.fromisoformat(wx["retrieved_utc"].replace("Z","+00:00")).astimezone(ZoneInfo("Asia/Tbilisi")).date()
 facing={"N":0,"N-NE":22.5,"NE":45,"E":90,"SE":135,"S":180,"SW":225,"W":270,"NW":315}
 def numeric(x):
     return float(x) if isinstance(x,(int,float)) and math.isfinite(x) else None
@@ -77,10 +78,10 @@ for sid,s in wx["sites"].items():
         if met.get("precip_11_16_mm") and met["precip_11_16_mm"]>=1:reasons.append("forecast precipitation")
         if met.get("low_cloud_pct") is not None and met["low_cloud_pct"]>=80:reasons.append("forecast low cloud / potential visibility")
         if met.get("gust10_ms_max") is not None and met["gust10_ms_max"]>=11:reasons.append("forecast gusts: verify slope/ridge turbulence")
-        available=(sid in mdl["sites"] and sample_count>=5 and lead==1)
+        available=(sid in mdl["sites"] and sample_count>=15 and lead==1)
         pred=predict(sid,day,met) if available else None
         if sid not in mdl["sites"]:reasons.append("no historical calibration at this site")
-        elif sample_count<5:reasons.append("very few historical multi-flight site-days")
+        elif sample_count<5:reasons.append("fewer than 15 historical multi-flight site-days")
         if lead!=1:reasons.append("D-1 training lead does not match today's lead; score withheld")
         rows.append({"date":day,"forecast_lead_days":lead,"site":sid,"site_name":s["label"],
            "model":"ecmwf_ifs025","model_issued_time":wx["retrieved_utc"],
@@ -95,8 +96,9 @@ for sid,s in wx["sites"].items():
            "unverified_reasons":reasons})
 report={"generated_utc":wx["retrieved_utc"],"trained_version":mdl["version"],
     "never_safe_to_launch_score":True,
+    "weather_adjustments_activated":{k:v["activated_weather_correction"] for k,v in validation.get("targets",{}).items()},
     "scope":"Experimental conditional ridge/thermal holding on recorded flight days; normal wind component is physical not a rating",
-    "notes":["Only lead==1 with trained site >=5 historical multi-flight cases yields a calibrated conditional score.",
+    "notes":["Only lead==1 with trained site >=15 historical multi-flight cases yields a calibrated conditional score.",
        "Unknown start, complex gorges, rotors, landing, ridge shape and airspace are not modeled as safe/unsafe here.",
        "WindNinja neutral scenarios are NOT equivalent to hour-by-hour data-driven dynamic lift forecast.",
        "For other days only uncalibrated physical forecast features are shown."],
@@ -104,7 +106,8 @@ report={"generated_utc":wx["retrieved_utc"],"trained_version":mdl["version"],
 (D/"xc_v2_live_diagnostics.json").write_text(json.dumps(report,ensure_ascii=False,indent=2),encoding="utf-8")
 lines=["# Georgia XC v2 — forecasts conditioned on observations","",f"Issued: {wx['retrieved_utc']} UTC","",
  "**These are NOT safe-to-fly or all-day flyability probabilities.**", "",
- "Only the following originally surveyed calibrated sites and lead D−1 are shown as experimental flight-signature outputs.",""]
+ "Only registered sites with >=15 historical site-days and lead D−1 get experimental conditional-to-flight proxies.","",
+ "**Current validation outcome:** weather adjustments are only active if 2026 holdout data show a statistically supported improvement. When none are activated, the percentages below are **historical site-season references**, NOT day-specific weather predictions.",""]
 tomorrow=(DAY+datetime.timedelta(days=1)).isoformat()
 rows1=[r for r in rows if r["date"]==tomorrow and r["trained_flight_signature_prediction"]]
 lines+=["| Start | D−1 wind 10m FROM | Normal component | Ridge pattern | Thermal pattern | Low cloud | Gusts |",
