@@ -1,0 +1,16 @@
+{
+  "groups": 29,
+  "multi_flight_site_days": 116,
+  "model": "ecmwf_ifs025",
+  "source": "Open-Meteo Previous Runs ECMWF IFS 0.25",
+  "fixed_valid_time_leads": [
+    1,
+    2
+  ],
+  "notes": "_previous_day1 and _previous_day2 are fixed 24/48 hour offsets, not exact 00Z/12Z issued runs",
+  "group_successes": 29,
+  "group_failures": 0,
+  "cases_with_day1_wind": 116,
+  "cases_with_day2_wind": 116,
+  "errors": []
+}
