@@ -1,0 +1,58 @@
+name: XC v3 weather sequences vs XC distance analog validation
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/learning/validate_multiday_analogs_v3.py'
+      - 'data/xc_v3_five_day_weather_sequences.csv'
+      - '.github/workflows/xc-v3-validate.yml'
+permissions:
+  contents: write
+concurrency:
+  group: xc-v3-validate
+  cancel-in-progress: false
+jobs:
+  evaluate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install evaluation packages
+        run: pip install 'numpy>=1.26,<3' 'pandas>=2.2,<3' 'scikit-learn>=1.5,<2'
+      - name: Out-of-year test of real route distance vs 5-day synoptic analog
+        run: |
+          python -m py_compile scripts/learning/validate_multiday_analogs_v3.py
+          python -u scripts/learning/validate_multiday_analogs_v3.py
+      - name: Publish out-of-sample errors and historical analog examples
+        if: always()
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [[ ! -f data/xc_v3_analog_validation.json ]]; then
+            printf '{"error":"No evaluation result. Check logs and weather history completeness."}\n' > data/xc_v3_analog_validation.json
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          cp data/xc_v3_analog_validation.json /tmp/xc_v3_analog_validation.json
+          for n in xc_v3_analog_validation.md xc_v3_analog_examples_2026.json; do
+            if [[ -f data/$n ]]; then cp data/$n /tmp/; fi
+          done
+          for attempt in 1 2 3 4 5; do
+            git fetch origin main
+            git reset --hard origin/main
+            cp /tmp/xc_v3_analog_validation.json data/
+            for n in xc_v3_analog_validation.md xc_v3_analog_examples_2026.json; do
+              if [[ -f /tmp/$n ]]; then cp /tmp/$n data/; fi
+            done
+            git add data/xc_v3_analog_validation.json
+            git add data/xc_v3_analog_validation.md data/xc_v3_analog_examples_2026.json 2>/dev/null || true
+            if git diff --cached --quiet; then exit 0; fi
+            git commit -m 'Report year-held-out XC route analog verification and uncertainty'
+            if git push origin HEAD:main; then exit 0; fi
+            sleep 3
+          done
+          exit 1
