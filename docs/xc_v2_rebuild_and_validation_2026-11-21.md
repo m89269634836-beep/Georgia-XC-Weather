@@ -50,3 +50,10 @@ Data/code:
 
 ## Reporting safety
 All heights AMSL, wind meteorological FROM. Model diagnostics do not supersede local anemometer, airspace/NOTAM, site inspection or a pilot's decision.
+
+## Permanent before-the-day forecast snapshot archive (added Nov 21)
+
+- `scripts/learning/archive_issued_snapshots.py` takes the current forecast **as already retrieved**, compresses the explicit site/day/model fields, and writes an immutable UTC timestamped `.json.gz` snapshot under `data/forecast_issue_snapshots/`.
+- `.github/workflows/xc-v2-forecast-snapshots.yml` schedules this after the 02:38 and 08:38 UTC regional wind fetches and preserves prior snapshots; it does not overwrite future forecast truth.
+- First successful snapshot: `data/forecast_issue_snapshots/xc_wind_20261121_122145UTC.json.gz` (480 model/site/date records, 20 points, 16,466 compressed bytes). Source issued time is retrieval time, not ECMWF original issuance cycle.
+- This enables future comparisons between D-3, D-2 and D-1 forecast revisions, *once actual field observations exist*. It does **not** transform unflown days into verified bad days.
