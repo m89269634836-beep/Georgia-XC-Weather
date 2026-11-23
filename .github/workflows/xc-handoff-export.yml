@@ -1,0 +1,34 @@
+name: Export portable Georgia XC code and model snapshot
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/xc-handoff-export.yml'
+permissions:
+  contents: read
+jobs:
+  export:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v4
+      - name: Collect reproducible source and selected model data
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/xc-handoff
+          cp -r scripts docs .github /tmp/xc-handoff/
+          mkdir -p /tmp/xc-handoff/data
+          find data -maxdepth 1 -type f \( -name 'xc_v2*' -o -name 'xc_v3*' -o -name 'dynamic_sites_registry.json' -o -name 'dynamic_sites_terrain_probe.json' -o -name 'dynamic_tbilisi_dem_scout.json' -o -name 'dynamic_scout_osm_roads.json' -o -name 'dynamic_new_sites_access_vegetation.json' -o -name 'windninja*status*.json' -o -name 'xcontest_historical*' -o -name 'status.json' \) -exec cp -t /tmp/xc-handoff/data/ {} +
+          if [[ -d data/forecast_issue_snapshots ]]; then mkdir -p /tmp/xc-handoff/data/forecast_issue_snapshots; cp -a data/forecast_issue_snapshots/*.gz /tmp/xc-handoff/data/forecast_issue_snapshots/ 2>/dev/null || true; fi
+          git rev-parse HEAD > /tmp/xc-handoff/REPO_COMMIT.txt
+          printf 'Original repo: https://github.com/m89269634836-beep/Georgia-XC-Weather\nPrivate raw GPS NOT included.\n' > /tmp/xc-handoff/README_SOURCE.txt
+          cd /tmp/xc-handoff
+          zip -q -r "$GITHUB_WORKSPACE/georgia-xc-github-code-snapshot.zip" .
+      - uses: actions/upload-artifact@v4
+        with:
+          name: georgia-xc-handoff-code-snapshot
+          path: georgia-xc-github-code-snapshot.zip
+          retention-days: 14
+          if-no-files-found: error
