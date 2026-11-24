@@ -1,16 +1,5 @@
 {
-  "generated_at_utc": "2026-11-24T12:36:36.006561+00:00",
-  "successful": 55,
-  "errors": [
-    {
-      "point": "udzilaurta",
-      "model": "icon",
-      "error": "HTTP Error 503: Service Unavailable"
-    },
-    {
-      "point": "lalisquri_b90_d50",
-      "model": "icon",
-      "error": "HTTP Error 503: Service Unavailable"
-    }
-  ]
+  "generated_at_utc": "2026-11-24T23:30:04.774537+00:00",
+  "successful": 57,
+  "errors": []
 }
