@@ -1,6 +1,6 @@
 # Georgia XC v2 — forecasts conditioned on observations
 
-Issued: 2026-11-24T12:54:18.070006+00:00 UTC
+Issued: 2026-11-25T11:40:30.591708+00:00 UTC
 
 **These are NOT safe-to-fly or all-day flyability probabilities.**
 
@@ -10,8 +10,8 @@ Only registered sites with >=15 historical site-days and lead D−1 get experime
 
 | Start | D−1 wind 10m FROM | Normal component | Ridge pattern | Thermal pattern | Low cloud | Gusts |
 |---|---|---:|---:|---:|---:|---:|
-| Лалискури | 4.0 m/s @298° | 1.89 | 0% | 13% | 36.5% | 12.5 m/s |
-| Гудаури район | 1.2 m/s @247° | — | 6% | 11% | 67.83% | 8.9 m/s |
+| Лалискури | 2.7 m/s @303° | 1.49 | 0% | 13% | 34.17% | 8.5 m/s |
+| Гудаури район | 1.5 m/s @248° | — | 6% | 11% | 89.33% | 10.3 m/s |
 
 The percentages represent expected fraction of tracks showing a **heuristic signature conditioned on a flight**, NOT percentage chance of flying. Models without clear holdout weather improvement default to site/season baseline.
 
